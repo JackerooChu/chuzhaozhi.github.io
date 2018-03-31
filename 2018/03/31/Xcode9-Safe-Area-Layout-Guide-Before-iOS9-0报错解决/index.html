@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错 （弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中">
+<meta name="description" content="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错（弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/index.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错 （弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中">
+<meta property="og:description" content="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错（弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-31T08:09:48.678Z">
+<meta property="og:updated_time" content="2018-03-31T11:25:55.747Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
-<meta name="twitter:description" content="####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错 （弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中">
+<meta name="twitter:description" content="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错（弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -304,11 +304,9 @@
       
 
       
-        <p>####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="问题一.png"><br>（弱弱的说一句，这个xcode9好像并没有那么友好~）<br>然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取而代之的是Safe Area Layout Guide.<br>针对新特性，解决方案如下<br>第一步、在项目报错地方打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code><br><img src="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一.png"><br> 第二步、切换到<code>Main.storyboard</code>文件,重读第一步操作打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code></p>
+        <h4 id="9月20日苹果爸爸推送了iOS11-0以及Xcode9-作为开发小白一枚，第一时间更新了Xcode9-去体验一下所谓的跨时代的iPhone-X-像往常新建个新项目，结果一运行直接报错"><a href="#9月20日苹果爸爸推送了iOS11-0以及Xcode9-作为开发小白一枚，第一时间更新了Xcode9-去体验一下所谓的跨时代的iPhone-X-像往常新建个新项目，结果一运行直接报错" class="headerlink" title="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错"></a>9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="问题一.png"><br>（弱弱的说一句，这个xcode9好像并没有那么友好~）<br>然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取而代之的是Safe Area Layout Guide.<br>针对新特性，解决方案如下<br>第一步、在项目报错地方打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code><br><img src="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一.png"><br> 第二步、切换到<code>Main.storyboard</code>文件,重读第一步操作打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一2.png"></p>
-<p>###到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</p>
-
+<h3 id="到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。"><a href="#到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。" class="headerlink" title="到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。"></a>到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</h3>
       
     </div>
     
@@ -332,8 +330,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/31/iOS上如何使用Iconfont图标/" rel="next" title="iOS上如何使用Iconfont图标">
-                <i class="fa fa-chevron-left"></i> iOS上如何使用Iconfont图标
+              <a href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" rel="next" title="UITableViewCell高度自适应--Xib和Masonry布局">
+                <i class="fa fa-chevron-left"></i> UITableViewCell高度自适应--Xib和Masonry布局
               </a>
             
           </div>
@@ -342,8 +340,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" rel="prev" title="UITableViewCell高度自适应--Xib和Masonry布局">
-                UITableViewCell高度自适应--Xib和Masonry布局 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/" rel="prev" title="UITableViewCell上的输入框，输入不同内容">
+                UITableViewCell上的输入框，输入不同内容 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -396,8 +394,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -439,6 +446,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#9月20日苹果爸爸推送了iOS11-0以及Xcode9-作为开发小白一枚，第一时间更新了Xcode9-去体验一下所谓的跨时代的iPhone-X-像往常新建个新项目，结果一运行直接报错"><span class="nav-number">1.</span> <span class="nav-text">9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。"><span class="nav-number"></span> <span class="nav-text">到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

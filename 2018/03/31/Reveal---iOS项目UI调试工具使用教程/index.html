@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-31T10:24:20.327Z">
+<meta property="og:updated_time" content="2018-03-31T11:27:01.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Reveal---iOS项目UI调试工具使用教程">
 <meta name="twitter:description" content="一、Reveal介绍Reveal是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。 二、Reveal集成">
@@ -312,14 +312,13 @@
       
         <h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。</p>
 <h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://www.jianshu.com/p/8b4f7d3c01cc" target="_blank" rel="noopener">文章</a>解决，这里了就不多说了。</p>
-<p>####2、找到你刚才安装的软件,打开</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p>
+<h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p>
 <h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p>
 <p>（2）、Xcode打开项目，并运行</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p>
-<p>####4、功能分析<br>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p>
+<h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p>
 <p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p>
 <p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p>
@@ -474,7 +473,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Reveal介绍"><span class="nav-number">1.</span> <span class="nav-text">一、Reveal介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Reveal集成使用"><span class="nav-number">2.</span> <span class="nav-text">二、Reveal集成使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、下载安装Reveal，直接安装。"><span class="nav-number">2.1.</span> <span class="nav-text">1、下载安装Reveal，直接安装。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、在你的项目中集成"><span class="nav-number">2.2.</span> <span class="nav-text">3、在你的项目中集成</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、Reveal介绍"><span class="nav-number">1.</span> <span class="nav-text">一、Reveal介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、Reveal集成使用"><span class="nav-number">2.</span> <span class="nav-text">二、Reveal集成使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、下载安装Reveal，直接安装。"><span class="nav-number">2.1.</span> <span class="nav-text">1、下载安装Reveal，直接安装。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、找到你刚才安装的软件-打开"><span class="nav-number">2.2.</span> <span class="nav-text">2、找到你刚才安装的软件,打开</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3、在你的项目中集成"><span class="nav-number">2.3.</span> <span class="nav-text">3、在你的项目中集成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4、功能分析"><span class="nav-number">2.4.</span> <span class="nav-text">4、功能分析</span></a></li></ol></li></ol></div>
             
 
           </div>
