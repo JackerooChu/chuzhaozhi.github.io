@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JackerooChu的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错 （弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JackerooChu的博客">
+<meta property="og:url" content="http://yoursite.com/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/index.html">
+<meta property="og:site_name" content="JackerooChu的博客">
+<meta property="og:description" content="####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错 （弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-03-31T07:59:40.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JackerooChu的博客">
+<meta name="twitter:description" content="####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错 （弱弱的说一句，这个xcode9好像并没有那么友好~）然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="JackerooChu的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">JackerooChu的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">一个iOS小白的技术积累</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/" class="article-date">
+  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="问题一.png"><br>（弱弱的说一句，这个xcode9好像并没有那么友好~）<br>然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取而代之的是Safe Area Layout Guide.<br>针对新特性，解决方案如下<br>第一步、在项目报错地方打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code><br><img src="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一.png"><br> 第二步、切换到<code>Main.storyboard</code>文件,重读第一步操作打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一2.png"></p>
+<p>###到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/" data-id="cjff3gtp00004erel8e7q1he8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          UITableViewCell高度自适应--Xib和Masonry布局
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/31/iOS上如何使用Iconfont图标/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">iOS上如何使用Iconfont图标</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">三月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/31/Charles抓包+Postman模拟请求/">Charles抓包+Postman模拟请求</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/">第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/">Reveal---iOS项目UI调试工具使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/">UITableViewCell高度自适应--Xib和Masonry布局</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 JackerooChu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

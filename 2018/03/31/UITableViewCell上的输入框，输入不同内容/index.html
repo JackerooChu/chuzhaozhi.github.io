@@ -5,18 +5,24 @@
   
 
   
-  <title>JackerooChu的博客</title>
+  <title>第一篇博客 | JackerooChu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人技术积累">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JackerooChu的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="##一、实现效果  ##二、项目结构   ##三、代码部分 ######1. 项目使用Cocoapods管理  在控制台对创建的项目进行创建pods，创建Podfile文件，使用命令vi Podfile进入到Podfile文件里面，按下键盘i进入编辑状态     输入我们需要使用的第三方库，此项目中使用了Masonry来进行适配 1234platform :ios, &amp;apos;8.0&amp;apos;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一篇博客">
+<meta property="og:url" content="http://yoursite.com/2018/03/31/UITableViewCell上的输入框，输入不同内容/index.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="个人技术积累">
+<meta property="og:description" content="##一、实现效果  ##二、项目结构   ##三、代码部分 ######1. 项目使用Cocoapods管理  在控制台对创建的项目进行创建pods，创建Podfile文件，使用命令vi Podfile进入到Podfile文件里面，按下键盘i进入编辑状态     输入我们需要使用的第三方库，此项目中使用了Masonry来进行适配 1234platform :ios, &amp;apos;8.0&amp;apos;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-fbff5f76b26f5be3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-89acd176adf2c7e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-897bd0685a5e2faf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-afd2b0d254db2f83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-03-31T08:07:37.909Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JackerooChu的博客">
-<meta name="twitter:description" content="个人技术积累">
+<meta name="twitter:title" content="第一篇博客">
+<meta name="twitter:description" content="##一、实现效果  ##二、项目结构   ##三、代码部分 ######1. 项目使用Cocoapods管理  在控制台对创建的项目进行创建pods，创建Podfile文件，使用命令vi Podfile进入到Podfile文件里面，按下键盘i进入编辑状态     输入我们需要使用的第三方库，此项目中使用了Masonry来进行适配 1234platform :ios, &amp;apos;8.0&amp;apos;">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-fbff5f76b26f5be3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="/atom.xml" title="JackerooChu的博客" type="application/atom+xml">
   
@@ -67,59 +73,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Charles抓包+Postman模拟请求" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/Charles抓包+Postman模拟请求/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/Charles抓包+Postman模拟请求/">Charles抓包+Postman模拟请求</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##一、工具介绍</p>
-<p>#####1.<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a><br>今天来介绍一下Mac上抓包工具<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a>，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版<a href="https://pan.baidu.com/s/1pMawsEv" target="_blank" rel="noopener">下载地址</a>密码:meuk)。<br><img src="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="charles.png"></p>
-<p>#####2.<a href="https://www.getpostman.com/" target="_blank" rel="noopener">Postman</a><br>Postman是一种网页调试与发送网页http请求的chrome插件。我们可以用来很方便的模拟get或者post或者其他方式的请求来调试接口。<a href="https://app.getpostman.com/app/download/osx64" target="_blank" rel="noopener">点击下载</a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-a010b13e92458678.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="postman.png"></p>
-<p>##二、开始抓取网络接口以及模拟请求</p>
-<p>#####第一步、打开Charles,在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口</p>
-<p>####显示信息如下：<img src="http://upload-images.jianshu.io/upload_images/4905848-1941e097e68ccc12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="headers.png"></p>
-<p>####cookie信息：<img src="http://upload-images.jianshu.io/upload_images/4905848-bac60fa4b21b0bfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="cookie.png"></p>
-<p>####参数信息：<br><img src="http://upload-images.jianshu.io/upload_images/4905848-64cc5a34eac55cb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="参数.png"></p>
-<p>#####第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。<img src="http://upload-images.jianshu.io/upload_images/4905848-eebf7859754b3cf4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="postman.png"></p>
-<p>####配置信息如下：<img src="http://upload-images.jianshu.io/upload_images/4905848-a8ff62cecd37f3bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置信息.png"></p>
-<p>####body参数：<img src="http://upload-images.jianshu.io/upload_images/4905848-2c4f00b32aec26e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="body.png"></p>
-<p>#####第三步、发送请求，看到后台返回的信息<img src="http://upload-images.jianshu.io/upload_images/4905848-84ebf0154dd6c623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="结果.png"></p>
-<p>到这里这个请求接口的操作就模拟成功了，既然参数和地址都有了，这个时候就是你想做什么就做什么的时候了，你懂得😆。<br><img src="http://upload-images.jianshu.io/upload_images/4905848-edfe3a61d514a92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="app.png"></p>
-<p>这是根据postman请求结果，自己随便写了个手机端来进行请求的，有兴趣的可以一起研究，欢迎骚扰。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/Charles抓包+Postman模拟请求/" data-id="cjff3gtoq0000erel7gsehetp" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-UITableViewCell上的输入框，输入不同内容" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-UITableViewCell上的输入框，输入不同内容" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/" class="article-date">
   <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
@@ -132,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/">第一篇博客</a>
+    <h1 class="article-title" itemprop="name">
+      第一篇博客
     </h1>
   
 
@@ -177,244 +131,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Reveal---iOS项目UI调试工具使用教程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2018/03/31/Charles抓包+Postman模拟请求/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          Charles抓包+Postman模拟请求
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/">Reveal---iOS项目UI调试工具使用教程</a>
-    </h1>
   
+    <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Reveal---iOS项目UI调试工具使用教程</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###一、Reveal介绍<br><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。</p>
-<p>###二、Reveal集成使用</p>
-<p>####1、下载安装Reveal，直接安装。<br>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://www.jianshu.com/p/8b4f7d3c01cc" target="_blank" rel="noopener">文章</a>解决，这里了就不多说了。</p>
-<p>####2、找到你刚才安装的软件,打开</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p>
-<p>####3、在你的项目中集成<br>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p>
-<p>（2）、Xcode打开项目，并运行</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p>
-<p>####4、功能分析<br>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p>
-<p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p>
-<p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/Reveal---iOS项目UI调试工具使用教程/" data-id="cjff3gtox0002erelot905gfv" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-UITableViewCell高度自适应--Xib和Masonry布局" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/">UITableViewCell高度自适应--Xib和Masonry布局</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" data-id="cjff3gtoy0003erel47g86ubm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>####9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="问题一.png"><br>（弱弱的说一句，这个xcode9好像并没有那么友好~）<br>然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取而代之的是Safe Area Layout Guide.<br>针对新特性，解决方案如下<br>第一步、在项目报错地方打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code><br><img src="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一.png"><br> 第二步、切换到<code>Main.storyboard</code>文件,重读第一步操作打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一2.png"></p>
-<p>###到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/" data-id="cjff3gtp00004erel8e7q1he8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-iOS上如何使用Iconfont图标" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/iOS上如何使用Iconfont图标/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/iOS上如何使用Iconfont图标/">iOS上如何使用Iconfont图标</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/iOS上如何使用Iconfont图标/" data-id="cjff3gtp10005ereln61b0te4" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-xxx-app文件已损坏，打不开，解决方案" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/xxx-app文件已损坏，打不开，解决方案/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/xxx-app文件已损坏，打不开，解决方案/">xxx.app文件已损坏，打不开，解决方案</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p>
-<p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p>
-<p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/xxx-app文件已损坏，打不开，解决方案/" data-id="cjff3gtp20006erelwik8ulqe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-iOS微信支付工具类" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/31/iOS微信支付工具类/" class="article-date">
-  <time datetime="2018-03-31T07:59:40.000Z" itemprop="datePublished">2018-03-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/31/iOS微信支付工具类/">iOS微信支付工具类</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/iOS微信支付工具类/" data-id="cjff3gtp30007erelv9ia25m1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
