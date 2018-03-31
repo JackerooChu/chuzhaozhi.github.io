@@ -498,6 +498,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JackerooChu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JackerooChu的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" itemprop="url">UITableViewCell高度自适应--Xib和Masonry布局</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
+                2018-03-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/UITableViewCell上的输入框，输入不同内容/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -596,125 +715,6 @@
 <p>######4.使用方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath&#123;</span><br><span class="line">      NSString  *identifier = [NSString stringWithFormat:@&quot;InputStrTableViewCellIdentifier%ld&quot;,indexPath.row];</span><br><span class="line">    InputStrTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];</span><br><span class="line">    if (!cell) &#123;</span><br><span class="line">        cell =[[InputStrTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];</span><br><span class="line">        Info *info = [[Info alloc] init];</span><br><span class="line">        if (indexPath.row==0) &#123;</span><br><span class="line">            [cell setCellInfo:@&quot;配偶信息：&quot; withInputDesc:info.name1&gt;0?info.name1:@&quot;请输入配偶信息&quot; withKeybordType:0 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name1 =result;</span><br><span class="line">            &#125;];</span><br><span class="line">        &#125;else if (indexPath.row==1)&#123;</span><br><span class="line">            [cell setCellInfo:@&quot;身份证：&quot; withInputDesc:info.name2&gt;0?info.name2:@&quot;请输入身份证号码&quot; withKeybordType:1 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name2 =result;</span><br><span class="line">            &#125;];</span><br><span class="line">        &#125;else if (indexPath.row==2)&#123;</span><br><span class="line">            [cell setCellInfo:@&quot;单位名称：&quot; withInputDesc:info.name3&gt;0?info.name3:@&quot;请输入单位名称&quot; withKeybordType:0 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name3 =result;</span><br><span class="line">            &#125;];</span><br><span class="line">        &#125;else if (indexPath.row==3)&#123;</span><br><span class="line">            [cell setCellInfo:@&quot;所在部门：&quot; withInputDesc:info.name4&gt;0?info.name4:@&quot;请输入所在部门&quot; withKeybordType:0 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name4 =result;</span><br><span class="line">            &#125;];</span><br><span class="line"></span><br><span class="line">        &#125;else if (indexPath.row==4)&#123;</span><br><span class="line">            [cell setCellInfo:@&quot;月均工资收入：&quot; withInputDesc:info.name5&gt;0?info.name5:@&quot;请输入月均工资收入&quot; withKeybordType:1 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name5 =result;</span><br><span class="line">            &#125;];</span><br><span class="line"></span><br><span class="line">        &#125;else if (indexPath.row==5)&#123;</span><br><span class="line">            [cell setCellInfo:@&quot;办公室电话：&quot; withInputDesc:info.name6&gt;0?info.name6:@&quot;请输入办公室电话&quot; withKeybordType:1 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name6 =result;</span><br><span class="line">            &#125;];</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            [cell setCellInfo:@&quot;移动电话：&quot; withInputDesc:info.name7&gt;0?info.name1:@&quot;请输入移动电话&quot; withKeybordType:1 withText:@&quot;&quot; WithReturnBlock:^(NSString *result) &#123;</span><br><span class="line">                info.name7 =result;</span><br><span class="line">            &#125;];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>注：只是粗糙的实现了功能，还有部分可优化的，代码已上传Github,喜欢的欢迎star一下，以资鼓励，嘿嘿，<a href="https://github.com/chuzhaozhi/InputInfoDemo/tree/master" target="_blank" rel="noopener">git地址</a>。</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JackerooChu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackerooChu的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" itemprop="url">UITableViewCell高度自适应--Xib和Masonry布局</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
           
         
       
