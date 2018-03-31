@@ -7,12 +7,12 @@
   
   <title>Charles抓包+Postman模拟请求 | JackerooChu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##一、工具介绍 #####1.Charles(又称为青花瓷)今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。 #####2.PostmanPostman是一种网页调试与发送网页http请求的chrome插件。我们可以用来">
+  <meta name="description" content="一、工具介绍1.Charles(又称为青花瓷)今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。 #####2.PostmanPostman是一种网页调试与发送网页http请求的chrome插件。我们可以用来很方便的模拟ge">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Charles抓包+Postman模拟请求">
 <meta property="og:url" content="http://yoursite.com/2018/03/31/Charles抓包+Postman模拟请求/index.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="##一、工具介绍 #####1.Charles(又称为青花瓷)今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。 #####2.PostmanPostman是一种网页调试与发送网页http请求的chrome插件。我们可以用来">
+<meta property="og:description" content="一、工具介绍1.Charles(又称为青花瓷)今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。 #####2.PostmanPostman是一种网页调试与发送网页http请求的chrome插件。我们可以用来很方便的模拟ge">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a010b13e92458678.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-2c4f00b32aec26e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-84ebf0154dd6c623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-edfe3a61d514a92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-31T08:05:03.619Z">
+<meta property="og:updated_time" content="2018-03-31T08:10:10.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Charles抓包+Postman模拟请求">
-<meta name="twitter:description" content="##一、工具介绍 #####1.Charles(又称为青花瓷)今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。 #####2.PostmanPostman是一种网页调试与发送网页http请求的chrome插件。我们可以用来">
+<meta name="twitter:description" content="一、工具介绍1.Charles(又称为青花瓷)今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。 #####2.PostmanPostman是一种网页调试与发送网页http请求的chrome插件。我们可以用来很方便的模拟ge">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternate" href="/atom.xml" title="JackerooChu的博客" type="application/atom+xml">
@@ -101,8 +101,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##一、工具介绍</p>
-<p>#####1.<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a><br>今天来介绍一下Mac上抓包工具<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a>，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版<a href="https://pan.baidu.com/s/1pMawsEv" target="_blank" rel="noopener">下载地址</a>密码:meuk)。<br><img src="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="charles.png"></p>
+        <p>一、工具介绍<br>1.<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a><br>今天来介绍一下Mac上抓包工具<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a>，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版<a href="https://pan.baidu.com/s/1pMawsEv" target="_blank" rel="noopener">下载地址</a>密码:meuk)。<br><img src="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="charles.png"></p>
 <p>#####2.<a href="https://www.getpostman.com/" target="_blank" rel="noopener">Postman</a><br>Postman是一种网页调试与发送网页http请求的chrome插件。我们可以用来很方便的模拟get或者post或者其他方式的请求来调试接口。<a href="https://app.getpostman.com/app/download/osx64" target="_blank" rel="noopener">点击下载</a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-a010b13e92458678.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="postman.png"></p>
 <p>##二、开始抓取网络接口以及模拟请求</p>
 <p>#####第一步、打开Charles,在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口</p>
@@ -119,7 +118,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/31/Charles抓包+Postman模拟请求/" data-id="cjff3gtoq0000erel7gsehetp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/31/Charles抓包+Postman模拟请求/" data-id="cjff3jz3p0000fwel5huk0a5d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -129,9 +128,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">第一篇博客</div>
+      <div class="article-nav-title">Reveal---iOS项目UI调试工具使用教程</div>
     </a>
   
 </nav>
@@ -172,11 +171,11 @@
           </li>
         
           <li>
-            <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/">第一篇博客</a>
+            <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/">Reveal---iOS项目UI调试工具使用教程</a>
           </li>
         
           <li>
-            <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/">Reveal---iOS项目UI调试工具使用教程</a>
+            <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/">第一篇博客</a>
           </li>
         
           <li>
@@ -184,7 +183,7 @@
           </li>
         
           <li>
-            <a href="/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/">(no title)</a>
+            <a href="/2018/03/31/iOS上如何使用Iconfont图标/">iOS上如何使用Iconfont图标</a>
           </li>
         
       </ul>
