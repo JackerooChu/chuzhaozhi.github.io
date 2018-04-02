@@ -157,6 +157,24 @@
   </entry>
   
   <entry>
+    <title>xxx.app文件已损坏，打不开，解决方案</title>
+    <link href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>http://chuzhaozhi.cn/2018/03/31/xxx-app文件已损坏，打不开，解决方案/</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-04-02T02:50:41.478Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p><p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p><p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>iOS微信支付工具类</title>
     <link href="http://chuzhaozhi.cn/2018/03/31/iOS%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     <id>http://chuzhaozhi.cn/2018/03/31/iOS微信支付工具类/</id>
@@ -172,24 +190,6 @@
         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>xxx.app文件已损坏，打不开，解决方案</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/xxx-app文件已损坏，打不开，解决方案/</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-04-02T02:50:41.478Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p><p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p><p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
     
     </summary>
     
