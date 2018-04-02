@@ -60,13 +60,13 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/ic-fact-180.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/ic-fact-32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/ic-fact-16.png?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -80,6 +80,8 @@
 
 
 
+
+  <link rel="alternate" href="/atom.xml" title="JackerooChu的博客" type="application/atom+xml" />
 
 
 
@@ -198,12 +200,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
-            关于
+            分类
           </a>
         </li>
       
@@ -217,11 +219,65 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -292,19 +348,30 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IT技能/" itemprop="url" rel="index">
+                    <span itemprop="name">IT技能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/31/Charles抓包+Postman模拟请求/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/31/Charles抓包+Postman模拟请求/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -362,7 +429,7 @@
 
       
         
-          <h4 id="一、工具介绍"><a href="#一、工具介绍" class="headerlink" title="一、工具介绍"></a>一、工具介绍</h4><h5 id="1-Charles"><a href="#1-Charles" class="headerlink" title="1. Charles"></a>1. Charles</h5><p>今天来介绍一下Mac上抓包工具<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a>，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版<a href="https://pan.baidu.com/s/1pMawsEv" target="_blank" rel="noopener">下载地址</a>密码:meuk)。<br>
+          <h4 id="一、工具介绍"><a href="#一、工具介绍" class="headerlink" title="一、工具介绍"></a>一、工具介绍</h4><h5 id="1-Charles"><a href="#1-Charles" class="headerlink" title="1. Charles"></a>1. Charles</h5><p><blockquote class="blockquote-center"><br>今天来介绍一下Mac上抓包工具<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a>，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版<a href="https://pan.baidu.com/s/1pMawsEv" target="_blank" rel="noopener">下载地址</a>密码:meuk)。<br></blockquote><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/31/Charles抓包+Postman模拟请求/#more" rel="contents">
@@ -373,6 +440,10 @@
         
       
     </div>
+<div>
+  
+</div>
+    
     
     
     
@@ -463,17 +534,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/31/Reveal---iOS项目UI调试工具使用教程/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -530,7 +590,9 @@
 
       
         
-          <h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br>
+          <h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center">
+
+<p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/31/Reveal---iOS项目UI调试工具使用教程/#more" rel="contents">
@@ -541,6 +603,10 @@
         
       
     </div>
+<div>
+  
+</div>
+    
     
     
     
@@ -631,17 +697,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/31/UITableViewCell上的输入框，输入不同内容/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -698,7 +753,7 @@
 
       
         
-          <h2 id="一、实现效果"><a href="#一、实现效果" class="headerlink" title="一、实现效果"></a>一、实现效果</h2><p>本文介绍怎么在UITableViewCell中添加输入框，对于不同的row的输入框输入的文本进行获取以至于打到一个表单填写的效果。<br>
+          <h2 id="一、实现效果"><a href="#一、实现效果" class="headerlink" title="一、实现效果"></a>一、实现效果</h2><p><blockquote class="blockquote-center"><br>本文介绍怎么在UITableViewCell中添加输入框，对于不同的row的输入框输入的文本进行获取以至于打到一个表单填写的效果。<br></blockquote><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/31/UITableViewCell上的输入框，输入不同内容/#more" rel="contents">
@@ -709,6 +764,10 @@
         
       
     </div>
+<div>
+  
+</div>
+    
     
     
     
@@ -799,17 +858,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -880,6 +928,10 @@
         
       
     </div>
+<div>
+  
+</div>
+    
     
     
     
@@ -967,19 +1019,30 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Xcode/" itemprop="url" rel="index">
+                    <span itemprop="name">Xcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -1037,7 +1100,7 @@
 
       
         
-          <h4 id="9月20日苹果爸爸推送了iOS11-0以及Xcode9-作为开发小白一枚，第一时间更新了Xcode9-去体验一下所谓的跨时代的iPhone-X-像往常新建个新项目，结果一运行直接报错"><a href="#9月20日苹果爸爸推送了iOS11-0以及Xcode9-作为开发小白一枚，第一时间更新了Xcode9-去体验一下所谓的跨时代的iPhone-X-像往常新建个新项目，结果一运行直接报错" class="headerlink" title="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错"></a>9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错</h4>
+          <p><blockquote class="blockquote-center"><br> 9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错<br></blockquote><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/#more" rel="contents">
@@ -1048,6 +1111,10 @@
         
       
     </div>
+<div>
+  
+</div>
+    
     
     
     
@@ -1141,11 +1208,36 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -1160,19 +1252,25 @@
                   <span class="links-of-author-item">
                     <a href="https://www.jianshu.com/u/b4e7a4553934" target="_blank" title="简书">
                       
-                        <i class="fa fa-fw fa-globe"></i>简书</a>
+                        <i class="fa fa-fw fa-book"></i>简书</a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="https://blog.csdn.net/chuzhaohzi" target="_blank" title="CSDN">
                       
-                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                        <i class="fa fa-fw fa-codiepie"></i>CSDN</a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="https://juejin.im/user/5a31ccc9f265da432652d738/posts" target="_blank" title="掘金">
                       
-                        <i class="fa fa-fw fa-globe"></i>掘金</a>
+                        <i class="fa fa-fw fa-spinner"></i>掘金</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/czz0604?is_all=1" target="_blank" title="微博">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>微博</a>
                   </span>
                 
             </div>
@@ -1212,7 +1310,7 @@
   <span class="author" itemprop="copyrightHolder">JackerooChu</span>
 
 &copy; 
-<span itemprop="copyrightYear">2018-04-01</span>
+<span itemprop="copyrightYear">2018-04-02</span>
  
 
   
@@ -1396,14 +1494,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://jackeroochu.disqus.com/count.js" async></script>
-    
-
-    
-
-  
-
 
 
 
@@ -1419,6 +1509,10 @@
 
 
 
+  
+
+
+
 
 
 
@@ -1429,6 +1523,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
