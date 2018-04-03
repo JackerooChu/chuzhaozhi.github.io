@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chuzhaozhi.cn/"/>
-  <updated>2018-04-02T04:43:04.493Z</updated>
+  <updated>2018-04-02T12:26:53.394Z</updated>
   <id>http://chuzhaozhi.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reveal---iOS项目UI调试工具使用教程</title>
+    <link href="http://chuzhaozhi.cn/Reveal---iOS%E9%A1%B9%E7%9B%AEUI%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"/>
+    <id>http://chuzhaozhi.cn/Reveal---iOS项目UI调试工具使用教程.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-04-02T12:26:53.394Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center"><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br><a id="more"></a><p></p><h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">文章</a>解决，这里了就不多说了。</p><h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p><h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p><p>（2）、Xcode打开项目，并运行</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p><h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p><p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p><p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、Reveal介绍&quot;&gt;&lt;a href=&quot;#一、Reveal介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Reveal介绍&quot;&gt;&lt;/a&gt;一、Reveal介绍&lt;/h3&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.waitsun.com/tag/reveal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reveal&lt;/a&gt;是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]&lt;br&gt;reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。&lt;br&gt;Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Charles抓包+Postman模拟请求</title>
@@ -39,48 +59,6 @@
       <category term="Charles" scheme="http://chuzhaozhi.cn/tags/Charles/"/>
     
       <category term="Postman" scheme="http://chuzhaozhi.cn/tags/Postman/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Reveal---iOS项目UI调试工具使用教程</title>
-    <link href="http://chuzhaozhi.cn/Reveal---iOS%E9%A1%B9%E7%9B%AEUI%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"/>
-    <id>http://chuzhaozhi.cn/Reveal---iOS项目UI调试工具使用教程.html</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-04-02T12:26:53.394Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center"><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br><a id="more"></a><p></p><h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">文章</a>解决，这里了就不多说了。</p><h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p><h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p><p>（2）、Xcode打开项目，并运行</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p><h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p><p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p><p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;一、Reveal介绍&quot;&gt;&lt;a href=&quot;#一、Reveal介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Reveal介绍&quot;&gt;&lt;/a&gt;一、Reveal介绍&lt;/h3&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.waitsun.com/tag/reveal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reveal&lt;/a&gt;是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]&lt;br&gt;reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。&lt;br&gt;Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>UITableViewCell高度自适应--Xib和Masonry布局</title>
-    <link href="http://chuzhaozhi.cn/UITableViewCell%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94--Xib%E5%92%8CMasonry%E5%B8%83%E5%B1%80.html"/>
-    <id>http://chuzhaozhi.cn/UITableViewCell高度自适应--Xib和Masonry布局.html</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-03-31T14:56:36.502Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
-    
-    </summary>
-    
     
   </entry>
   
@@ -111,11 +89,11 @@
   </entry>
   
   <entry>
-    <title>iOS微信支付工具类</title>
-    <link href="http://chuzhaozhi.cn/WeiXinPayService.html"/>
-    <id>http://chuzhaozhi.cn/WeiXinPayService.html</id>
+    <title>UITableViewCell高度自适应--Xib和Masonry布局</title>
+    <link href="http://chuzhaozhi.cn/UITableViewCell%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94--Xib%E5%92%8CMasonry%E5%B8%83%E5%B1%80.html"/>
+    <id>http://chuzhaozhi.cn/UITableViewCell高度自适应--Xib和Masonry布局.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-03-31T14:48:14.629Z</updated>
+    <updated>2018-03-31T14:56:36.502Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a>]]></content>
     
@@ -126,6 +104,24 @@
         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 
       
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>iOS微信支付以及工具类</title>
+    <link href="http://chuzhaozhi.cn/WeiXinPayService.html"/>
+    <id>http://chuzhaozhi.cn/WeiXinPayService.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-04-03T07:29:32.272Z</updated>
+    
+    <content type="html"><![CDATA[<p>在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。<br><a id="more"></a></p><h2 id="1-开始接入微信支付的准备工作"><a href="#1-开始接入微信支付的准备工作" class="headerlink" title="1.开始接入微信支付的准备工作"></a>1.开始接入微信支付的准备工作</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&amp;h=226&amp;f=png&amp;s=89227" alt="接入流程.png"></p><p>首先你需要去<a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>注册账号,在这里要吐槽一下，不知道这个微信平台的账号密码验证机制，忘了以前的密码，重新登录，各种找回密码都不行，实在没辙，去注册个Gmail😑，登录成功后，可以看到如下界面。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef8f0630?w=1240&amp;h=299&amp;f=jpeg&amp;s=22223" alt="1.png"></p><p>点击右上角的创建移动应用，一步一步填写必要填入的信息，在这里就不做多余的赘述了。<br>需要注意的是这里填入的<br>Bundle ID需要和项目的一一对应<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef7c4285?w=1240&amp;h=685&amp;f=jpeg&amp;s=50365" alt="BoundleId"><br>接下来就等一个星期左右，等待微信审核通过你就可以将微信支付SDK集成到项目中，详情可以看官方给出的<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=1417694084&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">文档</a>.<br>pod 集成方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;WechatOpenSDK&apos;</span><br></pre></td></tr></table></figure></p><p>在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序id（如下图所示）。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deefa04e0d?w=1240&amp;h=355&amp;f=jpeg&amp;s=38183" alt="URL scheme"></p><p>完成之后可以获取到appid(微信开放平台为应用生成的唯一识别码)、商户id、商户secretKey。对于app端来说只用到appid，商户id最好通过接口从server获取，商户secretKey是用来签名的，一般只有server能用到。</p><h2 id="2-支付流程"><a href="#2-支付流程" class="headerlink" title="2.支付流程"></a>2.支付流程</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5def1793359?w=894&amp;h=1042&amp;f=png&amp;s=35742" alt="支付流程.png"></p><p>刚开始看这个流程图可能会觉得很复杂，所以总结了我们比较关系的流程是：</p><ol><li>app客户端向服务器发送支付请求</li><li>服务器在收到客户端请求之后向微信后台调用统一下单API,获得预付单信息</li><li>服务端生成带签名的客户端支付信息给app</li><li>app客户端用户确认支付，app唤醒微信客户端进行支付</li><li>app获得支付结果后向服务端查询最终的结果并显示</li></ol><h5 id="app端的工作："><a href="#app端的工作：" class="headerlink" title="app端的工作："></a>app端的工作：</h5><ul><li>接入微信支付SDK</li><li>向服务器发送支付请求</li><li>支付信息唤醒微信app,然后进行支付</li><li>收到微信支付回调后向服务器确认支付结果</li><li>根据查询结果展示结果页面告知用户支付结果</li></ul><h5 id="服务器端的工作："><a href="#服务器端的工作：" class="headerlink" title="服务器端的工作："></a>服务器端的工作：</h5><ul><li>收到app客户端支付请求后向微信后台请求预支付订单</li><li>服务器端签名并返回信息给app客户端</li><li>接收微信后台返回的支付结果，用来app端查询</li></ul><blockquote><p>服务器端返回的字段说明：</p><blockquote></blockquote><ul><li>appId:返回的appid</li><li>partnerId: 父级id</li><li>prepayId: 支付id</li><li>packages: 包名（微信默认的为“Sign=WXPay”）</li><li>nonceStr: 生成的随机字符串</li><li>timesTamp: 时间戳</li><li>sign: 签名<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9724d9?w=1240&amp;h=599&amp;f=jpeg&amp;s=89869" alt="字段说明"> </li></ul></blockquote><h2 id="3-iOS端使用"><a href="#3-iOS端使用" class="headerlink" title="3.iOS端使用"></a>3.iOS端使用</h2><p>在<code>AppDelegate.m</code>,导入微信SDK头文件<code>WXApi.h</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">[WXApi registerApp:@&quot;注册获得的appid&quot;];//注册appid</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//支持所有iOS系统回调</span><br><span class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</span><br><span class="line">&#123;</span><br><span class="line">//    [self handleOpenURL:url];</span><br><span class="line">BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];</span><br><span class="line">if (!result) &#123;</span><br><span class="line">// 其他如支付等SDK的回调</span><br><span class="line">[self handleOpenURL:url];</span><br><span class="line">&#125;</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br><span class="line">- (void)handleOpenURL:(NSURL*)url &#123;</span><br><span class="line">if ([url.host isEqualToString:@&quot;pay&quot;]) &#123; // -- 微信支付</span><br><span class="line">[WXApi handleOpenURL:url delegate:[WXPayService sharedInstance]];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><blockquote><p>此处的<code>WXPayService</code>就是自己单独抽出来写的一个类，遵循<code>WXApiManagerDelegate</code>协议</p></blockquote><h5 id="WXPayService-h"><a href="#WXPayService-h" class="headerlink" title="WXPayService.h"></a>WXPayService.h</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">#import &quot;WXApi.h&quot;</span><br><span class="line">@interface WXPayService : NSObject &lt;WXApiDelegate&gt;</span><br><span class="line">///单例来接收微信请求的回调</span><br><span class="line">+ (instancetype)sharedInstance;</span><br><span class="line">// -- 根据接口返回的预支付信息,构造支付请求</span><br><span class="line">+ (PayReq *)getPayRequest:(NSDictionary *)prepayData;</span><br><span class="line"></span><br><span class="line">///处理非支付请求的回调</span><br><span class="line">- (void)onRespCallBack:(void(^)(BaseResp * resp))callback;</span><br><span class="line">///从服务器端获取到微信返回的支付请求用到的参数来发起支付请求</span><br><span class="line">- (void)startPayWithReq:(PayReq *)req callback:(void(^)(BaseResp * resp))callback; </span><br><span class="line">@end</span><br></pre></td></tr></table></figure><h5 id="WXPayService-m"><a href="#WXPayService-m" class="headerlink" title="WXPayService.m"></a>WXPayService.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#import &quot;WXPayService.h&quot;</span><br><span class="line">@interface WXPayService ()</span><br><span class="line">@property (nonatomic,copy) void(^RespCallBack)(BaseResp *);</span><br><span class="line">@end</span><br><span class="line">static WXPayService *sharedInstance;</span><br><span class="line"></span><br><span class="line">@implementation WXPayService</span><br><span class="line">+ (instancetype)allocWithZone:(struct _NSZone *)zone&#123;</span><br><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">sharedInstance = [super allocWithZone:zone];</span><br><span class="line">&#125;);</span><br><span class="line">return sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line">///单例来接收微信请求的回调</span><br><span class="line">+ (instancetype)sharedInstance &#123;</span><br><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">sharedInstance = [[self alloc] init];</span><br><span class="line">&#125;);</span><br><span class="line">return sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// -- 根据接口返回的预支付信息,构造支付请求</span><br><span class="line">+ (PayReq *)getPayRequest:(NSDictionary *)prepayData &#123;</span><br><span class="line">if (prepayData) &#123;</span><br><span class="line">//  此处Tools是自己的另一个工具类，用来判断字典的</span><br><span class="line">PayReq *req = [[PayReq alloc] init];</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;partnerid&quot;]) &#123;</span><br><span class="line">req.partnerId = prepayData[@&quot;partnerid&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;prepayid&quot;]) &#123;</span><br><span class="line">req.prepayId = prepayData[@&quot;prepayid&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;noncestr&quot;]) &#123;</span><br><span class="line">req.nonceStr = prepayData[@&quot;noncestr&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;timestamp&quot;]) &#123;</span><br><span class="line">req.timeStamp = [prepayData[@&quot;timestamp&quot;] intValue];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req.package =@&quot;Sign=WXPay&quot;;</span><br><span class="line">req.sign =  @&quot;null&quot;;</span><br><span class="line">//日志输出</span><br><span class="line">NSLog(@&quot;appid=%@/npartid=%@/nprepayid=%@/nnoncestr=%@/ntimestamp=%ld/npackage=%@/nsign=%@&quot;,[prepayData objectForKey:@&quot;appid&quot;],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);</span><br><span class="line">return req;</span><br><span class="line">&#125;</span><br><span class="line">return nil;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///处理非支付请求的回调</span><br><span class="line">- (void)onRespCallBack:(void(^)(BaseResp * resp))callback &#123;</span><br><span class="line">self.RespCallBack = callback;</span><br><span class="line">&#125;</span><br><span class="line">///从服务器端获取到微信返回的支付请求用到的参数来发起支付请求</span><br><span class="line">- (void)startPayWithReq:(PayReq *)req callback:(void(^)(BaseResp * resp))callback &#123;</span><br><span class="line">NSAssert(req !=nil , @&quot;未成功创建微信支付请求&quot;);</span><br><span class="line">self.RespCallBack = callback;</span><br><span class="line">if ([WXApi isWXAppInstalled]) &#123; // -- 判断是否安装微信应用</span><br><span class="line">//发起微信支付,设置参数</span><br><span class="line">[WXApi sendReq:req];</span><br><span class="line">&#125;else &#123;</span><br><span class="line">self.RespCallBack(nil);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark WXApiDelegate</span><br><span class="line">- (void)onResp:(BaseResp *)resp &#123;</span><br><span class="line">if ([resp isKindOfClass:[PayResp class]]) &#123; // -- 判断是否为支付的回调</span><br><span class="line">self.RespCallBack(resp);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure><p>在需要支付的ViewController中导入工具类<code>WXPayService</code><br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5df0fd34ad6?w=1240&amp;h=695&amp;f=jpeg&amp;s=97948" alt="pay.png"></p><h2 id="4-注意点及问题"><a href="#4-注意点及问题" class="headerlink" title="4.注意点及问题"></a>4.注意点及问题</h2><h4 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h4><ul><li>设置好scheme,否则应用无法跳转到微信客户端</li><li>支付签名时的key值全部是小写的</li><li>如果支付显示验证签名失败<br>的时候，可以将packages设为默认值(Sign=WXPay)试试</li></ul><h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><blockquote><p>系统版本大于等于iOS9的，调起微信客户端之后，可以直接点击状态栏左侧按钮返回，这时是不走回调方法的。</p></blockquote><p>解决方案：<br>在AppDelegate.m的applicationWillEnterForeground方法中，调用查询支付结果接口然后刷新当然页面。需要设置bool变量作为标志，否则每次应用进入前台都去查询，就不符合业务要求了。</p><blockquote><p>进入微信支付页面之后，不做操作，切换到自己应用中，退出当前支付页面，然后再进入微信客户端点击支付或者取消，此时自己的应用会崩溃闪退</p></blockquote><p>原因：退出页面后页面已经出栈被销毁，但wx回调时还是去调用其中的代理方法，就会出现野指针。<br>解决方案：在页面的<code>viewWillDisappear</code>方法中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[WXPayService sharedManager].delegate = nil;</span><br></pre></td></tr></table></figure></p><h2 id="5-结束语"><a href="#5-结束语" class="headerlink" title="5.结束语"></a>5.结束语</h2><p>微信支付签名建议和服务端协商做二次签名，以保证支付的安全性。<br>ps: 如有不对的地方，欢迎批评指正，另外安利一下个人的<a href="http://www.chuzhaozhi.cn" target="_blank" rel="noopener">博客</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。&lt;br&gt;
     
     </summary>
     
@@ -157,6 +153,24 @@
   </entry>
   
   <entry>
+    <title>xxx.app文件已损坏，打不开，解决方案</title>
+    <link href="http://chuzhaozhi.cn/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
+    <id>http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-04-02T02:50:41.478Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p><p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p><p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>iOS上如何使用Iconfont图标</title>
     <link href="http://chuzhaozhi.cn/iOS%E4%B8%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Iconfont%E5%9B%BE%E6%A0%87.html"/>
     <id>http://chuzhaozhi.cn/iOS上如何使用Iconfont图标.html</id>
@@ -172,24 +186,6 @@
         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>xxx.app文件已损坏，打不开，解决方案</title>
-    <link href="http://chuzhaozhi.cn/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
-    <id>http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-04-02T02:50:41.478Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p><p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p><p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
     
     </summary>
     
