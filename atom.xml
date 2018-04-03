@@ -18,8 +18,8 @@
   
   <entry>
     <title>Charles抓包+Postman模拟请求</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/Charles%E6%8A%93%E5%8C%85+Postman%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/Charles抓包+Postman模拟请求/</id>
+    <link href="http://chuzhaozhi.cn/Charles%E6%8A%93%E5%8C%85+Postman%E6%A8%A1%E6%8B%9F%E8%AF%B7%E6%B1%82.html"/>
+    <id>http://chuzhaozhi.cn/Charles抓包+Postman模拟请求.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-04-02T04:43:04.493Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>Reveal---iOS项目UI调试工具使用教程</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/Reveal---iOS%E9%A1%B9%E7%9B%AEUI%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/Reveal---iOS项目UI调试工具使用教程/</id>
+    <link href="http://chuzhaozhi.cn/Reveal---iOS%E9%A1%B9%E7%9B%AEUI%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"/>
+    <id>http://chuzhaozhi.cn/Reveal---iOS项目UI调试工具使用教程.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-04-02T12:26:53.394Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>UITableViewCell上的输入框，输入不同内容</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/UITableViewCell%E4%B8%8A%E7%9A%84%E8%BE%93%E5%85%A5%E6%A1%86%EF%BC%8C%E8%BE%93%E5%85%A5%E4%B8%8D%E5%90%8C%E5%86%85%E5%AE%B9/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/UITableViewCell上的输入框，输入不同内容/</id>
+    <link href="http://chuzhaozhi.cn/UITableViewCell%E4%B8%8A%E7%9A%84%E8%BE%93%E5%85%A5%E6%A1%86%EF%BC%8C%E8%BE%93%E5%85%A5%E4%B8%8D%E5%90%8C%E5%86%85%E5%AE%B9.html"/>
+    <id>http://chuzhaozhi.cn/UITableViewCell上的输入框，输入不同内容.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-04-02T03:21:27.770Z</updated>
     
@@ -89,31 +89,9 @@
   </entry>
   
   <entry>
-    <title>iOS微信支付工具类</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/WeiXinPayService/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/WeiXinPayService/</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-03-31T14:48:14.629Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>UITableViewCell高度自适应--Xib和Masonry布局</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/UITableViewCell%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94--Xib%E5%92%8CMasonry%E5%B8%83%E5%B1%80/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/UITableViewCell高度自适应--Xib和Masonry布局/</id>
+    <link href="http://chuzhaozhi.cn/UITableViewCell%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94--Xib%E5%92%8CMasonry%E5%B8%83%E5%B1%80.html"/>
+    <id>http://chuzhaozhi.cn/UITableViewCell高度自适应--Xib和Masonry布局.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-03-31T14:56:36.502Z</updated>
     
@@ -133,9 +111,31 @@
   </entry>
   
   <entry>
+    <title>iOS微信支付工具类</title>
+    <link href="http://chuzhaozhi.cn/WeiXinPayService.html"/>
+    <id>http://chuzhaozhi.cn/WeiXinPayService.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-03-31T14:48:14.629Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决/</id>
+    <link href="http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0%E6%8A%A5%E9%94%99%E8%A7%A3%E5%86%B3.html"/>
+    <id>http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-04-02T04:44:09.297Z</updated>
     
@@ -158,8 +158,8 @@
   
   <entry>
     <title>iOS上如何使用Iconfont图标</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/iOS%E4%B8%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Iconfont%E5%9B%BE%E6%A0%87/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/iOS上如何使用Iconfont图标/</id>
+    <link href="http://chuzhaozhi.cn/iOS%E4%B8%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Iconfont%E5%9B%BE%E6%A0%87.html"/>
+    <id>http://chuzhaozhi.cn/iOS上如何使用Iconfont图标.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-03-31T14:48:10.228Z</updated>
     
@@ -180,8 +180,8 @@
   
   <entry>
     <title>xxx.app文件已损坏，打不开，解决方案</title>
-    <link href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>http://chuzhaozhi.cn/2018/03/31/xxx-app文件已损坏，打不开，解决方案/</id>
+    <link href="http://chuzhaozhi.cn/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.html"/>
+    <id>http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
     <updated>2018-04-02T02:50:41.478Z</updated>
     
