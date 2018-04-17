@@ -105,7 +105,7 @@
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5def1793359?w=894&h=1042&f=png&s=35742">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9724d9?w=1240&h=599&f=jpeg&s=89869">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5df0fd34ad6?w=1240&h=695&f=jpeg&s=97948">
-<meta property="og:updated_time" content="2018-04-03T07:29:32.272Z">
+<meta property="og:updated_time" content="2018-04-17T12:24:12.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS微信支付以及工具类">
 <meta name="twitter:description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
@@ -445,7 +445,7 @@
       
 
       
-        <p>在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。<br><a id="more"></a></p>
+        <p><blockquote class="blockquote-center"><br>在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。<br></blockquote><br><a id="more"></a></p>
 <h2 id="1-开始接入微信支付的准备工作"><a href="#1-开始接入微信支付的准备工作" class="headerlink" title="1.开始接入微信支付的准备工作"></a>1.开始接入微信支付的准备工作</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&amp;h=226&amp;f=png&amp;s=89227" alt="接入流程.png"></p>
 <p>首先你需要去<a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>注册账号,在这里要吐槽一下，不知道这个微信平台的账号密码验证机制，忘了以前的密码，重新登录，各种找回密码都不行，实在没辙，去注册个Gmail😑，登录成功后，可以看到如下界面。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef8f0630?w=1240&amp;h=299&amp;f=jpeg&amp;s=22223" alt="1.png"></p>
 <p>点击右上角的创建移动应用，一步一步填写必要填入的信息，在这里就不做多余的赘述了。<br>需要注意的是这里填入的<br>Bundle ID需要和项目的一一对应<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef7c4285?w=1240&amp;h=685&amp;f=jpeg&amp;s=50365" alt="BoundleId"><br>接下来就等一个星期左右，等待微信审核通过你就可以将微信支付SDK集成到项目中，详情可以看官方给出的<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=1417694084&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">文档</a>.<br>pod 集成方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;WechatOpenSDK&apos;</span><br></pre></td></tr></table></figure></p>
