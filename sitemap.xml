@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://chuzhaozhi.cn/about/index.html</loc>
+    
+    <lastmod>2018-07-26T07:39:13.445Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://chuzhaozhi.cn/iOS%E7%A8%8B%E5%BA%8F%E5%BC%82%E5%B8%B8Crash%E5%8F%8B%E5%A5%BD%E5%8C%96%E5%A4%84%E7%90%86.html</loc>
     
     <lastmod>2018-06-04T07:42:51.470Z</lastmod>
@@ -75,13 +82,6 @@
     <loc>http://chuzhaozhi.cn/UITableViewCell%E9%AB%98%E5%BA%A6%E8%87%AA%E9%80%82%E5%BA%94--Xib%E5%92%8CMasonry%E5%B8%83%E5%B1%80.html</loc>
     
     <lastmod>2018-03-31T14:56:36.502Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://chuzhaozhi.cn/about/index.html</loc>
-    
-    <lastmod>2018-03-31T13:48:34.656Z</lastmod>
     
   </url>
   
