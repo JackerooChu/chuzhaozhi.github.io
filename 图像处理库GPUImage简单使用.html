@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="iOS, 开发, 技术积累, 分享" />
+  <meta name="keywords" content="滤镜,GPUImage,颜色,Filter,渲染," />
 
 
 
@@ -90,25 +90,21 @@
 
 
 
-<meta name="description" content="现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。">
-<meta name="keywords" content="iOS">
+<meta name="description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GPUImage是一个基于OpenGL ES 2.0的开源的图像处理库，作者是Brad Larson。GPUImage将OpenGL ES封装为简洁的Objective-C或Swift接口，可以用来给图像、实时相机视频、电影等添加滤镜。 二、使用1.导入GPUImage两种方式a.使用 cocopods导入">
+<meta name="keywords" content="滤镜,GPUImage,颜色,Filter,渲染">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xxx.app文件已损坏，打不开，解决方案">
-<meta property="og:url" content="http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html">
+<meta property="og:title" content="Charles抓包+Postman模拟请求">
+<meta property="og:url" content="http://chuzhaozhi.cn/图像处理库GPUImage简单使用.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。">
+<meta property="og:description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GPUImage是一个基于OpenGL ES 2.0的开源的图像处理库，作者是Brad Larson。GPUImage将OpenGL ES封装为简洁的Objective-C或Swift接口，可以用来给图像、实时相机视频、电影等添加滤镜。 二、使用1.导入GPUImage两种方式a.使用 cocopods导入">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-02T02:50:41.478Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-7f593efff167175f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-b5a91c4a3cf4494f.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2018-09-19T02:29:20.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xxx.app文件已损坏，打不开，解决方案">
-<meta name="twitter:description" content="现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Charles抓包+Postman模拟请求">
+<meta name="twitter:description" content="一、介绍&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;GPUImage是一个基于OpenGL ES 2.0的开源的图像处理库，作者是Brad Larson。GPUImage将OpenGL ES封装为简洁的Objective-C或Swift接口，可以用来给图像、实时相机视频、电影等添加滤镜。 二、使用1.导入GPUImage两种方式a.使用 cocopods导入">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4905848-7f593efff167175f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -138,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/图像处理库GPUImage简单使用.html"/>
 
 
 
 
 
-  <title>xxx.app文件已损坏，打不开，解决方案 | JackerooChu的博客</title>
+  <title>Charles抓包+Postman模拟请求 | JackerooChu的博客</title>
   
 
 
@@ -325,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/图像处理库GPUImage简单使用.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -342,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">xxx.app文件已损坏，打不开，解决方案</h1>
+          <h1 class="post-title" itemprop="name headline">Charles抓包+Postman模拟请求</h1>
         
 
         <div class="post-meta">
@@ -354,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-19T10:27:19+08:00">
+                2018-09-19
               </time>
             
 
@@ -365,6 +361,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/IT技能/" itemprop="url" rel="index">
+                    <span itemprop="name">IT技能</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -373,8 +391,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/xxx-app文件已损坏，打不开，解决方案.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/xxx-app文件已损坏，打不开，解决方案.html" itemprop="commentCount"></span>
+                <a href="/图像处理库GPUImage简单使用.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/图像处理库GPUImage简单使用.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -382,7 +400,7 @@
 
           
           
-             <span id="/xxx-app文件已损坏，打不开，解决方案.html" class="leancloud_visitors" data-flag-title="xxx.app文件已损坏，打不开，解决方案">
+             <span id="/图像处理库GPUImage简单使用.html" class="leancloud_visitors" data-flag-title="Charles抓包+Postman模拟请求">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -407,7 +425,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  268
+                  2,002
                 </span>
               
 
@@ -423,7 +441,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  9
                 </span>
               
             </div>
@@ -444,13 +462,25 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p>
-<p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p>
-<p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>
+        <h2 id="一、介绍"><a href="#一、介绍" class="headerlink" title="一、介绍"></a>一、介绍</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>GPUImage</code>是一个基于<code>OpenGL ES 2.0</code>的开源的图像处理库，作者是<a href="https://link.jianshu.com/?t=https://github.com/BradLarson" target="_blank" rel="noopener">Brad Larson</a>。<code>GPUImage</code>将<code>OpenGL ES</code>封装为简洁的<code>Objective-C</code>或<code>Swift</code>接口，可以用来给图像、实时相机视频、电影等添加滤镜。</p>
+<h2 id="二、使用"><a href="#二、使用" class="headerlink" title="二、使用"></a>二、使用</h2><h3 id="1-导入GPUImage两种方式"><a href="#1-导入GPUImage两种方式" class="headerlink" title="1.导入GPUImage两种方式"></a>1.导入GPUImage两种方式</h3><h4 id="a-使用-cocopods导入"><a href="#a-使用-cocopods导入" class="headerlink" title="a.使用 cocopods导入"></a>a.使用 <code>cocopods</code>导入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">platform :ios, &apos;9.0&apos;</span><br><span class="line">target &apos;GPUImageDemo&apos; do</span><br><span class="line">pod &apos;GPUImage&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：给项目添加cocopods等操作在此不做多余赘述</p>
+</blockquote>
+<h4 id="b-手动导入"><a href="#b-手动导入" class="headerlink" title="b.手动导入"></a>b.手动导入</h4><p> （1）.首先下载GPUImage，<a href="https://github.com/BradLarson/GPUImage" target="_blank" rel="noopener">下载地址</a><br> （2）.解压后，在framework 目录下，打开<code>GPUImage.xcodeproj</code>工程<br><img src="https://upload-images.jianshu.io/upload_images/4905848-7f593efff167175f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图片来源于网络.png"><br>（3）.因为 GPUImage是一个开源的库 ，所以需要自己生成 静态库（以前的笨方法把整个工程加入项目，这在使用中出现了很不不必要的麻烦）<br>（4）.运行该工程（生成 用于真机和模拟器的lib)</p>
+<p>（5）.点击Products下的 libGPUImage.a，右键， show in finder 将 两个lib 合并（方法，详见关于 <a href="https://www.jianshu.com/p/ca2f329254e8" target="_blank" rel="noopener">创建静态库的博文</a>）</p>
+<p>（6）.将 GPUImage.h文件中包含的头文件全部 提取到 header文件中</p>
+<h3 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h3><p>（1）.导入头文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;GPUImageView.h&gt;</span><br><span class="line">#import &lt;GPUImage/GPUImage.h&gt;</span><br></pre></td></tr></table></figure></p>
+<p>（2）.使用滤镜<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">UIImage *inputImage =[UIImage imageNamed:@&quot;lzl&quot;];</span><br><span class="line">//  创建滤镜</span><br><span class="line">GPUImageVignetteFilter *disFilter = [[GPUImageVignetteFilter alloc] init];</span><br><span class="line">//设置要渲染的区域</span><br><span class="line">[self.filter forceProcessingAtSize:inputImage.size];</span><br><span class="line">[self.filter useNextFrameForImageCapture];</span><br><span class="line">//获取数据源</span><br><span class="line">GPUImagePicture *stillImageSource = [[GPUImagePicture alloc]initWithImage:inputImage];</span><br><span class="line">//添加上滤镜</span><br><span class="line">[stillImageSource addTarget:self.filter];</span><br><span class="line">//开始渲染</span><br><span class="line">[stillImageSource processImage];</span><br><span class="line">//获取渲染后的图片</span><br><span class="line">UIImage *newImage = [self.filter imageFromCurrentFramebuffer];</span><br><span class="line">//加载出来</span><br><span class="line">UIImageView *imageView = [[UIImageView alloc] initWithImage:newImage];</span><br><span class="line">imageView.frame = CGRectMake(50,0,250 ,250);</span><br><span class="line">[self.view addSubview:imageView];</span><br></pre></td></tr></table></figure></p>
+<p>（3）.效果<br><img src="https://upload-images.jianshu.io/upload_images/4905848-b5a91c4a3cf4494f.gif?imageMogr2/auto-orient/strip" alt="效果图.gif"></p>
+<h2 id="三、概念解析"><a href="#三、概念解析" class="headerlink" title="三、概念解析"></a>三、概念解析</h2><p><code>output</code>为输出源<br><code>intput</code>为输入源<br><code>filter</code>为滤镜</p>
+<blockquote>
+<p>以下为滤镜，添加了部分注释<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line">// Filters</span><br><span class="line">#import &quot;GPUImageFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageTwoInputFilter.h&quot;</span><br><span class="line">#import &quot;GPUImagePixellateFilter.h&quot;              //像素化</span><br><span class="line">#import &quot;GPUImagePixellatePositionFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageSepiaFilter.h&quot;                      // 褐色（怀旧）</span><br><span class="line">#import &quot;GPUImageColorInvertFilter.h&quot;                //  反色</span><br><span class="line">#import &quot;GPUImageSaturationFilter.h&quot;                 // 饱和度</span><br><span class="line">#import &quot;GPUImageContrastFilter.h&quot;                   // 对比度</span><br><span class="line">#import &quot;GPUImageExposureFilter.h&quot;                   //  曝光</span><br><span class="line">#import &quot;GPUImageBrightnessFilter.h&quot;                 // 亮度  </span><br><span class="line">#import &quot;GPUImageLevelsFilter.h&quot;                     // 色阶</span><br><span class="line">#import &quot;GPUImageSharpenFilter.h&quot;                    //锐化</span><br><span class="line">#import &quot;GPUImageGammaFilter.h&quot;                      //gamma：要应用的灰度调整（0.0 - 3.0，默认为1.0）</span><br><span class="line">#import &quot;GPUImageSobelEdgeDetectionFilter.h&quot;              //Sobel边缘检测算法(白边，黑内容，有点漫画的反色效果)</span><br><span class="line">#import &quot;GPUImageSketchFilter.h&quot;                         //素描</span><br><span class="line">#import &quot;GPUImageToonFilter.h&quot;                         //卡通效果（黑色粗线描边）</span><br><span class="line">#import &quot;GPUImageSmoothToonFilter.h&quot;                //相比上面的效果更细腻，上面是粗旷的画风</span><br><span class="line">#import &quot;GPUImageMultiplyBlendFilter.h&quot;              //通常用于创建阴影和深度效果</span><br><span class="line">#import &quot;GPUImageDissolveBlendFilter.h&quot;              //溶解</span><br><span class="line">#import &quot;GPUImageKuwaharaFilter.h&quot;                  //桑原(Kuwahara)滤波,水粉画的模糊效果；处理时间比较长，慎用</span><br><span class="line">#import &quot;GPUImageKuwaharaRadius3Filter.h&quot;</span><br><span class="line">#import &quot;GPUImageVignetteFilter.h&quot;                    //晕影，形成黑色圆形边缘，突出中间图像的效果</span><br><span class="line">#import &quot;GPUImageGaussianBlurFilter.h&quot;               //高斯模糊</span><br><span class="line">#import &quot;GPUImageGaussianBlurPositionFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageGaussianSelectiveBlurFilter.h&quot;         //高斯模糊，选择部分清晰</span><br><span class="line">#import &quot;GPUImageOverlayBlendFilter.h&quot;                         //叠加,通常用于创建阴影效果</span><br><span class="line">#import &quot;GPUImageDarkenBlendFilter.h&quot;                   //加深混合,通常用于重叠类型</span><br><span class="line">#import &quot;GPUImageLightenBlendFilter.h&quot;               //减淡混合,通常用于重叠类型</span><br><span class="line">#import &quot;GPUImageSwirlFilter.h&quot;                       //漩涡，中间形成卷曲的画面</span><br><span class="line">#import &quot;GPUImageSourceOverBlendFilter.h&quot;                    //源混合</span><br><span class="line">#import &quot;GPUImageColorBurnBlendFilter.h&quot;            //色彩加深混合</span><br><span class="line">#import &quot;GPUImageColorDodgeBlendFilter.h&quot;            //色彩减淡混合</span><br><span class="line">#import &quot;GPUImageScreenBlendFilter.h&quot;                //屏幕包裹,通常用于创建亮点和镜头眩光</span><br><span class="line">#import &quot;GPUImageExclusionBlendFilter.h&quot;           //排除混合</span><br><span class="line">#import &quot;GPUImageDifferenceBlendFilter.h&quot;                 //差异混合,通常用于创建更多变动的颜色</span><br><span class="line">#import &quot;GPUImageSubtractBlendFilter.h&quot;                  //差值混合,通常用于创建两个图像之间的动画变暗模糊效果</span><br><span class="line">#import &quot;GPUImageHardLightBlendFilter.h&quot;                 //强光混合,通常用于创建阴影效果</span><br><span class="line">#import &quot;GPUImageSoftLightBlendFilter.h&quot;            //柔光混合</span><br><span class="line">#import &quot;GPUImageColorBlendFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageHueBlendFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageSaturationBlendFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageLuminosityBlendFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageCropFilter.h&quot;                           //剪裁</span><br><span class="line">#import &quot;GPUImageGrayscaleFilter.h&quot;                 // 灰度</span><br><span class="line">#import &quot;GPUImageTransformFilter.h&quot;                 //形状变化</span><br><span class="line">#import &quot;GPUImageChromaKeyBlendFilter.h&quot;             //色度键混合</span><br><span class="line">#import &quot;GPUImageHazeFilter.h&quot;                      //朦胧加暗</span><br><span class="line">#import &quot;GPUImageLuminanceThresholdFilter.h&quot;          //亮度阈</span><br><span class="line">#import &quot;GPUImagePosterizeFilter.h&quot;                 //色调分离，形成噪点效果</span><br><span class="line">#import &quot;GPUImageBoxBlurFilter.h&quot;                    //盒状模糊</span><br><span class="line">#import &quot;GPUImageAdaptiveThresholdFilter.h&quot;              //自适应阈值</span><br><span class="line">#import &quot;GPUImageUnsharpMaskFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageBulgeDistortionFilter.h&quot;            //凸起失真，鱼眼效果</span><br><span class="line">#import &quot;GPUImagePinchDistortionFilter.h&quot;        //收缩失真，凹面镜</span><br><span class="line">#import &quot;GPUImageCrosshatchFilter.h&quot;            //交叉线阴影，形成黑白网状画面</span><br><span class="line">#import &quot;GPUImageCGAColorspaceFilter.h&quot;          //CGA色彩滤镜，形成黑、浅蓝、紫色块的画面</span><br><span class="line">#import &quot;GPUImagePolarPixellateFilter.h&quot;             //同心圆像素化</span><br><span class="line">#import &quot;GPUImageStretchDistortionFilter.h&quot;      //伸展失真，哈哈镜</span><br><span class="line">#import &quot;GPUImagePerlinNoiseFilter.h&quot;         //柏林噪点，花边噪点</span><br><span class="line">#import &quot;GPUImageJFAVoronoiFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageVoronoiConsumerFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageMosaicFilter.h&quot;                      //黑白马赛克</span><br><span class="line">#import &quot;GPUImageTiltShiftFilter.h&quot;                 //条纹模糊，中间清晰，上下两端模糊</span><br><span class="line">#import &quot;GPUImage3x3ConvolutionFilter.h&quot;        //3x3卷积，高亮大色块变黑，加亮边缘、线条等</span><br><span class="line">#import &quot;GPUImageEmbossFilter.h&quot;                        //浮雕效果，带有点3d的感觉</span><br><span class="line">#import &quot;GPUImageCannyEdgeDetectionFilter.h&quot;        //Canny边缘检测算法</span><br><span class="line">#import &quot;GPUImageThresholdEdgeDetectionFilter.h&quot;         //阈值边缘检测（效果与上差别不大）</span><br><span class="line">#import &quot;GPUImageMaskFilter.h&quot;                                //遮罩混合</span><br><span class="line">#import &quot;GPUImageHistogramFilter.h&quot;                 // 色彩直方图，显示在图片上</span><br><span class="line">#import &quot;GPUImageHistogramGenerator.h&quot;              // 色彩直方图</span><br><span class="line">#import &quot;GPUImageHistogramEqualizationFilter.h&quot;</span><br><span class="line">#import &quot;GPUImagePrewittEdgeDetectionFilter.h&quot;      //普瑞维特(Prewitt)边缘检测(效果与Sobel差不多，貌似更平滑)</span><br><span class="line">#import &quot;GPUImageXYDerivativeFilter.h&quot;            //XYDerivative边缘检测，画面以蓝色为主，绿色为边缘，带彩色</span><br><span class="line">#import &quot;GPUImageHarrisCornerDetectionFilter.h&quot;      //Harris角点检测，会有绿色小十字显示在图片角点处</span><br><span class="line">#import &quot;GPUImageAlphaBlendFilter.h&quot;                 //透明混合,通常用于在背景上应用前景的透明度</span><br><span class="line">#import &quot;GPUImageNormalBlendFilter.h&quot;                   //正常</span><br><span class="line">#import &quot;GPUImageNonMaximumSuppressionFilter.h&quot;                  //非最大抑制，只显示亮度最高的像素，其他为黑</span><br><span class="line">#import &quot;GPUImageRGBFilter.h&quot;                      //  RGB</span><br><span class="line">#import &quot;GPUImageMedianFilter.h&quot;                     //中间值，有种稍微模糊边缘的效果</span><br><span class="line">#import &quot;GPUImageBilateralFilter.h&quot;              //双边模糊</span><br><span class="line">#import &quot;GPUImageCrosshairGenerator.h&quot;      //十字</span><br><span class="line">#import &quot;GPUImageToneCurveFilter.h&quot;             // 色调曲线</span><br><span class="line">#import &quot;GPUImageNobleCornerDetectionFilter.h&quot;  //Noble角点检测，检测点更多</span><br><span class="line">#import &quot;GPUImageShiTomasiFeatureDetectionFilter.h&quot;   //ShiTomasi角点检测，与上差别不大</span><br><span class="line">#import &quot;GPUImageErosionFilter.h&quot;            //侵蚀边缘模糊，变黑白</span><br><span class="line">#import &quot;GPUImageRGBErosionFilter.h&quot;           //RGB侵蚀边缘模糊，有色彩</span><br><span class="line">#import &quot;GPUImageDilationFilter.h&quot;                   //扩展边缘模糊，变黑白</span><br><span class="line">#import &quot;GPUImageRGBDilationFilter.h&quot;                //RGB扩展边缘模糊，有色彩</span><br><span class="line">#import &quot;GPUImageOpeningFilter.h&quot;           //黑白色调模糊</span><br><span class="line">#import &quot;GPUImageRGBOpeningFilter.h&quot;        //RGB扩展边缘模糊，有色彩</span><br><span class="line">#import &quot;GPUImageClosingFilter.h&quot;           //黑白色调模糊，暗色会被提亮</span><br><span class="line">#import &quot;GPUImageRGBClosingFilter.h&quot;        //彩色模糊，暗色会被提亮</span><br><span class="line">#import &quot;GPUImageColorPackingFilter.h&quot;      //色彩丢失，模糊（类似监控摄像效果）</span><br><span class="line">#import &quot;GPUImageSphereRefractionFilter.h&quot;    //球形折射，图形倒立</span><br><span class="line">#import &quot;GPUImageMonochromeFilter.h&quot;            // 单色</span><br><span class="line">#import &quot;GPUImageOpacityFilter.h&quot;               // 不透明度</span><br><span class="line">#import &quot;GPUImageHighlightShadowFilter.h&quot;       // 提亮阴影</span><br><span class="line">#import &quot;GPUImageFalseColorFilter.h&quot;            // 色彩替换（替换亮部和暗部色彩）</span><br><span class="line">#import &quot;GPUImageHSBFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageHueFilter.h&quot;                   //色度</span><br><span class="line">#import &quot;GPUImageGlassSphereFilter.h&quot;          //水晶球效果</span><br><span class="line">#import &quot;GPUImageLookupFilter.h&quot;                 //lookup 色彩调整</span><br><span class="line">#import &quot;GPUImageAmatorkaFilter.h&quot;               //Amatorka lookup</span><br><span class="line">#import &quot;GPUImageMissEtikateFilter.h&quot;                //MissEtikate lookup</span><br><span class="line">#import &quot;GPUImageSoftEleganceFilter.h&quot;          //SoftElegance lookup</span><br><span class="line">#import &quot;GPUImageAddBlendFilter.h&quot;          //通常用于创建两个图像之间的动画变亮模糊效果</span><br><span class="line">#import &quot;GPUImageDivideBlendFilter.h&quot;           //通常用于创建两个图像之间的动画变暗模糊效果</span><br><span class="line">#import &quot;GPUImagePolkaDotFilter.h&quot;           //像素圆点花样</span><br><span class="line">#import &quot;GPUImageLocalBinaryPatternFilter.h&quot;   //图像黑白化，并有大量噪点</span><br><span class="line">#import &quot;GPUImageLanczosResamplingFilter.h&quot;          //Lanczos重取样，模糊效果</span><br><span class="line">#import &quot;GPUImageAverageColor.h&quot;                 //像素平均色值</span><br><span class="line">#import &quot;GPUImageSolidColorGenerator.h&quot;           //纯色</span><br><span class="line">#import &quot;GPUImageLuminosity.h&quot;                  //亮度平均</span><br><span class="line">#import &quot;GPUImageAverageLuminanceThresholdFilter.h&quot;   //像素色值亮度平均，图像黑白（有类似漫画效果）</span><br><span class="line">#import &quot;GPUImageWhiteBalanceFilter.h&quot;              //白平横</span><br><span class="line">#import &quot;GPUImageChromaKeyFilter.h&quot;                 //色度键</span><br><span class="line">#import &quot;GPUImageLowPassFilter.h&quot;            //用于图像加亮</span><br><span class="line">#import &quot;GPUImageHighPassFilter.h&quot;               //图像低于某值时显示为黑</span><br><span class="line">#import &quot;GPUImageMotionDetector.h&quot;        //动作检测</span><br><span class="line">#import &quot;GPUImageHalftoneFilter.h&quot;         //点染,图像黑白化，由黑点构成原图的大致图形</span><br><span class="line">#import &quot;GPUImageThresholdedNonMaximumSuppressionFilter.h&quot;          //非最大抑制，只显示亮度最高的像素，其他为黑，像素丢失更多</span><br><span class="line">#import &quot;GPUImageHoughTransformLineDetector.h&quot;    //线条检测</span><br><span class="line">#import &quot;GPUImageParallelCoordinateLineTransformFilter.h&quot;  //平行线检测</span><br><span class="line">#import &quot;GPUImageThresholdSketchFilter.h&quot;    //阀值素描，形成有噪点的素描</span><br><span class="line">#import &quot;GPUImageLineGenerator.h&quot;           // 线条</span><br><span class="line">#import &quot;GPUImageLinearBurnBlendFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageGaussianBlurPositionFilter.h&quot;</span><br><span class="line">#import &quot;GPUImagePixellatePositionFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageTwoInputCrossTextureSamplingFilter.h&quot;</span><br><span class="line">#import &quot;GPUImagePoissonBlendFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageMotionBlurFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageZoomBlurFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageLaplacianFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageiOSBlurFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageLuminanceRangeFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageDirectionalNonMaximumSuppressionFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageDirectionalSobelEdgeDetectionFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageSingleComponentGaussianBlurFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageThreeInputFilter.h&quot;</span><br><span class="line">#import &quot;GPUImageWeakPixelInclusionFilter.h&quot;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>代码<a href="https://github.com/chuzhaozhi/GPUImageDemo.git" target="_blank" rel="noopener">传送门</a><br>  更多文章请访问<a href="http://chuzhaozhi.cn">个人博客</a></p>
+</blockquote>
+<p>ps: 大神请轻喷，如果觉得还行，请点个star，谢谢！</p>
 
       
     </div>
@@ -510,7 +540,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html" title="xxx.app文件已损坏，打不开，解决方案">http://chuzhaozhi.cn/xxx-app文件已损坏，打不开，解决方案.html</a>
+    <a href="http://chuzhaozhi.cn/图像处理库GPUImage简单使用.html" title="Charles抓包+Postman模拟请求">http://chuzhaozhi.cn/图像处理库GPUImage简单使用.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -523,6 +553,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/滤镜/" rel="tag"><i class="fa fa-tag"></i>  滤镜</a>
+          
+            <a href="/tags/GPUImage/" rel="tag"><i class="fa fa-tag"></i>  GPUImage</a>
+          
+            <a href="/tags/颜色/" rel="tag"><i class="fa fa-tag"></i>  颜色</a>
+          
+            <a href="/tags/Filter/" rel="tag"><i class="fa fa-tag"></i>  Filter</a>
+          
+            <a href="/tags/渲染/" rel="tag"><i class="fa fa-tag"></i>  渲染</a>
+          
+        </div>
+      
 
       
       
@@ -532,8 +576,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/UITableViewCell高度自适应--Xib和Masonry布局.html" rel="next" title="UITableViewCell高度自适应--Xib和Masonry布局">
-                <i class="fa fa-chevron-left"></i> UITableViewCell高度自适应--Xib和Masonry布局
+              <a href="/多级Push页面后优雅的返回指定控制器几种方法.html" rel="next" title="多级Push页面后优雅的返回指定控制器几种方法">
+                <i class="fa fa-chevron-left"></i> 多级Push页面后优雅的返回指定控制器几种方法
               </a>
             
           </div>
@@ -541,10 +585,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/UITableViewCell上的输入框，输入不同内容.html" rel="prev" title="UITableViewCell上的输入框，输入不同内容">
-                UITableViewCell上的输入框，输入不同内容 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -637,8 +677,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -743,6 +792,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、介绍"><span class="nav-number">1.</span> <span class="nav-text">一、介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、使用"><span class="nav-number">2.</span> <span class="nav-text">二、使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-导入GPUImage两种方式"><span class="nav-number">2.1.</span> <span class="nav-text">1.导入GPUImage两种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-使用-cocopods导入"><span class="nav-number">2.1.1.</span> <span class="nav-text">a.使用 cocopods导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-手动导入"><span class="nav-number">2.1.2.</span> <span class="nav-text">b.手动导入</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用"><span class="nav-number">2.2.</span> <span class="nav-text">2.使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、概念解析"><span class="nav-number">3.</span> <span class="nav-text">三、概念解析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
