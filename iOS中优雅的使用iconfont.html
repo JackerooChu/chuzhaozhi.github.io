@@ -374,15 +374,14 @@
           
             
               <span class="post-comments-count">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-comment-o"></i>
-              </span>
-              
-                <a href="/iOS中优雅的使用iconfont.html#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="iOS中优雅的使用iconfont.html" itemprop="commentsCount"></span>
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/iOS中优雅的使用iconfont.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/iOS中优雅的使用iconfont.html" itemprop="commentCount"></span>
                 </a>
-              
+              </span>
             
           
 
@@ -630,8 +629,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/WeiXinPayService.html" rel="next" title="iOS微信支付以及工具类">
-                <i class="fa fa-chevron-left"></i> iOS微信支付以及工具类
+              <a href="/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html" rel="next" title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
+                <i class="fa fa-chevron-left"></i> Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决
               </a>
             
           </div>
@@ -711,9 +710,7 @@
 
   
     <div class="comments" id="comments">
-      <div id="SOHUCS"></div>
     </div>
-
   
 
 
@@ -1146,26 +1143,33 @@
 
 
 
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
-    <script type="text/javascript">
-    (function(){
-      var appid = 'cytQ7BaTu';
-      var conf = '5f748bb48da20b261505852772a3e99b';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      if (width < 960) {
-      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
-        window.changyan.api.config({appid:appid,conf:conf})});
-      }
-    })();
-    </script>
-    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
-  
-
-
-
-
-
-
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: true,
+        appId: '8lLHEJN0b5CQM0z0zwINSAKj-gzGzoHsz',
+        appKey: 'P8FLghl21NYuCyoqdDB0o1WA',
+        placeholder: '既然来了，那就留下你的足迹吧~',
+        avatar:'monsterid',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
