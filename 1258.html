@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="iconfont,iOS" />
+  <meta name="keywords" content="Carsh,崩溃拦截," />
 
 
 
@@ -90,28 +90,21 @@
 
 
 
-<meta name="description" content="1.什么是iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图标库下载自己需要的图标。  2.为什么要使用iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;e">
-<meta name="keywords" content="iconfont,iOS">
+<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：">
+<meta name="keywords" content="Carsh,崩溃拦截">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS中优雅的使用iconfont">
-<meta property="og:url" content="http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html">
+<meta property="og:title" content="iOS程序异常Crash友好化处理">
+<meta property="og:url" content="http://chuzhaozhi.cn/1258.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="1.什么是iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图标库下载自己需要的图标。  2.为什么要使用iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;e">
+<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fbd94fa67dea?w=419&h=272&f=gif&s=19630995">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bc5fcbc?w=1240&h=754&f=jpeg&s=34197">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c1c16e4?w=1108&h=858&f=jpeg&s=102941">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c2668b4?w=1240&h=670&f=jpeg&s=81590">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c25f899?w=1240&h=605&f=jpeg&s=73436">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fbe92dd04385?w=840&h=524&f=gif&s=29884118">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988d49c856?w=436&h=338&f=jpeg&s=19892">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bfb497c?w=748&h=1370&f=jpeg&s=28831">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb98b5f56ef5?w=1240&h=753&f=jpeg&s=86665">
-<meta property="og:updated_time" content="2018-04-17T12:25:58.158Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-21bc956920f2ba63.gif?imageMogr2/auto-orient/strip">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-34a1195e5cc15ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-28T06:50:41.582Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS中优雅的使用iconfont">
-<meta name="twitter:description" content="1.什么是iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图标库下载自己需要的图标。  2.为什么要使用iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;e">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fbd94fa67dea?w=419&h=272&f=gif&s=19630995">
+<meta name="twitter:title" content="iOS程序异常Crash友好化处理">
+<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4905848-21bc956920f2ba63.gif?imageMogr2/auto-orient/strip">
 
 
 
@@ -141,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/1258.html"/>
 
 
 
 
 
-  <title>iOS中优雅的使用iconfont | JackerooChu的博客</title>
+  <title>iOS程序异常Crash友好化处理 | JackerooChu的博客</title>
   
 
 
@@ -325,12 +318,12 @@
   
   
 
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/1258.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -347,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS中优雅的使用iconfont</h1>
+          <h1 class="post-title" itemprop="name headline">iOS程序异常Crash友好化处理</h1>
         
 
         <div class="post-meta">
@@ -359,8 +352,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T16:32:40+08:00">
-                2018-04-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T15:33:50+08:00">
+                2018-06-04
               </time>
             
 
@@ -370,6 +363,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ios/" itemprop="url" rel="index">
+                    <span itemprop="name">ios</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -378,8 +393,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/iOS中优雅的使用iconfont.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/iOS中优雅的使用iconfont.html" itemprop="commentCount"></span>
+                <a href="/1258.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/1258.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,7 +402,7 @@
 
           
           
-             <span id="/iOS中优雅的使用iconfont.html" class="leancloud_visitors" data-flag-title="iOS中优雅的使用iconfont">
+             <span id="/1258.html" class="leancloud_visitors" data-flag-title="iOS程序异常Crash友好化处理">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -412,7 +427,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  1,485
+                  1,224
                 </span>
               
 
@@ -428,7 +443,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  5
                 </span>
               
             </div>
@@ -449,64 +464,170 @@
       
 
       
-        <h2 id="1-什么是iconfont"><a href="#1-什么是iconfont" class="headerlink" title="1.什么是iconfont"></a>1.什么是iconfont</h2><blockquote class="blockquote-center"><br>&ensp;&ensp;&ensp;&ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont图标库</a>下载自己需要的图标。<br></blockquote>
-
-<h2 id="2-为什么要使用iconfont"><a href="#2-为什么要使用iconfont" class="headerlink" title="2.为什么要使用iconfont"></a>2.为什么要使用iconfont</h2><p>&ensp;&ensp;&ensp;&ensp;在开发项目时，不可避免的会用到各种图标，为了适配不同的设备，通常需要@2x和@3x两套图，例如说我们tabBar上使用的图标。有些app有换肤的需要，还需要多套不同的图来进行匹配不同的主题。如果使用切图，这对于设计和开发来说无疑是增加了工作量，而且ipa的体积也会增大。</p>
-<p>使用iconfont的好处:</p>
-<ol>
-<li>减小ipa包的大小</li>
-<li>图标保真缩放，多设备适配一套图解决问题</li>
-<li>适应换肤要求，使用方便。</li>
-</ol>
-<h2 id="3-怎么用iconfont"><a href="#3-怎么用iconfont" class="headerlink" title="3.怎么用iconfont"></a>3.怎么用iconfont</h2><h6 id="1-首先去iconfont图标库下载自己需要的图标。"><a href="#1-首先去iconfont图标库下载自己需要的图标。" class="headerlink" title="1. 首先去iconfont图标库下载自己需要的图标。"></a>1. 首先去<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont图标库</a>下载自己需要的图标。</h6><p><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fbd94fa67dea?w=419&amp;h=272&amp;f=gif&amp;s=19630995" alt="下载图片"></p>
-<p>如图我们可以选择自己需要的icon加入到购物车，然后加入项目里，当然你也可以直接在购物车直接下载，但是这样只是没有修改icon为自己想要的样式，加入项目中，你可以自己任意修改icon为自己想要的样式。<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bc5fcbc?w=1240&amp;h=754&amp;f=jpeg&amp;s=34197" alt="购物车直接下载"></p>
-<blockquote>
-<p>注意：这里是下载代码，这样我们就可以在项目中直接使用</p>
-</blockquote>
-<h6 id="2-将下载下来的icon资源添加到自己的项目中。"><a href="#2-将下载下来的icon资源添加到自己的项目中。" class="headerlink" title="2.将下载下来的icon资源添加到自己的项目中。"></a>2.将下载下来的icon资源添加到自己的项目中。</h6><p><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c1c16e4?w=1108&amp;h=858&amp;f=jpeg&amp;s=102941" alt="下载之后文件夹内容"><br>我们所需要的就是这个iconfont.ttf，对于这个ttf文件，我想我们并不陌生吧。新建项目，将这个ttf文件拖入自己的项目里。<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c2668b4?w=1240&amp;h=670&amp;f=jpeg&amp;s=81590" alt="加入项目"></p>
-<blockquote>
-<p>注意：勾选如图选项</p>
-</blockquote>
-<p>接下来配置项目加载这个文件</p>
+        <p><blockquote class="blockquote-center"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：<br></blockquote><br><a id="more"></a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-21bc956920f2ba63.gif?imageMogr2/auto-orient/strip" alt="carsh.gif"></p>
+<h2 id="效果实现："><a href="#效果实现：" class="headerlink" title="效果实现："></a>效果实现：</h2><p><img src="https://upload-images.jianshu.io/upload_images/4905848-34a1195e5cc15ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="demo截图"></p>
+<h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>1.将截图的中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.在```AppDelegate.m```中找到以下方法并如下添加代码：</span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>检查文件是否在项目中，不然会崩溃<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c25f899?w=1240&amp;h=605&amp;f=jpeg&amp;s=73436" alt="check"></li>
-<li>在plist文件中加入字体<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fbe92dd04385?w=840&amp;h=524&amp;f=gif&amp;s=29884118" alt="plist"><br>接下来我们借助淘点点科技写的一个关于iconfont封装，方便我们使用iconfont。iconfont的封装包括<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988d49c856?w=436&amp;h=338&amp;f=jpeg&amp;s=19892" alt="工具类"></li>
+<li><p>(BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions {<br>  // Override point for customization after application launch.</p>
+<p>  [UncaughtExceptionHandler installUncaughtExceptionHandler:YES showAlert:YES];<br>  return YES;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以上代码就可以实现稍微友好一点的crash拦截处理。</span><br><span class="line">## 代码解释：</span><br><span class="line">```UncaughtExceptionHandler.h```主要代码：</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<ol>
-<li><p><code>TBCityIconInfo.h</code>的实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line"></span><br><span class="line">@interface TBCityIconInfo : NSObject</span><br><span class="line"></span><br><span class="line">@property (nonatomic, strong) NSString *text;</span><br><span class="line">@property (nonatomic, assign) NSInteger size;</span><br><span class="line">@property (nonatomic, strong) UIColor *color;</span><br><span class="line"></span><br><span class="line">- (instancetype)initWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color;</span><br><span class="line">+ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>#import &lt;Foundation/Foundation.h&gt;</p>
+<p>#import &lt;UIKit/UIKit.h&gt;</p>
+<p>@interface UncaughtExceptionHandler : NSObject</p>
+<p>/*!</p>
+<ul>
+<li>异常的处理方法<br>*</li>
+<li>@param install   是否开启捕获异常</li>
+<li>@param showAlert 是否在发生异常时弹出alertView<br>*/<ul>
+<li>(void)installUncaughtExceptionHandler:(BOOL)install showAlert:(BOOL)showAlert;<br>@end<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```UncaughtExceptionHandler.m```文件主要的代码如下：</span><br><span class="line">#### 1.发送异常信号</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>TBCityIconInfo.m</code>的实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;TBCityIconInfo.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation TBCityIconInfo</span><br><span class="line"></span><br><span class="line">- (instancetype)initWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color &#123;</span><br><span class="line">if (self = [super init]) &#123;</span><br><span class="line">self.text = text;</span><br><span class="line">self.size = size;</span><br><span class="line">self.color = color;</span><br><span class="line">&#125;</span><br><span class="line">return self;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color &#123;</span><br><span class="line">return [[TBCityIconInfo alloc] initWithText:text size:size color:color];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</ul>
 </li>
-<li><p><code>TBCityIconFont.h</code>的实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;UIImage+TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;TBCityIconInfo.h&quot;</span><br><span class="line"></span><br><span class="line">#define TBCityIconInfoMake(text, imageSize, imageColor) [TBCityIconInfo iconInfoWithText:text size:imageSize color:imageColor]</span><br><span class="line"></span><br><span class="line">@interface TBCityIconFont : NSObject</span><br><span class="line"></span><br><span class="line">+ (UIFont *)fontWithSize: (CGFloat)size;</span><br><span class="line">+ (void)setFontName:(NSString *)fontName;</span><br></pre></td></tr></table></figure>
+</ul>
+<p>/*</p>
+<ul>
+<li>异常的处理方法<br>*</li>
+<li>@param install   是否开启捕获异常</li>
+<li><p>@param showAlert 是否在发生异常时弹出alertView<br>*/</p>
+<ul>
+<li>(void)installUncaughtExceptionHandler:(BOOL)install showAlert:(BOOL)showAlert {</li>
+</ul>
+<p>if (install &amp;&amp; showAlert) {</p>
+<pre><code>[[self alloc] alertView:showAlert];
+</code></pre><p>}</p>
+<p>NSSetUncaughtExceptionHandler(install ? HandleException : NULL);<br>signal(SIGABRT, install ? SignalHandler : SIG_DFL);<br>signal(SIGILL, install ? SignalHandler : SIG_DFL);<br>signal(SIGSEGV, install ? SignalHandler : SIG_DFL);<br>signal(SIGFPE, install ? SignalHandler : SIG_DFL);<br>signal(SIGBUS, install ? SignalHandler : SIG_DFL);<br>signal(SIGPIPE, install ? SignalHandler : SIG_DFL);<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　产生上述的signal的时候就会调用我们定义的```SignalHandler```来处理异常。</span><br><span class="line"> &gt; ps: NSSetUncaughtExceptionHandler就是iOS SDK中提供的一个现成的函数,用来捕获异常的方法，使用方便。但它不能捕获抛出的signal，所以定义了SignalHandler方法。</span><br><span class="line"></span><br><span class="line">#### 2.处理异常</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>TBCityIconFont.m</code>的实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &lt;CoreText/CoreText.h&gt;</span><br><span class="line"></span><br><span class="line">@implementation TBCityIconFont</span><br><span class="line"></span><br><span class="line">static NSString *_fontName;</span><br><span class="line"></span><br><span class="line">+ (void)registerFontWithURL:(NSURL *)url &#123;</span><br><span class="line">NSAssert([[NSFileManager defaultManager] fileExistsAtPath:[url path]], @&quot;Font file doesn&apos;t exist&quot;);</span><br><span class="line">CGDataProviderRef fontDataProvider = CGDataProviderCreateWithURL((__bridge CFURLRef)url);</span><br><span class="line">CGFontRef newFont = CGFontCreateWithDataProvider(fontDataProvider);</span><br><span class="line">CGDataProviderRelease(fontDataProvider);</span><br><span class="line">CTFontManagerRegisterGraphicsFont(newFont, nil);</span><br><span class="line">CGFontRelease(newFont);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (UIFont *)fontWithSize:(CGFloat)size &#123;</span><br><span class="line">UIFont *font = [UIFont fontWithName:[self fontName] size:size];</span><br><span class="line">if (font == nil) &#123;</span><br><span class="line">NSURL *fontFileUrl = [[NSBundle mainBundle] URLForResource:[self fontName] withExtension:@&quot;ttf&quot;];</span><br><span class="line">[self registerFontWithURL: fontFileUrl];</span><br><span class="line">font = [UIFont fontWithName:[self fontName] size:size];</span><br><span class="line">NSAssert(font, @&quot;UIFont object should not be nil, check if the font file is added to the application bundle and you&apos;re using the correct font name.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">return font;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (void)setFontName:(NSString *)fontName &#123;</span><br><span class="line">_fontName = fontName;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ (NSString *)fontName &#123;</span><br><span class="line">return _fontName ? : @&quot;iconfont&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</ul>
+<p>void HandleException(NSException *exception) {</p>
+<pre><code>int32_t exceptionCount = OSAtomicIncrement32(&amp;UncaughtExceptionCount);
+// 如果太多不用处理
+if (exceptionCount &gt; UncaughtExceptionMaximum) {
+    return;
+}
+
+//获取调用堆栈
+NSArray *callStack = [exception callStackSymbols];
+NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:[exception userInfo]];
+[userInfo setObject:callStack forKey:UncaughtExceptionHandlerAddressesKey];
+
+//在主线程中，执行制定的方法, withObject是执行方法传入的参数
+[[[UncaughtExceptionHandler alloc] init]
+ performSelectorOnMainThread:@selector(handleException:)
+ withObject:
+ [NSException exceptionWithName:[exception name]
+                         reason:[exception reason]
+                       userInfo:userInfo]
+ waitUntilDone:YES];
+</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">该方法就是对应```NSSetUncaughtExceptionHandler```的处理，只要方法关联到这个函数，那么发生相应错误时会自动调用该函数，调用时会传入```exception```参数。获取异常后会将捕获的异常传入最终调用处理的```handleException```函数。</span><br><span class="line">#### 3.无法捕获的signal处理</span><br></pre></td></tr></table></figure>
+<p>//处理signal报错<br>void SignalHandler(int signal) {</p>
+<pre><code>int32_t exceptionCount = OSAtomicIncrement32(&amp;UncaughtExceptionCount);
+// 如果太多不用处理
+if (exceptionCount &gt; UncaughtExceptionMaximum) {
+    return;
+}
+
+NSString* description = nil;
+switch (signal) {
+    case SIGABRT:
+        description = [NSString stringWithFormat:@&quot;Signal SIGABRT was raised!\n&quot;];
+        break;
+    case SIGILL:
+        description = [NSString stringWithFormat:@&quot;Signal SIGILL was raised!\n&quot;];
+        break;
+    case SIGSEGV:
+        description = [NSString stringWithFormat:@&quot;Signal SIGSEGV was raised!\n&quot;];
+        break;
+    case SIGFPE:
+        description = [NSString stringWithFormat:@&quot;Signal SIGFPE was raised!\n&quot;];
+        break;
+    case SIGBUS:
+        description = [NSString stringWithFormat:@&quot;Signal SIGBUS was raised!\n&quot;];
+        break;
+    case SIGPIPE:
+        description = [NSString stringWithFormat:@&quot;Signal SIGPIPE was raised!\n&quot;];
+        break;
+    default:
+        description = [NSString stringWithFormat:@&quot;Signal %d was raised!&quot;,signal];
+}
+
+NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+NSArray *callStack = [UncaughtExceptionHandler backtrace];
+[userInfo setObject:callStack forKey:UncaughtExceptionHandlerAddressesKey];
+[userInfo setObject:[NSNumber numberWithInt:signal] forKey:UncaughtExceptionHandlerSignalKey];
+
+//在主线程中，执行指定的方法, withObject是执行方法传入的参数
+[[[UncaughtExceptionHandler alloc] init]
+ performSelectorOnMainThread:@selector(handleException:)
+ withObject:
+ [NSException exceptionWithName:UncaughtExceptionHandlerSignalExceptionName
+                         reason: description
+                       userInfo: userInfo]
+ waitUntilDone:YES];
+</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">以上方法是对于捕获不到的signal信号进行处理，列出常见的异常类型。</span><br><span class="line">#### 4.堆栈调用</span><br></pre></td></tr></table></figure>
+<p>//获取调用堆栈</p>
+<ul>
+<li><p>(NSArray *)backtrace {</p>
+<p>  //指针列表<br>  void<em> callstack[128];<br>  //backtrace用来获取当前线程的调用堆栈，获取的信息存放在这里的callstack中<br>  //128用来指定当前的buffer中可以保存多少个void</em>元素<br>  //返回值是实际获取的指针个数<br>  int frames = backtrace(callstack, 128);<br>  //backtrace_symbols将从backtrace函数获取的信息转化为一个字符串数组<br>  //返回一个指向字符串数组的指针<br>  //每个字符串包含了一个相对于callstack中对应元素的可打印信息，包括函数名、偏移地址、实际返回地址<br>  char **strs = backtrace_symbols(callstack, frames);</p>
+<p>  int i;<br>  NSMutableArray *backtrace = [NSMutableArray arrayWithCapacity:frames];<br>  for (i = 0; i &lt; frames; i++) {</p>
+<pre><code>[backtrace addObject:[NSString stringWithUTF8String:strs[i]]];
+</code></pre><p>  }<br>  free(strs);</p>
+<p>  return backtrace;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; backtrace是Linux下用来追踪函数调用堆栈以及定位段错误的函数。</span><br><span class="line">#### 5.使用UIAlerView进行友好化提示</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>UIImage+TBCityIconFont.h</code>的实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">#import &quot;TBCityIconInfo.h&quot;</span><br><span class="line"></span><br><span class="line">@interface UIImage (TBCityIconFont)</span><br><span class="line"></span><br><span class="line">+ (UIImage *)iconWithInfo:(TBCityIconInfo *)info;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</ul>
+<ul>
+<li><p>(void)handleException:(NSException *)exception {</p>
+<p>  [self validateAndSaveCriticalApplicationData:exception];</p>
+<p>  if (!showAlertView) {</p>
+<pre><code>return;
+</code></pre><p>  }</p>
 </li>
-<li><p><code>UIImage+TBCityIconFont.m</code>的实现</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;UIImage+TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &lt;CoreText/CoreText.h&gt;</span><br><span class="line"></span><br><span class="line">@implementation UIImage (TBCityIconFont)</span><br><span class="line"></span><br><span class="line">+ (UIImage *)iconWithInfo:(TBCityIconInfo *)info &#123;</span><br><span class="line">CGFloat size = info.size;</span><br><span class="line">CGFloat scale = [UIScreen mainScreen].scale;</span><br><span class="line">CGFloat realSize = size * scale;</span><br><span class="line">UIFont *font = [TBCityIconFont fontWithSize:realSize];</span><br><span class="line">UIGraphicsBeginImageContext(CGSizeMake(realSize, realSize));</span><br><span class="line">CGContextRef context = UIGraphicsGetCurrentContext();</span><br><span class="line"></span><br><span class="line">if ([info.text respondsToSelector:@selector(drawAtPoint:withAttributes:)]) &#123;</span><br><span class="line">/**</span><br><span class="line">* 如果这里抛出异常，请打开断点列表，右击All Exceptions -&gt; Edit Breakpoint -&gt; All修改为Objective-C</span><br><span class="line">* See: http://stackoverflow.com/questions/1163981/how-to-add-a-breakpoint-to-objc-exception-throw/14767076#14767076</span><br><span class="line">*/</span><br><span class="line">[info.text drawAtPoint:CGPointZero withAttributes:@&#123;NSFontAttributeName:font, NSForegroundColorAttributeName: info.color&#125;];</span><br><span class="line">&#125; else &#123;</span><br><span class="line"></span><br><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span><br><span class="line">CGContextSetFillColorWithColor(context, info.color.CGColor);</span><br><span class="line">[info.text drawAtPoint:CGPointMake(0, 0) withFont:font];</span><br><span class="line">#pragma clang pop</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">UIImage *image = [UIImage imageWithCGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage scale:scale orientation:UIImageOrientationUp];</span><br><span class="line">UIGraphicsEndImageContext();</span><br><span class="line"></span><br><span class="line">return image;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h5 id="3-具体使用方法"><a href="#3-具体使用方法" class="headerlink" title="3.具体使用方法"></a>3.具体使用方法</h5><p>1.在<code>AppDelegate.m</code>中，初始化iconfont<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;AppDelegate.h&quot;</span><br><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;ViewController.h&quot;</span><br><span class="line">@interface AppDelegate ()</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation AppDelegate</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">// Override point for customization after application launch.</span><br><span class="line">[TBCityIconFont setFontName:@&quot;iconfont&quot;];</span><br><span class="line">UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];</span><br><span class="line">self.window.rootViewController = nav;</span><br><span class="line">[self.window makeKeyAndVisible];</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>在<code>ViewController.m</code>中实现<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;ViewController.h&quot;</span><br><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;UIImage+TBCityIconFont.h&quot;</span><br><span class="line">@interface ViewController ()</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation ViewController</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad &#123;</span><br><span class="line">[super viewDidLoad];</span><br><span class="line">self.view.backgroundColor = [UIColor  whiteColor];</span><br><span class="line">UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 30, 30)];</span><br><span class="line">[self.view addSubview:imageView];</span><br><span class="line">//图标编码是&amp;#xe600，需要转成\U0000e600</span><br><span class="line">imageView.image = [UIImage iconWithInfo:TBCityIconInfoMake(@&quot;\U0000e600&quot;, 30, [UIColor redColor])];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//    button</span><br><span class="line">UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];</span><br><span class="line">button.frame = CGRectMake(100, 150, 40, 40);</span><br><span class="line">[self.view addSubview:button];</span><br><span class="line">[button setImage:[UIImage iconWithInfo:TBCityIconInfoMake(@&quot;\U0000e614&quot;, 40, [UIColor redColor])] forState:UIControlStateNormal];</span><br><span class="line"></span><br><span class="line">//    label,label可以将文字与图标结合一起，直接用label的text属性将图标显示出来</span><br><span class="line">UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 200, 280, 40)];</span><br><span class="line">[self.view addSubview:label];</span><br><span class="line">label.font = [UIFont fontWithName:@&quot;iconfont&quot; size:15];//设置label的字体</span><br><span class="line">label.text = @&quot;在lable上显示  \U0000e658&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Do any additional setup after loading the view, typically from a nib.</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (void)didReceiveMemoryWarning &#123;</span><br><span class="line">[super didReceiveMemoryWarning];</span><br><span class="line">// Dispose of any resources that can be recreated.</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果如下图所示：<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bfb497c?w=748&amp;h=1370&amp;f=jpeg&amp;s=28831" alt="显示结果"></p>
+</ul>
+<p>#pragma clang diagnostic push</p>
+<p>#pragma clang diagnostic ignored “-Wdeprecated-declarations”<br>    UIAlertView *alert =<br>    [[UIAlertView alloc]<br>     initWithTitle:@”出错啦”<br>     message:[NSString stringWithFormat:@”你可以尝试继续操作，但是应用可能无法正常运行.\n”]<br>     delegate:self<br>     cancelButtonTitle:@”退出”<br>     otherButtonTitles:@”继续”, nil];<br>    [alert show];</p>
+<p>#pragma clang diagnostic pop</p>
+<pre><code>CFRunLoopRef runLoop = CFRunLoopGetCurrent();
+CFArrayRef allModes = CFRunLoopCopyAllModes(runLoop);
+
+while (!self.dismissed) {
+    //点击继续
+    for (NSString *mode in (__bridge NSArray *)allModes) {
+        //快速切换Mode
+        CFRunLoopRunInMode((CFStringRef)mode, 0.001, false);
+    }
+}
+
+//点击退出
+CFRelease(allModes);
+
+NSSetUncaughtExceptionHandler(NULL);
+signal(SIGABRT, SIG_DFL);
+signal(SIGILL, SIG_DFL);
+signal(SIGSEGV, SIG_DFL);
+signal(SIGFPE, SIG_DFL);
+signal(SIGBUS, SIG_DFL);
+signal(SIGPIPE, SIG_DFL);
+
+if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
+
+    kill(getpid(), [[[exception userInfo] objectForKey:UncaughtExceptionHandlerSignalKey] intValue]);
+
+} else {
+
+    [exception raise];
+}
+</code></pre><p>}<br><code>`</code></p>
 <blockquote>
-<p>注意：</p>
-<ol>
-<li>所用到的unicode编码需要自己手动将&amp;#xXXXX格式转换成\UXXXXXXXX格式，例如//图标编码是&amp;#xe600，需要转成\U0000e600</li>
-<li>所有需要的unicode编码都可以在下载的iconfont文件夹中的.html文件打开查看<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb98b5f56ef5?w=1240&amp;h=753&amp;f=jpeg&amp;s=86665" alt="uiicode编码"></li>
-</ol>
+<p>在这里你可以做自己的crash收集操作，例如上传服务器等。</p>
 </blockquote>
-<blockquote>
-<p>本文<a href="https://github.com/chuzhaozhi/iconfontDemo" target="_blank" rel="noopener">demo</a>,欢迎批评指正，留下你的star哦。</p>
+<h5 id="最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客"><a href="#最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客" class="headerlink" title="最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客"></a>最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至<a href="http://chuzhaozhi.cn/">本人博客</a></h5><blockquote>
+<p><a href="https://github.com/chuzhaozhi/CrashCatched" target="_blank" rel="noopener">代码传送门</a><br><a href="http://chuzhaozhi.cn/">更多文章</a></p>
 </blockquote>
 
       
@@ -527,38 +648,6 @@
 <div>
       
         
-<div class="my_post_copyright">
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  
-  <!-- JS库 sweetalert 可修改路径 -->
-  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
-  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
-
-  <p><span>本文标题:</span>iOS中优雅的使用iconfont</a></p>
-  <p><span>文章作者:</span>JackerooChu</a></p>
-  <p><span>发布时间:</span>2018年04月04日 - 16:32:40</p>
-  <p><span>最后更新:</span>2018年04月17日 - 20:25:58</p>
-  <p><span>原始链接:</span><a href="/iOS中优雅的使用iconfont.html" title="iOS中优雅的使用iconfont">http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html"  aria-label="复制成功！"></i></span>
-  </p>
-  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    clipboard.on('success', $(function(){
-      $(".fa-clipboard").click(function(){
-        swal({   
-          title: "",   
-          text: '复制成功',   
-          html: false,
-          timer: 500,   
-          showConfirmButton: false
-        });
-      });
-    }));  
-</script>
-
 
       
 </div>
@@ -599,7 +688,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html" title="iOS中优雅的使用iconfont">http://chuzhaozhi.cn/iOS中优雅的使用iconfont.html</a>
+    <a href="http://chuzhaozhi.cn/1258.html" title="iOS程序异常Crash友好化处理">http://chuzhaozhi.cn/1258.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -614,9 +703,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i>  ios</a>
+            <a href="/tags/Carsh/" rel="tag"><i class="fa fa-tag"></i>  Carsh</a>
           
-            <a href="/tags/iconfont/" rel="tag"><i class="fa fa-tag"></i>  iconfont</a>
+            <a href="/tags/崩溃拦截/" rel="tag"><i class="fa fa-tag"></i>  崩溃拦截</a>
           
         </div>
       
@@ -629,8 +718,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html" rel="next" title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
-                <i class="fa fa-chevron-left"></i> Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决
+              <a href="/20558.html" rel="next" title="iOS中优雅的使用iconfont">
+                <i class="fa fa-chevron-left"></i> iOS中优雅的使用iconfont
               </a>
             
           </div>
@@ -639,8 +728,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/iOS程序异常Crash友好化处理.html" rel="prev" title="iOS程序异常Crash友好化处理">
-                iOS程序异常Crash友好化处理 <i class="fa fa-chevron-right"></i>
+              <a href="/10633.html" rel="prev" title="多级Push页面后优雅的返回指定控制器几种方法">
+                多级Push页面后优雅的返回指定控制器几种方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -859,7 +948,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是iconfont"><span class="nav-number">1.</span> <span class="nav-text">1.什么是iconfont</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-为什么要使用iconfont"><span class="nav-number">2.</span> <span class="nav-text">2.为什么要使用iconfont</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-怎么用iconfont"><span class="nav-number">3.</span> <span class="nav-text">3.怎么用iconfont</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-首先去iconfont图标库下载自己需要的图标。"><span class="nav-number">3.0.0.0.1.</span> <span class="nav-text">1. 首先去iconfont图标库下载自己需要的图标。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-将下载下来的icon资源添加到自己的项目中。"><span class="nav-number">3.0.0.0.2.</span> <span class="nav-text">2.将下载下来的icon资源添加到自己的项目中。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-具体使用方法"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">3.具体使用方法</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果实现："><span class="nav-number">1.</span> <span class="nav-text">效果实现：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法："><span class="nav-number">2.</span> <span class="nav-text">用法：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

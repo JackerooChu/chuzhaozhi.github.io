@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="iOS, 开发, 技术积累, 分享" />
+  <meta name="keywords" content="iconfont,iOS" />
 
 
 
@@ -90,26 +90,28 @@
 
 
 
-<meta name="description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
-<meta name="keywords" content="iOS">
+<meta name="description" content="1.什么是iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图标库下载自己需要的图标。  2.为什么要使用iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;e">
+<meta name="keywords" content="iconfont,iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS微信支付以及工具类">
-<meta property="og:url" content="http://chuzhaozhi.cn/WeiXinPayService.html">
+<meta property="og:title" content="iOS中优雅的使用iconfont">
+<meta property="og:url" content="http://chuzhaozhi.cn/20558.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
+<meta property="og:description" content="1.什么是iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图标库下载自己需要的图标。  2.为什么要使用iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;e">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&h=226&f=png&s=89227">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef8f0630?w=1240&h=299&f=jpeg&s=22223">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef7c4285?w=1240&h=685&f=jpeg&s=50365">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deefa04e0d?w=1240&h=355&f=jpeg&s=38183">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5def1793359?w=894&h=1042&f=png&s=35742">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9724d9?w=1240&h=599&f=jpeg&s=89869">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5df0fd34ad6?w=1240&h=695&f=jpeg&s=97948">
-<meta property="og:updated_time" content="2018-04-17T12:24:12.485Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fbd94fa67dea?w=419&h=272&f=gif&s=19630995">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bc5fcbc?w=1240&h=754&f=jpeg&s=34197">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c1c16e4?w=1108&h=858&f=jpeg&s=102941">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c2668b4?w=1240&h=670&f=jpeg&s=81590">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c25f899?w=1240&h=605&f=jpeg&s=73436">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fbe92dd04385?w=840&h=524&f=gif&s=29884118">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988d49c856?w=436&h=338&f=jpeg&s=19892">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bfb497c?w=748&h=1370&f=jpeg&s=28831">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fb98b5f56ef5?w=1240&h=753&f=jpeg&s=86665">
+<meta property="og:updated_time" content="2018-09-28T06:50:41.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS微信支付以及工具类">
-<meta name="twitter:description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&h=226&f=png&s=89227">
+<meta name="twitter:title" content="iOS中优雅的使用iconfont">
+<meta name="twitter:description" content="1.什么是iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图标库下载自己需要的图标。  2.为什么要使用iconfont&amp;ensp;&amp;ensp;&amp;ensp;&amp;e">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/4/4/1628fbd94fa67dea?w=419&h=272&f=gif&s=19630995">
 
 
 
@@ -139,13 +141,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/WeiXinPayService.html"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/20558.html"/>
 
 
 
 
 
-  <title>iOS微信支付以及工具类 | JackerooChu的博客</title>
+  <title>iOS中优雅的使用iconfont | JackerooChu的博客</title>
   
 
 
@@ -323,12 +325,12 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/WeiXinPayService.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/20558.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -345,7 +347,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS微信支付以及工具类</h1>
+          <h1 class="post-title" itemprop="name headline">iOS中优雅的使用iconfont</h1>
         
 
         <div class="post-meta">
@@ -357,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T16:32:40+08:00">
+                2018-04-04
               </time>
             
 
@@ -376,8 +378,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/WeiXinPayService.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/WeiXinPayService.html" itemprop="commentCount"></span>
+                <a href="/20558.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/20558.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -385,7 +387,7 @@
 
           
           
-             <span id="/WeiXinPayService.html" class="leancloud_visitors" data-flag-title="iOS微信支付以及工具类">
+             <span id="/20558.html" class="leancloud_visitors" data-flag-title="iOS中优雅的使用iconfont">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -410,7 +412,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  1,748
+                  1,485
                 </span>
               
 
@@ -447,68 +449,65 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br>在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。<br></blockquote><br><a id="more"></a></p>
-<h2 id="1-开始接入微信支付的准备工作"><a href="#1-开始接入微信支付的准备工作" class="headerlink" title="1.开始接入微信支付的准备工作"></a>1.开始接入微信支付的准备工作</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&amp;h=226&amp;f=png&amp;s=89227" alt="接入流程.png"></p>
-<p>首先你需要去<a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>注册账号,在这里要吐槽一下，不知道这个微信平台的账号密码验证机制，忘了以前的密码，重新登录，各种找回密码都不行，实在没辙，去注册个Gmail😑，登录成功后，可以看到如下界面。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef8f0630?w=1240&amp;h=299&amp;f=jpeg&amp;s=22223" alt="1.png"></p>
-<p>点击右上角的创建移动应用，一步一步填写必要填入的信息，在这里就不做多余的赘述了。<br>需要注意的是这里填入的<br>Bundle ID需要和项目的一一对应<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef7c4285?w=1240&amp;h=685&amp;f=jpeg&amp;s=50365" alt="BoundleId"><br>接下来就等一个星期左右，等待微信审核通过你就可以将微信支付SDK集成到项目中，详情可以看官方给出的<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=1417694084&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">文档</a>.<br>pod 集成方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;WechatOpenSDK&apos;</span><br></pre></td></tr></table></figure></p>
-<p>在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序id（如下图所示）。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deefa04e0d?w=1240&amp;h=355&amp;f=jpeg&amp;s=38183" alt="URL scheme"></p>
-<p>完成之后可以获取到appid(微信开放平台为应用生成的唯一识别码)、商户id、商户secretKey。对于app端来说只用到appid，商户id最好通过接口从server获取，商户secretKey是用来签名的，一般只有server能用到。</p>
-<h2 id="2-支付流程"><a href="#2-支付流程" class="headerlink" title="2.支付流程"></a>2.支付流程</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5def1793359?w=894&amp;h=1042&amp;f=png&amp;s=35742" alt="支付流程.png"></p>
-<p>刚开始看这个流程图可能会觉得很复杂，所以总结了我们比较关系的流程是：</p>
+        <h2 id="1-什么是iconfont"><a href="#1-什么是iconfont" class="headerlink" title="1.什么是iconfont"></a>1.什么是iconfont</h2><blockquote class="blockquote-center"><br>&ensp;&ensp;&ensp;&ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont图标库</a>下载自己需要的图标。<br></blockquote>
+
+<h2 id="2-为什么要使用iconfont"><a href="#2-为什么要使用iconfont" class="headerlink" title="2.为什么要使用iconfont"></a>2.为什么要使用iconfont</h2><p>&ensp;&ensp;&ensp;&ensp;在开发项目时，不可避免的会用到各种图标，为了适配不同的设备，通常需要@2x和@3x两套图，例如说我们tabBar上使用的图标。有些app有换肤的需要，还需要多套不同的图来进行匹配不同的主题。如果使用切图，这对于设计和开发来说无疑是增加了工作量，而且ipa的体积也会增大。</p>
+<p>使用iconfont的好处:</p>
 <ol>
-<li>app客户端向服务器发送支付请求</li>
-<li>服务器在收到客户端请求之后向微信后台调用统一下单API,获得预付单信息</li>
-<li>服务端生成带签名的客户端支付信息给app</li>
-<li>app客户端用户确认支付，app唤醒微信客户端进行支付</li>
-<li>app获得支付结果后向服务端查询最终的结果并显示</li>
+<li>减小ipa包的大小</li>
+<li>图标保真缩放，多设备适配一套图解决问题</li>
+<li>适应换肤要求，使用方便。</li>
 </ol>
-<h5 id="app端的工作："><a href="#app端的工作：" class="headerlink" title="app端的工作："></a>app端的工作：</h5><ul>
-<li>接入微信支付SDK</li>
-<li>向服务器发送支付请求</li>
-<li>支付信息唤醒微信app,然后进行支付</li>
-<li>收到微信支付回调后向服务器确认支付结果</li>
-<li>根据查询结果展示结果页面告知用户支付结果</li>
-</ul>
-<h5 id="服务器端的工作："><a href="#服务器端的工作：" class="headerlink" title="服务器端的工作："></a>服务器端的工作：</h5><ul>
-<li>收到app客户端支付请求后向微信后台请求预支付订单</li>
-<li>服务器端签名并返回信息给app客户端</li>
-<li>接收微信后台返回的支付结果，用来app端查询</li>
-</ul>
+<h2 id="3-怎么用iconfont"><a href="#3-怎么用iconfont" class="headerlink" title="3.怎么用iconfont"></a>3.怎么用iconfont</h2><h6 id="1-首先去iconfont图标库下载自己需要的图标。"><a href="#1-首先去iconfont图标库下载自己需要的图标。" class="headerlink" title="1. 首先去iconfont图标库下载自己需要的图标。"></a>1. 首先去<a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont图标库</a>下载自己需要的图标。</h6><p><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fbd94fa67dea?w=419&amp;h=272&amp;f=gif&amp;s=19630995" alt="下载图片"></p>
+<p>如图我们可以选择自己需要的icon加入到购物车，然后加入项目里，当然你也可以直接在购物车直接下载，但是这样只是没有修改icon为自己想要的样式，加入项目中，你可以自己任意修改icon为自己想要的样式。<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bc5fcbc?w=1240&amp;h=754&amp;f=jpeg&amp;s=34197" alt="购物车直接下载"></p>
 <blockquote>
-<p>服务器端返回的字段说明：</p>
-<blockquote>
+<p>注意：这里是下载代码，这样我们就可以在项目中直接使用</p>
 </blockquote>
+<h6 id="2-将下载下来的icon资源添加到自己的项目中。"><a href="#2-将下载下来的icon资源添加到自己的项目中。" class="headerlink" title="2.将下载下来的icon资源添加到自己的项目中。"></a>2.将下载下来的icon资源添加到自己的项目中。</h6><p><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c1c16e4?w=1108&amp;h=858&amp;f=jpeg&amp;s=102941" alt="下载之后文件夹内容"><br>我们所需要的就是这个iconfont.ttf，对于这个ttf文件，我想我们并不陌生吧。新建项目，将这个ttf文件拖入自己的项目里。<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c2668b4?w=1240&amp;h=670&amp;f=jpeg&amp;s=81590" alt="加入项目"></p>
+<blockquote>
+<p>注意：勾选如图选项</p>
+</blockquote>
+<p>接下来配置项目加载这个文件</p>
 <ul>
-<li>appId:返回的appid</li>
-<li>partnerId: 父级id</li>
-<li>prepayId: 支付id</li>
-<li>packages: 包名（微信默认的为“Sign=WXPay”）</li>
-<li>nonceStr: 生成的随机字符串</li>
-<li>timesTamp: 时间戳</li>
-<li>sign: 签名<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9724d9?w=1240&amp;h=599&amp;f=jpeg&amp;s=89869" alt="字段说明"> </li>
+<li>检查文件是否在项目中，不然会崩溃<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988c25f899?w=1240&amp;h=605&amp;f=jpeg&amp;s=73436" alt="check"></li>
+<li>在plist文件中加入字体<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fbe92dd04385?w=840&amp;h=524&amp;f=gif&amp;s=29884118" alt="plist"><br>接下来我们借助淘点点科技写的一个关于iconfont封装，方便我们使用iconfont。iconfont的封装包括<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988d49c856?w=436&amp;h=338&amp;f=jpeg&amp;s=19892" alt="工具类"></li>
 </ul>
-</blockquote>
-<h2 id="3-iOS端使用"><a href="#3-iOS端使用" class="headerlink" title="3.iOS端使用"></a>3.iOS端使用</h2><p>在<code>AppDelegate.m</code>,导入微信SDK头文件<code>WXApi.h</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">[WXApi registerApp:@&quot;注册获得的appid&quot;];//注册appid</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//支持所有iOS系统回调</span><br><span class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</span><br><span class="line">&#123;</span><br><span class="line">//    [self handleOpenURL:url];</span><br><span class="line">BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];</span><br><span class="line">if (!result) &#123;</span><br><span class="line">// 其他如支付等SDK的回调</span><br><span class="line">[self handleOpenURL:url];</span><br><span class="line">&#125;</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br><span class="line">- (void)handleOpenURL:(NSURL*)url &#123;</span><br><span class="line">if ([url.host isEqualToString:@&quot;pay&quot;]) &#123; // -- 微信支付</span><br><span class="line">[WXApi handleOpenURL:url delegate:[WXPayService sharedInstance]];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li><p><code>TBCityIconInfo.h</code>的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line"></span><br><span class="line">@interface TBCityIconInfo : NSObject</span><br><span class="line"></span><br><span class="line">@property (nonatomic, strong) NSString *text;</span><br><span class="line">@property (nonatomic, assign) NSInteger size;</span><br><span class="line">@property (nonatomic, strong) UIColor *color;</span><br><span class="line"></span><br><span class="line">- (instancetype)initWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color;</span><br><span class="line">+ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>TBCityIconInfo.m</code>的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;TBCityIconInfo.h&quot;</span><br><span class="line"></span><br><span class="line">@implementation TBCityIconInfo</span><br><span class="line"></span><br><span class="line">- (instancetype)initWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color &#123;</span><br><span class="line">if (self = [super init]) &#123;</span><br><span class="line">self.text = text;</span><br><span class="line">self.size = size;</span><br><span class="line">self.color = color;</span><br><span class="line">&#125;</span><br><span class="line">return self;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (instancetype)iconInfoWithText:(NSString *)text size:(NSInteger)size color:(UIColor *)color &#123;</span><br><span class="line">return [[TBCityIconInfo alloc] initWithText:text size:size color:color];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>TBCityIconFont.h</code>的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;UIImage+TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;TBCityIconInfo.h&quot;</span><br><span class="line"></span><br><span class="line">#define TBCityIconInfoMake(text, imageSize, imageColor) [TBCityIconInfo iconInfoWithText:text size:imageSize color:imageColor]</span><br><span class="line"></span><br><span class="line">@interface TBCityIconFont : NSObject</span><br><span class="line"></span><br><span class="line">+ (UIFont *)fontWithSize: (CGFloat)size;</span><br><span class="line">+ (void)setFontName:(NSString *)fontName;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>TBCityIconFont.m</code>的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &lt;CoreText/CoreText.h&gt;</span><br><span class="line"></span><br><span class="line">@implementation TBCityIconFont</span><br><span class="line"></span><br><span class="line">static NSString *_fontName;</span><br><span class="line"></span><br><span class="line">+ (void)registerFontWithURL:(NSURL *)url &#123;</span><br><span class="line">NSAssert([[NSFileManager defaultManager] fileExistsAtPath:[url path]], @&quot;Font file doesn&apos;t exist&quot;);</span><br><span class="line">CGDataProviderRef fontDataProvider = CGDataProviderCreateWithURL((__bridge CFURLRef)url);</span><br><span class="line">CGFontRef newFont = CGFontCreateWithDataProvider(fontDataProvider);</span><br><span class="line">CGDataProviderRelease(fontDataProvider);</span><br><span class="line">CTFontManagerRegisterGraphicsFont(newFont, nil);</span><br><span class="line">CGFontRelease(newFont);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (UIFont *)fontWithSize:(CGFloat)size &#123;</span><br><span class="line">UIFont *font = [UIFont fontWithName:[self fontName] size:size];</span><br><span class="line">if (font == nil) &#123;</span><br><span class="line">NSURL *fontFileUrl = [[NSBundle mainBundle] URLForResource:[self fontName] withExtension:@&quot;ttf&quot;];</span><br><span class="line">[self registerFontWithURL: fontFileUrl];</span><br><span class="line">font = [UIFont fontWithName:[self fontName] size:size];</span><br><span class="line">NSAssert(font, @&quot;UIFont object should not be nil, check if the font file is added to the application bundle and you&apos;re using the correct font name.&quot;);</span><br><span class="line">&#125;</span><br><span class="line">return font;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">+ (void)setFontName:(NSString *)fontName &#123;</span><br><span class="line">_fontName = fontName;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ (NSString *)fontName &#123;</span><br><span class="line">return _fontName ? : @&quot;iconfont&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>UIImage+TBCityIconFont.h</code>的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">#import &quot;TBCityIconInfo.h&quot;</span><br><span class="line"></span><br><span class="line">@interface UIImage (TBCityIconFont)</span><br><span class="line"></span><br><span class="line">+ (UIImage *)iconWithInfo:(TBCityIconInfo *)info;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>UIImage+TBCityIconFont.m</code>的实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;UIImage+TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &lt;CoreText/CoreText.h&gt;</span><br><span class="line"></span><br><span class="line">@implementation UIImage (TBCityIconFont)</span><br><span class="line"></span><br><span class="line">+ (UIImage *)iconWithInfo:(TBCityIconInfo *)info &#123;</span><br><span class="line">CGFloat size = info.size;</span><br><span class="line">CGFloat scale = [UIScreen mainScreen].scale;</span><br><span class="line">CGFloat realSize = size * scale;</span><br><span class="line">UIFont *font = [TBCityIconFont fontWithSize:realSize];</span><br><span class="line">UIGraphicsBeginImageContext(CGSizeMake(realSize, realSize));</span><br><span class="line">CGContextRef context = UIGraphicsGetCurrentContext();</span><br><span class="line"></span><br><span class="line">if ([info.text respondsToSelector:@selector(drawAtPoint:withAttributes:)]) &#123;</span><br><span class="line">/**</span><br><span class="line">* 如果这里抛出异常，请打开断点列表，右击All Exceptions -&gt; Edit Breakpoint -&gt; All修改为Objective-C</span><br><span class="line">* See: http://stackoverflow.com/questions/1163981/how-to-add-a-breakpoint-to-objc-exception-throw/14767076#14767076</span><br><span class="line">*/</span><br><span class="line">[info.text drawAtPoint:CGPointZero withAttributes:@&#123;NSFontAttributeName:font, NSForegroundColorAttributeName: info.color&#125;];</span><br><span class="line">&#125; else &#123;</span><br><span class="line"></span><br><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span><br><span class="line">CGContextSetFillColorWithColor(context, info.color.CGColor);</span><br><span class="line">[info.text drawAtPoint:CGPointMake(0, 0) withFont:font];</span><br><span class="line">#pragma clang pop</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">UIImage *image = [UIImage imageWithCGImage:UIGraphicsGetImageFromCurrentImageContext().CGImage scale:scale orientation:UIImageOrientationUp];</span><br><span class="line">UIGraphicsEndImageContext();</span><br><span class="line"></span><br><span class="line">return image;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="3-具体使用方法"><a href="#3-具体使用方法" class="headerlink" title="3.具体使用方法"></a>3.具体使用方法</h5><p>1.在<code>AppDelegate.m</code>中，初始化iconfont<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;AppDelegate.h&quot;</span><br><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;ViewController.h&quot;</span><br><span class="line">@interface AppDelegate ()</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation AppDelegate</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">// Override point for customization after application launch.</span><br><span class="line">[TBCityIconFont setFontName:@&quot;iconfont&quot;];</span><br><span class="line">UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];</span><br><span class="line">self.window.rootViewController = nav;</span><br><span class="line">[self.window makeKeyAndVisible];</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>在<code>ViewController.m</code>中实现<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#import &quot;ViewController.h&quot;</span><br><span class="line">#import &quot;TBCityIconFont.h&quot;</span><br><span class="line">#import &quot;UIImage+TBCityIconFont.h&quot;</span><br><span class="line">@interface ViewController ()</span><br><span class="line"></span><br><span class="line">@end</span><br><span class="line"></span><br><span class="line">@implementation ViewController</span><br><span class="line"></span><br><span class="line">- (void)viewDidLoad &#123;</span><br><span class="line">[super viewDidLoad];</span><br><span class="line">self.view.backgroundColor = [UIColor  whiteColor];</span><br><span class="line">UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 30, 30)];</span><br><span class="line">[self.view addSubview:imageView];</span><br><span class="line">//图标编码是&amp;#xe600，需要转成\U0000e600</span><br><span class="line">imageView.image = [UIImage iconWithInfo:TBCityIconInfoMake(@&quot;\U0000e600&quot;, 30, [UIColor redColor])];</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//    button</span><br><span class="line">UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];</span><br><span class="line">button.frame = CGRectMake(100, 150, 40, 40);</span><br><span class="line">[self.view addSubview:button];</span><br><span class="line">[button setImage:[UIImage iconWithInfo:TBCityIconInfoMake(@&quot;\U0000e614&quot;, 40, [UIColor redColor])] forState:UIControlStateNormal];</span><br><span class="line"></span><br><span class="line">//    label,label可以将文字与图标结合一起，直接用label的text属性将图标显示出来</span><br><span class="line">UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(50, 200, 280, 40)];</span><br><span class="line">[self.view addSubview:label];</span><br><span class="line">label.font = [UIFont fontWithName:@&quot;iconfont&quot; size:15];//设置label的字体</span><br><span class="line">label.text = @&quot;在lable上显示  \U0000e658&quot;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// Do any additional setup after loading the view, typically from a nib.</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (void)didReceiveMemoryWarning &#123;</span><br><span class="line">[super didReceiveMemoryWarning];</span><br><span class="line">// Dispose of any resources that can be recreated.</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果如下图所示：<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb988bfb497c?w=748&amp;h=1370&amp;f=jpeg&amp;s=28831" alt="显示结果"></p>
 <blockquote>
-<p>此处的<code>WXPayService</code>就是自己单独抽出来写的一个类，遵循<code>WXApiManagerDelegate</code>协议</p>
+<p>注意：</p>
+<ol>
+<li>所用到的unicode编码需要自己手动将&amp;#xXXXX格式转换成\UXXXXXXXX格式，例如//图标编码是&amp;#xe600，需要转成\U0000e600</li>
+<li>所有需要的unicode编码都可以在下载的iconfont文件夹中的.html文件打开查看<br><img src="https://user-gold-cdn.xitu.io/2018/4/4/1628fb98b5f56ef5?w=1240&amp;h=753&amp;f=jpeg&amp;s=86665" alt="uiicode编码"></li>
+</ol>
 </blockquote>
-<h5 id="WXPayService-h"><a href="#WXPayService-h" class="headerlink" title="WXPayService.h"></a>WXPayService.h</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">#import &quot;WXApi.h&quot;</span><br><span class="line">@interface WXPayService : NSObject &lt;WXApiDelegate&gt;</span><br><span class="line">///单例来接收微信请求的回调</span><br><span class="line">+ (instancetype)sharedInstance;</span><br><span class="line">// -- 根据接口返回的预支付信息,构造支付请求</span><br><span class="line">+ (PayReq *)getPayRequest:(NSDictionary *)prepayData;</span><br><span class="line"></span><br><span class="line">///处理非支付请求的回调</span><br><span class="line">- (void)onRespCallBack:(void(^)(BaseResp * resp))callback;</span><br><span class="line">///从服务器端获取到微信返回的支付请求用到的参数来发起支付请求</span><br><span class="line">- (void)startPayWithReq:(PayReq *)req callback:(void(^)(BaseResp * resp))callback; </span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-<h5 id="WXPayService-m"><a href="#WXPayService-m" class="headerlink" title="WXPayService.m"></a>WXPayService.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#import &quot;WXPayService.h&quot;</span><br><span class="line">@interface WXPayService ()</span><br><span class="line">@property (nonatomic,copy) void(^RespCallBack)(BaseResp *);</span><br><span class="line">@end</span><br><span class="line">static WXPayService *sharedInstance;</span><br><span class="line"></span><br><span class="line">@implementation WXPayService</span><br><span class="line">+ (instancetype)allocWithZone:(struct _NSZone *)zone&#123;</span><br><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">sharedInstance = [super allocWithZone:zone];</span><br><span class="line">&#125;);</span><br><span class="line">return sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line">///单例来接收微信请求的回调</span><br><span class="line">+ (instancetype)sharedInstance &#123;</span><br><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">sharedInstance = [[self alloc] init];</span><br><span class="line">&#125;);</span><br><span class="line">return sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// -- 根据接口返回的预支付信息,构造支付请求</span><br><span class="line">+ (PayReq *)getPayRequest:(NSDictionary *)prepayData &#123;</span><br><span class="line">if (prepayData) &#123;</span><br><span class="line">//  此处Tools是自己的另一个工具类，用来判断字典的</span><br><span class="line">PayReq *req = [[PayReq alloc] init];</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;partnerid&quot;]) &#123;</span><br><span class="line">req.partnerId = prepayData[@&quot;partnerid&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;prepayid&quot;]) &#123;</span><br><span class="line">req.prepayId = prepayData[@&quot;prepayid&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;noncestr&quot;]) &#123;</span><br><span class="line">req.nonceStr = prepayData[@&quot;noncestr&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;timestamp&quot;]) &#123;</span><br><span class="line">req.timeStamp = [prepayData[@&quot;timestamp&quot;] intValue];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req.package =@&quot;Sign=WXPay&quot;;</span><br><span class="line">req.sign =  @&quot;null&quot;;</span><br><span class="line">//日志输出</span><br><span class="line">NSLog(@&quot;appid=%@/npartid=%@/nprepayid=%@/nnoncestr=%@/ntimestamp=%ld/npackage=%@/nsign=%@&quot;,[prepayData objectForKey:@&quot;appid&quot;],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);</span><br><span class="line">return req;</span><br><span class="line">&#125;</span><br><span class="line">return nil;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///处理非支付请求的回调</span><br><span class="line">- (void)onRespCallBack:(void(^)(BaseResp * resp))callback &#123;</span><br><span class="line">self.RespCallBack = callback;</span><br><span class="line">&#125;</span><br><span class="line">///从服务器端获取到微信返回的支付请求用到的参数来发起支付请求</span><br><span class="line">- (void)startPayWithReq:(PayReq *)req callback:(void(^)(BaseResp * resp))callback &#123;</span><br><span class="line">NSAssert(req !=nil , @&quot;未成功创建微信支付请求&quot;);</span><br><span class="line">self.RespCallBack = callback;</span><br><span class="line">if ([WXApi isWXAppInstalled]) &#123; // -- 判断是否安装微信应用</span><br><span class="line">//发起微信支付,设置参数</span><br><span class="line">[WXApi sendReq:req];</span><br><span class="line">&#125;else &#123;</span><br><span class="line">self.RespCallBack(nil);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark WXApiDelegate</span><br><span class="line">- (void)onResp:(BaseResp *)resp &#123;</span><br><span class="line">if ([resp isKindOfClass:[PayResp class]]) &#123; // -- 判断是否为支付的回调</span><br><span class="line">self.RespCallBack(resp);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-<p>在需要支付的ViewController中导入工具类<code>WXPayService</code><br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5df0fd34ad6?w=1240&amp;h=695&amp;f=jpeg&amp;s=97948" alt="pay.png"></p>
-<h2 id="4-注意点及问题"><a href="#4-注意点及问题" class="headerlink" title="4.注意点及问题"></a>4.注意点及问题</h2><h4 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h4><ul>
-<li>设置好scheme,否则应用无法跳转到微信客户端</li>
-<li>支付签名时的key值全部是小写的</li>
-<li>如果支付显示验证签名失败<br>的时候，可以将packages设为默认值(Sign=WXPay)试试</li>
-</ul>
-<h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><blockquote>
-<p>系统版本大于等于iOS9的，调起微信客户端之后，可以直接点击状态栏左侧按钮返回，这时是不走回调方法的。</p>
-</blockquote>
-<p>解决方案：<br>在AppDelegate.m的applicationWillEnterForeground方法中，调用查询支付结果接口然后刷新当然页面。需要设置bool变量作为标志，否则每次应用进入前台都去查询，就不符合业务要求了。</p>
 <blockquote>
-<p>进入微信支付页面之后，不做操作，切换到自己应用中，退出当前支付页面，然后再进入微信客户端点击支付或者取消，此时自己的应用会崩溃闪退</p>
+<p>本文<a href="https://github.com/chuzhaozhi/iconfontDemo" target="_blank" rel="noopener">demo</a>,欢迎批评指正，留下你的star哦。</p>
 </blockquote>
-<p>原因：退出页面后页面已经出栈被销毁，但wx回调时还是去调用其中的代理方法，就会出现野指针。<br>解决方案：在页面的<code>viewWillDisappear</code>方法中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[WXPayService sharedManager].delegate = nil;</span><br></pre></td></tr></table></figure></p>
-<h2 id="5-结束语"><a href="#5-结束语" class="headerlink" title="5.结束语"></a>5.结束语</h2><p>微信支付签名建议和服务端协商做二次签名，以保证支付的安全性。<br>ps: 如有不对的地方，欢迎批评指正，另外安利一下个人的<a href="http://www.chuzhaozhi.cn" target="_blank" rel="noopener">博客</a></p>
 
       
     </div>
@@ -528,6 +527,38 @@
 <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+
+  <p><span>本文标题:</span>iOS中优雅的使用iconfont</a></p>
+  <p><span>文章作者:</span>JackerooChu</a></p>
+  <p><span>发布时间:</span>2018年04月04日 - 16:32:40</p>
+  <p><span>最后更新:</span>2018年09月28日 - 14:50:41</p>
+  <p><span>原始链接:</span><a href="/20558.html" title="iOS中优雅的使用iconfont">http://chuzhaozhi.cn/20558.html</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://chuzhaozhi.cn/20558.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
 
       
 </div>
@@ -568,7 +599,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://chuzhaozhi.cn/WeiXinPayService.html" title="iOS微信支付以及工具类">http://chuzhaozhi.cn/WeiXinPayService.html</a>
+    <a href="http://chuzhaozhi.cn/20558.html" title="iOS中优雅的使用iconfont">http://chuzhaozhi.cn/20558.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -581,6 +612,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ios/" rel="tag"><i class="fa fa-tag"></i>  ios</a>
+          
+            <a href="/tags/iconfont/" rel="tag"><i class="fa fa-tag"></i>  iconfont</a>
+          
+        </div>
+      
 
       
       
@@ -590,8 +629,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/UITableViewCell上的输入框，输入不同内容.html" rel="next" title="UITableViewCell上的输入框，输入不同内容">
-                <i class="fa fa-chevron-left"></i> UITableViewCell上的输入框，输入不同内容
+              <a href="/45450.html" rel="next" title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
+                <i class="fa fa-chevron-left"></i> Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决
               </a>
             
           </div>
@@ -600,8 +639,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html" rel="prev" title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
-                Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决 <i class="fa fa-chevron-right"></i>
+              <a href="/1258.html" rel="prev" title="iOS程序异常Crash友好化处理">
+                iOS程序异常Crash友好化处理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -820,7 +859,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-开始接入微信支付的准备工作"><span class="nav-number">1.</span> <span class="nav-text">1.开始接入微信支付的准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-支付流程"><span class="nav-number">2.</span> <span class="nav-text">2.支付流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#app端的工作："><span class="nav-number">2.0.0.1.</span> <span class="nav-text">app端的工作：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器端的工作："><span class="nav-number">2.0.0.2.</span> <span class="nav-text">服务器端的工作：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-iOS端使用"><span class="nav-number">3.</span> <span class="nav-text">3.iOS端使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#WXPayService-h"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">WXPayService.h</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WXPayService-m"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">WXPayService.m</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-注意点及问题"><span class="nav-number">4.</span> <span class="nav-text">4.注意点及问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意点："><span class="nav-number">4.0.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-number">4.0.2.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-结束语"><span class="nav-number">5.</span> <span class="nav-text">5.结束语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是iconfont"><span class="nav-number">1.</span> <span class="nav-text">1.什么是iconfont</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-为什么要使用iconfont"><span class="nav-number">2.</span> <span class="nav-text">2.为什么要使用iconfont</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-怎么用iconfont"><span class="nav-number">3.</span> <span class="nav-text">3.怎么用iconfont</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#1-首先去iconfont图标库下载自己需要的图标。"><span class="nav-number">3.0.0.0.1.</span> <span class="nav-text">1. 首先去iconfont图标库下载自己需要的图标。</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-将下载下来的icon资源添加到自己的项目中。"><span class="nav-number">3.0.0.0.2.</span> <span class="nav-text">2.将下载下来的icon资源添加到自己的项目中。</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-具体使用方法"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">3.具体使用方法</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

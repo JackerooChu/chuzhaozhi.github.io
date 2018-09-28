@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Carsh,崩溃拦截," />
+  <meta name="keywords" content="iOS, 开发, 技术积累, 分享" />
 
 
 
@@ -90,21 +90,26 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：">
-<meta name="keywords" content="Carsh,崩溃拦截">
+<meta name="description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
+<meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS程序异常Crash友好化处理">
-<meta property="og:url" content="http://chuzhaozhi.cn/iOS程序异常Crash友好化处理.html">
+<meta property="og:title" content="iOS微信支付以及工具类">
+<meta property="og:url" content="http://chuzhaozhi.cn/21387.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：">
+<meta property="og:description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-21bc956920f2ba63.gif?imageMogr2/auto-orient/strip">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-34a1195e5cc15ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-06-04T07:42:51.470Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&h=226&f=png&s=89227">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef8f0630?w=1240&h=299&f=jpeg&s=22223">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef7c4285?w=1240&h=685&f=jpeg&s=50365">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deefa04e0d?w=1240&h=355&f=jpeg&s=38183">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5def1793359?w=894&h=1042&f=png&s=35742">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9724d9?w=1240&h=599&f=jpeg&s=89869">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5df0fd34ad6?w=1240&h=695&f=jpeg&s=97948">
+<meta property="og:updated_time" content="2018-09-28T06:50:41.577Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS程序异常Crash友好化处理">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4905848-21bc956920f2ba63.gif?imageMogr2/auto-orient/strip">
+<meta name="twitter:title" content="iOS微信支付以及工具类">
+<meta name="twitter:description" content="在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&h=226&f=png&s=89227">
 
 
 
@@ -134,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/iOS程序异常Crash友好化处理.html"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/21387.html"/>
 
 
 
 
 
-  <title>iOS程序异常Crash友好化处理 | JackerooChu的博客</title>
+  <title>iOS微信支付以及工具类 | JackerooChu的博客</title>
   
 
 
@@ -323,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/iOS程序异常Crash友好化处理.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/21387.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -340,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">iOS程序异常Crash友好化处理</h1>
+          <h1 class="post-title" itemprop="name headline">iOS微信支付以及工具类</h1>
         
 
         <div class="post-meta">
@@ -352,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T15:33:50+08:00">
-                2018-06-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
+                2018-03-31
               </time>
             
 
@@ -363,28 +368,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ios/" itemprop="url" rel="index">
-                    <span itemprop="name">ios</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -393,8 +376,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/iOS程序异常Crash友好化处理.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/iOS程序异常Crash友好化处理.html" itemprop="commentCount"></span>
+                <a href="/21387.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/21387.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -402,7 +385,7 @@
 
           
           
-             <span id="/iOS程序异常Crash友好化处理.html" class="leancloud_visitors" data-flag-title="iOS程序异常Crash友好化处理">
+             <span id="/21387.html" class="leancloud_visitors" data-flag-title="iOS微信支付以及工具类">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -427,7 +410,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  1,224
+                  1,748
                 </span>
               
 
@@ -443,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  7
                 </span>
               
             </div>
@@ -464,171 +447,68 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前两天接到个面试，面试官问到上线的app怎么避免闪退，首先想到的就是在编码的时候进行各种容错，但貌似并不是面试官想要的答案，所以表现的很糟糕。今天有时间就来整理一下，希望有所帮助。实现效果如图：<br></blockquote><br><a id="more"></a></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/4905848-21bc956920f2ba63.gif?imageMogr2/auto-orient/strip" alt="carsh.gif"></p>
-<h2 id="效果实现："><a href="#效果实现：" class="headerlink" title="效果实现："></a>效果实现：</h2><p><img src="https://upload-images.jianshu.io/upload_images/4905848-34a1195e5cc15ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="demo截图"></p>
-<h2 id="用法："><a href="#用法：" class="headerlink" title="用法："></a>用法：</h2><p>1.将截图的中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.在```AppDelegate.m```中找到以下方法并如下添加代码：</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li><p>(BOOL)application:(UIApplication <em>)application didFinishLaunchingWithOptions:(NSDictionary </em>)launchOptions {<br>  // Override point for customization after application launch.</p>
-<p>  [UncaughtExceptionHandler installUncaughtExceptionHandler:YES showAlert:YES];<br>  return YES;<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">以上代码就可以实现稍微友好一点的crash拦截处理。</span><br><span class="line">## 代码解释：</span><br><span class="line">```UncaughtExceptionHandler.h```主要代码：</span><br></pre></td></tr></table></figure>
-</li>
+        <p><blockquote class="blockquote-center"><br>在刚刚结束的一个项目中用到了微信支付，从接入微信支付到工具类的封装，在本文中做个积累，方便日后使用。<br></blockquote><br><a id="more"></a></p>
+<h2 id="1-开始接入微信支付的准备工作"><a href="#1-开始接入微信支付的准备工作" class="headerlink" title="1.开始接入微信支付的准备工作"></a>1.开始接入微信支付的准备工作</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9ccd64?w=700&amp;h=226&amp;f=png&amp;s=89227" alt="接入流程.png"></p>
+<p>首先你需要去<a href="https://open.weixin.qq.com/" target="_blank" rel="noopener">微信开放平台</a>注册账号,在这里要吐槽一下，不知道这个微信平台的账号密码验证机制，忘了以前的密码，重新登录，各种找回密码都不行，实在没辙，去注册个Gmail😑，登录成功后，可以看到如下界面。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef8f0630?w=1240&amp;h=299&amp;f=jpeg&amp;s=22223" alt="1.png"></p>
+<p>点击右上角的创建移动应用，一步一步填写必要填入的信息，在这里就不做多余的赘述了。<br>需要注意的是这里填入的<br>Bundle ID需要和项目的一一对应<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef7c4285?w=1240&amp;h=685&amp;f=jpeg&amp;s=50365" alt="BoundleId"><br>接下来就等一个星期左右，等待微信审核通过你就可以将微信支付SDK集成到项目中，详情可以看官方给出的<a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&amp;t=resource/res_list&amp;verify=1&amp;id=1417694084&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">文档</a>.<br>pod 集成方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod &apos;WechatOpenSDK&apos;</span><br></pre></td></tr></table></figure></p>
+<p>在Xcode中，选择你的工程设置项，选中“TARGETS”一栏，在“info”标签栏的“URL type“添加“URL scheme”为你所注册的应用程序id（如下图所示）。<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deefa04e0d?w=1240&amp;h=355&amp;f=jpeg&amp;s=38183" alt="URL scheme"></p>
+<p>完成之后可以获取到appid(微信开放平台为应用生成的唯一识别码)、商户id、商户secretKey。对于app端来说只用到appid，商户id最好通过接口从server获取，商户secretKey是用来签名的，一般只有server能用到。</p>
+<h2 id="2-支付流程"><a href="#2-支付流程" class="headerlink" title="2.支付流程"></a>2.支付流程</h2><p><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5def1793359?w=894&amp;h=1042&amp;f=png&amp;s=35742" alt="支付流程.png"></p>
+<p>刚开始看这个流程图可能会觉得很复杂，所以总结了我们比较关系的流程是：</p>
+<ol>
+<li>app客户端向服务器发送支付请求</li>
+<li>服务器在收到客户端请求之后向微信后台调用统一下单API,获得预付单信息</li>
+<li>服务端生成带签名的客户端支付信息给app</li>
+<li>app客户端用户确认支付，app唤醒微信客户端进行支付</li>
+<li>app获得支付结果后向服务端查询最终的结果并显示</li>
+</ol>
+<h5 id="app端的工作："><a href="#app端的工作：" class="headerlink" title="app端的工作："></a>app端的工作：</h5><ul>
+<li>接入微信支付SDK</li>
+<li>向服务器发送支付请求</li>
+<li>支付信息唤醒微信app,然后进行支付</li>
+<li>收到微信支付回调后向服务器确认支付结果</li>
+<li>根据查询结果展示结果页面告知用户支付结果</li>
 </ul>
-<p>#import &lt;Foundation/Foundation.h&gt;</p>
-<p>#import &lt;UIKit/UIKit.h&gt;</p>
-<p>@interface UncaughtExceptionHandler : NSObject</p>
-<p>/*!</p>
-<ul>
-<li>异常的处理方法<br>*</li>
-<li>@param install   是否开启捕获异常</li>
-<li>@param showAlert 是否在发生异常时弹出alertView<br>*/<ul>
-<li>(void)installUncaughtExceptionHandler:(BOOL)install showAlert:(BOOL)showAlert;<br>@end<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">```UncaughtExceptionHandler.m```文件主要的代码如下：</span><br><span class="line">#### 1.发送异常信号</span><br></pre></td></tr></table></figure>
-</li>
+<h5 id="服务器端的工作："><a href="#服务器端的工作：" class="headerlink" title="服务器端的工作："></a>服务器端的工作：</h5><ul>
+<li>收到app客户端支付请求后向微信后台请求预支付订单</li>
+<li>服务器端签名并返回信息给app客户端</li>
+<li>接收微信后台返回的支付结果，用来app端查询</li>
 </ul>
-</li>
-</ul>
-<p>/*</p>
-<ul>
-<li>异常的处理方法<br>*</li>
-<li>@param install   是否开启捕获异常</li>
-<li><p>@param showAlert 是否在发生异常时弹出alertView<br>*/</p>
-<ul>
-<li>(void)installUncaughtExceptionHandler:(BOOL)install showAlert:(BOOL)showAlert {</li>
-</ul>
-<p>if (install &amp;&amp; showAlert) {</p>
-<pre><code>[[self alloc] alertView:showAlert];
-</code></pre><p>}</p>
-<p>NSSetUncaughtExceptionHandler(install ? HandleException : NULL);<br>signal(SIGABRT, install ? SignalHandler : SIG_DFL);<br>signal(SIGILL, install ? SignalHandler : SIG_DFL);<br>signal(SIGSEGV, install ? SignalHandler : SIG_DFL);<br>signal(SIGFPE, install ? SignalHandler : SIG_DFL);<br>signal(SIGBUS, install ? SignalHandler : SIG_DFL);<br>signal(SIGPIPE, install ? SignalHandler : SIG_DFL);<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　产生上述的signal的时候就会调用我们定义的```SignalHandler```来处理异常。</span><br><span class="line"> &gt; ps: NSSetUncaughtExceptionHandler就是iOS SDK中提供的一个现成的函数,用来捕获异常的方法，使用方便。但它不能捕获抛出的signal，所以定义了SignalHandler方法。</span><br><span class="line"></span><br><span class="line">#### 2.处理异常</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>void HandleException(NSException *exception) {</p>
-<pre><code>int32_t exceptionCount = OSAtomicIncrement32(&amp;UncaughtExceptionCount);
-// 如果太多不用处理
-if (exceptionCount &gt; UncaughtExceptionMaximum) {
-    return;
-}
-
-//获取调用堆栈
-NSArray *callStack = [exception callStackSymbols];
-NSMutableDictionary *userInfo = [NSMutableDictionary dictionaryWithDictionary:[exception userInfo]];
-[userInfo setObject:callStack forKey:UncaughtExceptionHandlerAddressesKey];
-
-//在主线程中，执行制定的方法, withObject是执行方法传入的参数
-[[[UncaughtExceptionHandler alloc] init]
- performSelectorOnMainThread:@selector(handleException:)
- withObject:
- [NSException exceptionWithName:[exception name]
-                         reason:[exception reason]
-                       userInfo:userInfo]
- waitUntilDone:YES];
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">该方法就是对应```NSSetUncaughtExceptionHandler```的处理，只要方法关联到这个函数，那么发生相应错误时会自动调用该函数，调用时会传入```exception```参数。获取异常后会将捕获的异常传入最终调用处理的```handleException```函数。</span><br><span class="line">#### 3.无法捕获的signal处理</span><br></pre></td></tr></table></figure>
-<p>//处理signal报错<br>void SignalHandler(int signal) {</p>
-<pre><code>int32_t exceptionCount = OSAtomicIncrement32(&amp;UncaughtExceptionCount);
-// 如果太多不用处理
-if (exceptionCount &gt; UncaughtExceptionMaximum) {
-    return;
-}
-
-NSString* description = nil;
-switch (signal) {
-    case SIGABRT:
-        description = [NSString stringWithFormat:@&quot;Signal SIGABRT was raised!\n&quot;];
-        break;
-    case SIGILL:
-        description = [NSString stringWithFormat:@&quot;Signal SIGILL was raised!\n&quot;];
-        break;
-    case SIGSEGV:
-        description = [NSString stringWithFormat:@&quot;Signal SIGSEGV was raised!\n&quot;];
-        break;
-    case SIGFPE:
-        description = [NSString stringWithFormat:@&quot;Signal SIGFPE was raised!\n&quot;];
-        break;
-    case SIGBUS:
-        description = [NSString stringWithFormat:@&quot;Signal SIGBUS was raised!\n&quot;];
-        break;
-    case SIGPIPE:
-        description = [NSString stringWithFormat:@&quot;Signal SIGPIPE was raised!\n&quot;];
-        break;
-    default:
-        description = [NSString stringWithFormat:@&quot;Signal %d was raised!&quot;,signal];
-}
-
-NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
-NSArray *callStack = [UncaughtExceptionHandler backtrace];
-[userInfo setObject:callStack forKey:UncaughtExceptionHandlerAddressesKey];
-[userInfo setObject:[NSNumber numberWithInt:signal] forKey:UncaughtExceptionHandlerSignalKey];
-
-//在主线程中，执行指定的方法, withObject是执行方法传入的参数
-[[[UncaughtExceptionHandler alloc] init]
- performSelectorOnMainThread:@selector(handleException:)
- withObject:
- [NSException exceptionWithName:UncaughtExceptionHandlerSignalExceptionName
-                         reason: description
-                       userInfo: userInfo]
- waitUntilDone:YES];
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">以上方法是对于捕获不到的signal信号进行处理，列出常见的异常类型。</span><br><span class="line">#### 4.堆栈调用</span><br></pre></td></tr></table></figure>
-<p>//获取调用堆栈</p>
-<ul>
-<li><p>(NSArray *)backtrace {</p>
-<p>  //指针列表<br>  void<em> callstack[128];<br>  //backtrace用来获取当前线程的调用堆栈，获取的信息存放在这里的callstack中<br>  //128用来指定当前的buffer中可以保存多少个void</em>元素<br>  //返回值是实际获取的指针个数<br>  int frames = backtrace(callstack, 128);<br>  //backtrace_symbols将从backtrace函数获取的信息转化为一个字符串数组<br>  //返回一个指向字符串数组的指针<br>  //每个字符串包含了一个相对于callstack中对应元素的可打印信息，包括函数名、偏移地址、实际返回地址<br>  char **strs = backtrace_symbols(callstack, frames);</p>
-<p>  int i;<br>  NSMutableArray *backtrace = [NSMutableArray arrayWithCapacity:frames];<br>  for (i = 0; i &lt; frames; i++) {</p>
-<pre><code>[backtrace addObject:[NSString stringWithUTF8String:strs[i]]];
-</code></pre><p>  }<br>  free(strs);</p>
-<p>  return backtrace;<br>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; backtrace是Linux下用来追踪函数调用堆栈以及定位段错误的函数。</span><br><span class="line">#### 5.使用UIAlerView进行友好化提示</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>(void)handleException:(NSException *)exception {</p>
-<p>  [self validateAndSaveCriticalApplicationData:exception];</p>
-<p>  if (!showAlertView) {</p>
-<pre><code>return;
-</code></pre><p>  }</p>
-</li>
-</ul>
-<p>#pragma clang diagnostic push</p>
-<p>#pragma clang diagnostic ignored “-Wdeprecated-declarations”<br>    UIAlertView *alert =<br>    [[UIAlertView alloc]<br>     initWithTitle:@”出错啦”<br>     message:[NSString stringWithFormat:@”你可以尝试继续操作，但是应用可能无法正常运行.\n”]<br>     delegate:self<br>     cancelButtonTitle:@”退出”<br>     otherButtonTitles:@”继续”, nil];<br>    [alert show];</p>
-<p>#pragma clang diagnostic pop</p>
-<pre><code>CFRunLoopRef runLoop = CFRunLoopGetCurrent();
-CFArrayRef allModes = CFRunLoopCopyAllModes(runLoop);
-
-while (!self.dismissed) {
-    //点击继续
-    for (NSString *mode in (__bridge NSArray *)allModes) {
-        //快速切换Mode
-        CFRunLoopRunInMode((CFStringRef)mode, 0.001, false);
-    }
-}
-
-//点击退出
-CFRelease(allModes);
-
-NSSetUncaughtExceptionHandler(NULL);
-signal(SIGABRT, SIG_DFL);
-signal(SIGILL, SIG_DFL);
-signal(SIGSEGV, SIG_DFL);
-signal(SIGFPE, SIG_DFL);
-signal(SIGBUS, SIG_DFL);
-signal(SIGPIPE, SIG_DFL);
-
-if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
-
-    kill(getpid(), [[[exception userInfo] objectForKey:UncaughtExceptionHandlerSignalKey] intValue]);
-
-} else {
-
-    [exception raise];
-}
-</code></pre><p>}<br><code>`</code></p>
 <blockquote>
-<p>在这里你可以做自己的crash收集操作，例如上传服务器等。</p>
+<p>服务器端返回的字段说明：</p>
+<blockquote>
 </blockquote>
-<h5 id="最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客"><a href="#最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客" class="headerlink" title="最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客"></a>最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至<a href="http://chuzhaozhi.cn/">本人博客</a></h5><blockquote>
-<p><a href="https://github.com/chuzhaozhi/CrashCatched" target="_blank" rel="noopener">代码传送门</a><br><a href="http://chuzhaozhi.cn/">更多文章</a></p>
+<ul>
+<li>appId:返回的appid</li>
+<li>partnerId: 父级id</li>
+<li>prepayId: 支付id</li>
+<li>packages: 包名（微信默认的为“Sign=WXPay”）</li>
+<li>nonceStr: 生成的随机字符串</li>
+<li>timesTamp: 时间戳</li>
+<li>sign: 签名<br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5deef9724d9?w=1240&amp;h=599&amp;f=jpeg&amp;s=89869" alt="字段说明"> </li>
+</ul>
 </blockquote>
+<h2 id="3-iOS端使用"><a href="#3-iOS端使用" class="headerlink" title="3.iOS端使用"></a>3.iOS端使用</h2><p>在<code>AppDelegate.m</code>,导入微信SDK头文件<code>WXApi.h</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions &#123;</span><br><span class="line">[WXApi registerApp:@&quot;注册获得的appid&quot;];//注册appid</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//支持所有iOS系统回调</span><br><span class="line">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation</span><br><span class="line">&#123;</span><br><span class="line">//    [self handleOpenURL:url];</span><br><span class="line">BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];</span><br><span class="line">if (!result) &#123;</span><br><span class="line">// 其他如支付等SDK的回调</span><br><span class="line">[self handleOpenURL:url];</span><br><span class="line">&#125;</span><br><span class="line">return YES;</span><br><span class="line">&#125;</span><br><span class="line">- (void)handleOpenURL:(NSURL*)url &#123;</span><br><span class="line">if ([url.host isEqualToString:@&quot;pay&quot;]) &#123; // -- 微信支付</span><br><span class="line">[WXApi handleOpenURL:url delegate:[WXPayService sharedInstance]];</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>此处的<code>WXPayService</code>就是自己单独抽出来写的一个类，遵循<code>WXApiManagerDelegate</code>协议</p>
+</blockquote>
+<h5 id="WXPayService-h"><a href="#WXPayService-h" class="headerlink" title="WXPayService.h"></a>WXPayService.h</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;Foundation/Foundation.h&gt;</span><br><span class="line">#import &quot;WXApi.h&quot;</span><br><span class="line">@interface WXPayService : NSObject &lt;WXApiDelegate&gt;</span><br><span class="line">///单例来接收微信请求的回调</span><br><span class="line">+ (instancetype)sharedInstance;</span><br><span class="line">// -- 根据接口返回的预支付信息,构造支付请求</span><br><span class="line">+ (PayReq *)getPayRequest:(NSDictionary *)prepayData;</span><br><span class="line"></span><br><span class="line">///处理非支付请求的回调</span><br><span class="line">- (void)onRespCallBack:(void(^)(BaseResp * resp))callback;</span><br><span class="line">///从服务器端获取到微信返回的支付请求用到的参数来发起支付请求</span><br><span class="line">- (void)startPayWithReq:(PayReq *)req callback:(void(^)(BaseResp * resp))callback; </span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<h5 id="WXPayService-m"><a href="#WXPayService-m" class="headerlink" title="WXPayService.m"></a>WXPayService.m</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#import &quot;WXPayService.h&quot;</span><br><span class="line">@interface WXPayService ()</span><br><span class="line">@property (nonatomic,copy) void(^RespCallBack)(BaseResp *);</span><br><span class="line">@end</span><br><span class="line">static WXPayService *sharedInstance;</span><br><span class="line"></span><br><span class="line">@implementation WXPayService</span><br><span class="line">+ (instancetype)allocWithZone:(struct _NSZone *)zone&#123;</span><br><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">sharedInstance = [super allocWithZone:zone];</span><br><span class="line">&#125;);</span><br><span class="line">return sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line">///单例来接收微信请求的回调</span><br><span class="line">+ (instancetype)sharedInstance &#123;</span><br><span class="line">static dispatch_once_t onceToken;</span><br><span class="line">dispatch_once(&amp;onceToken, ^&#123;</span><br><span class="line">sharedInstance = [[self alloc] init];</span><br><span class="line">&#125;);</span><br><span class="line">return sharedInstance;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// -- 根据接口返回的预支付信息,构造支付请求</span><br><span class="line">+ (PayReq *)getPayRequest:(NSDictionary *)prepayData &#123;</span><br><span class="line">if (prepayData) &#123;</span><br><span class="line">//  此处Tools是自己的另一个工具类，用来判断字典的</span><br><span class="line">PayReq *req = [[PayReq alloc] init];</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;partnerid&quot;]) &#123;</span><br><span class="line">req.partnerId = prepayData[@&quot;partnerid&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;prepayid&quot;]) &#123;</span><br><span class="line">req.prepayId = prepayData[@&quot;prepayid&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;noncestr&quot;]) &#123;</span><br><span class="line">req.nonceStr = prepayData[@&quot;noncestr&quot;];</span><br><span class="line">&#125;</span><br><span class="line">if ([Tools dicContain:prepayData withKey:@&quot;timestamp&quot;]) &#123;</span><br><span class="line">req.timeStamp = [prepayData[@&quot;timestamp&quot;] intValue];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">req.package =@&quot;Sign=WXPay&quot;;</span><br><span class="line">req.sign =  @&quot;null&quot;;</span><br><span class="line">//日志输出</span><br><span class="line">NSLog(@&quot;appid=%@/npartid=%@/nprepayid=%@/nnoncestr=%@/ntimestamp=%ld/npackage=%@/nsign=%@&quot;,[prepayData objectForKey:@&quot;appid&quot;],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);</span><br><span class="line">return req;</span><br><span class="line">&#125;</span><br><span class="line">return nil;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///处理非支付请求的回调</span><br><span class="line">- (void)onRespCallBack:(void(^)(BaseResp * resp))callback &#123;</span><br><span class="line">self.RespCallBack = callback;</span><br><span class="line">&#125;</span><br><span class="line">///从服务器端获取到微信返回的支付请求用到的参数来发起支付请求</span><br><span class="line">- (void)startPayWithReq:(PayReq *)req callback:(void(^)(BaseResp * resp))callback &#123;</span><br><span class="line">NSAssert(req !=nil , @&quot;未成功创建微信支付请求&quot;);</span><br><span class="line">self.RespCallBack = callback;</span><br><span class="line">if ([WXApi isWXAppInstalled]) &#123; // -- 判断是否安装微信应用</span><br><span class="line">//发起微信支付,设置参数</span><br><span class="line">[WXApi sendReq:req];</span><br><span class="line">&#125;else &#123;</span><br><span class="line">self.RespCallBack(nil);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark WXApiDelegate</span><br><span class="line">- (void)onResp:(BaseResp *)resp &#123;</span><br><span class="line">if ([resp isKindOfClass:[PayResp class]]) &#123; // -- 判断是否为支付的回调</span><br><span class="line">self.RespCallBack(resp);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
+<p>在需要支付的ViewController中导入工具类<code>WXPayService</code><br><img src="https://user-gold-cdn.xitu.io/2018/4/3/1628a5df0fd34ad6?w=1240&amp;h=695&amp;f=jpeg&amp;s=97948" alt="pay.png"></p>
+<h2 id="4-注意点及问题"><a href="#4-注意点及问题" class="headerlink" title="4.注意点及问题"></a>4.注意点及问题</h2><h4 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h4><ul>
+<li>设置好scheme,否则应用无法跳转到微信客户端</li>
+<li>支付签名时的key值全部是小写的</li>
+<li>如果支付显示验证签名失败<br>的时候，可以将packages设为默认值(Sign=WXPay)试试</li>
+</ul>
+<h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><blockquote>
+<p>系统版本大于等于iOS9的，调起微信客户端之后，可以直接点击状态栏左侧按钮返回，这时是不走回调方法的。</p>
+</blockquote>
+<p>解决方案：<br>在AppDelegate.m的applicationWillEnterForeground方法中，调用查询支付结果接口然后刷新当然页面。需要设置bool变量作为标志，否则每次应用进入前台都去查询，就不符合业务要求了。</p>
+<blockquote>
+<p>进入微信支付页面之后，不做操作，切换到自己应用中，退出当前支付页面，然后再进入微信客户端点击支付或者取消，此时自己的应用会崩溃闪退</p>
+</blockquote>
+<p>原因：退出页面后页面已经出栈被销毁，但wx回调时还是去调用其中的代理方法，就会出现野指针。<br>解决方案：在页面的<code>viewWillDisappear</code>方法中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[WXPayService sharedManager].delegate = nil;</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-结束语"><a href="#5-结束语" class="headerlink" title="5.结束语"></a>5.结束语</h2><p>微信支付签名建议和服务端协商做二次签名，以保证支付的安全性。<br>ps: 如有不对的地方，欢迎批评指正，另外安利一下个人的<a href="http://www.chuzhaozhi.cn" target="_blank" rel="noopener">博客</a></p>
 
       
     </div>
@@ -688,7 +568,7 @@ if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://chuzhaozhi.cn/iOS程序异常Crash友好化处理.html" title="iOS程序异常Crash友好化处理">http://chuzhaozhi.cn/iOS程序异常Crash友好化处理.html</a>
+    <a href="http://chuzhaozhi.cn/21387.html" title="iOS微信支付以及工具类">http://chuzhaozhi.cn/21387.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -701,14 +581,6 @@ if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Carsh/" rel="tag"><i class="fa fa-tag"></i>  Carsh</a>
-          
-            <a href="/tags/崩溃拦截/" rel="tag"><i class="fa fa-tag"></i>  崩溃拦截</a>
-          
-        </div>
-      
 
       
       
@@ -718,8 +590,8 @@ if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/iOS中优雅的使用iconfont.html" rel="next" title="iOS中优雅的使用iconfont">
-                <i class="fa fa-chevron-left"></i> iOS中优雅的使用iconfont
+              <a href="/14523.html" rel="next" title="xxx.app文件已损坏，打不开，解决方案">
+                <i class="fa fa-chevron-left"></i> xxx.app文件已损坏，打不开，解决方案
               </a>
             
           </div>
@@ -728,8 +600,8 @@ if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/多级Push页面后优雅的返回指定控制器几种方法.html" rel="prev" title="多级Push页面后优雅的返回指定控制器几种方法">
-                多级Push页面后优雅的返回指定控制器几种方法 <i class="fa fa-chevron-right"></i>
+              <a href="/1581.html" rel="prev" title="Reveal---iOS项目UI调试工具使用教程">
+                Reveal---iOS项目UI调试工具使用教程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -948,7 +820,7 @@ if ([[exception name] isEqual:UncaughtExceptionHandlerSignalExceptionName]) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果实现："><span class="nav-number">1.</span> <span class="nav-text">效果实现：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用法："><span class="nav-number">2.</span> <span class="nav-text">用法：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">最后，我想说对网上给的这个拦截处理个人理解的不是很透彻，借鉴了多位大牛的技术分享，如果有新的解决方案，麻烦评论告诉我，大家一起共同进步。本文已同步至本人博客</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-开始接入微信支付的准备工作"><span class="nav-number">1.</span> <span class="nav-text">1.开始接入微信支付的准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-支付流程"><span class="nav-number">2.</span> <span class="nav-text">2.支付流程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#app端的工作："><span class="nav-number">2.0.0.1.</span> <span class="nav-text">app端的工作：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#服务器端的工作："><span class="nav-number">2.0.0.2.</span> <span class="nav-text">服务器端的工作：</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-iOS端使用"><span class="nav-number">3.</span> <span class="nav-text">3.iOS端使用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#WXPayService-h"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">WXPayService.h</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#WXPayService-m"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">WXPayService.m</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-注意点及问题"><span class="nav-number">4.</span> <span class="nav-text">4.注意点及问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#注意点："><span class="nav-number">4.0.1.</span> <span class="nav-text">注意点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-number">4.0.2.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-结束语"><span class="nav-number">5.</span> <span class="nav-text">5.结束语</span></a></li></ol></div>
             
 
           </div>

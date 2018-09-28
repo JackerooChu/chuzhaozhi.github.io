@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="Xcode,自适应," />
+  <meta name="keywords" content="抓包,Charles,Postman," />
 
 
 
@@ -90,22 +90,29 @@
 
 
 
-<meta name="description" content="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错">
-<meta name="keywords" content="Xcode,自适应">
+<meta name="description" content="一、工具介绍1. Charles今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。">
+<meta name="keywords" content="抓包,Charles,Postman">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
-<meta property="og:url" content="http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html">
+<meta property="og:title" content="Charles抓包+Postman模拟请求">
+<meta property="og:url" content="http://chuzhaozhi.cn/54645.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错">
+<meta property="og:description" content="一、工具介绍1. Charles今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-04-02T04:44:09.297Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a010b13e92458678.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-1941e097e68ccc12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-bac60fa4b21b0bfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-64cc5a34eac55cb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-eebf7859754b3cf4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a8ff62cecd37f3bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-2c4f00b32aec26e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-84ebf0154dd6c623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-edfe3a61d514a92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-28T06:50:41.571Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
-<meta name="twitter:description" content="9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Charles抓包+Postman模拟请求">
+<meta name="twitter:description" content="一、工具介绍1. Charles今天来介绍一下Mac上抓包工具Charles(又称为青花瓷)，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版下载地址密码:meuk)。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -135,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/54645.html"/>
 
 
 
 
 
-  <title>Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决 | JackerooChu的博客</title>
+  <title>Charles抓包+Postman模拟请求 | JackerooChu的博客</title>
   
 
 
@@ -324,7 +331,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/54645.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -341,7 +348,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决</h1>
+          <h1 class="post-title" itemprop="name headline">Charles抓包+Postman模拟请求</h1>
         
 
         <div class="post-meta">
@@ -376,8 +383,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Xcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Xcode</span>
+                  <a href="/categories/IT技能/" itemprop="url" rel="index">
+                    <span itemprop="name">IT技能</span>
                   </a>
                 </span>
 
@@ -394,8 +401,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html" itemprop="commentCount"></span>
+                <a href="/54645.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/54645.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -403,7 +410,7 @@
 
           
           
-             <span id="/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html" class="leancloud_visitors" data-flag-title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
+             <span id="/54645.html" class="leancloud_visitors" data-flag-title="Charles抓包+Postman模拟请求">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -428,7 +435,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  238
+                  362
                 </span>
               
 
@@ -465,9 +472,12 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br> 9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-a869700e765c7aa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="问题一.png"><br>（弱弱的说一句，这个xcode9好像并没有那么友好~）<br>然后一Google，苹果爸爸在苹果在iOS7中引入的Top Layout Guide和Bottom Layout Guide,这些布局指南在iOS 11中被弃用，取而代之的是Safe Area Layout Guide.<br>针对新特性，解决方案如下<br>第一步、在项目报错地方打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code><br><img src="http://upload-images.jianshu.io/upload_images/4905848-822db122e4b09814.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一.png"><br> 第二步、切换到<code>Main.storyboard</code>文件,重读第一步操作打开右边工具栏找到如图位置选中<code>View Controller</code>，去掉<code>Use Safe Area Layout Guides</code></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/4905848-20c763e7c4ee3077.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="解决一2.png"></p>
-<h3 id="到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。"><a href="#到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。" class="headerlink" title="到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。"></a>到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</h3>
+        <h4 id="一、工具介绍"><a href="#一、工具介绍" class="headerlink" title="一、工具介绍"></a>一、工具介绍</h4><h5 id="1-Charles"><a href="#1-Charles" class="headerlink" title="1. Charles"></a>1. Charles</h5><p><blockquote class="blockquote-center"><br>今天来介绍一下Mac上抓包工具<a href="https://www.charlesproxy.com/" target="_blank" rel="noopener">Charles(又称为青花瓷)</a>，官网可以下载，但是需要破解之后才能永久使用，当然，可以有30天试用期，具体的使用方法在此就不进行一一介绍了，如有需要再补上。（ps:破解版<a href="https://pan.baidu.com/s/1pMawsEv" target="_blank" rel="noopener">下载地址</a>密码:meuk)。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-fc2e807fca9adfe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="charles.png"></p>
+<h5 id="2-Postman"><a href="#2-Postman" class="headerlink" title="2.Postman"></a>2.Postman</h5><p>Postman是一种网页调试与发送网页http请求的chrome插件。我们可以用来很方便的模拟get或者post或者其他方式的请求来调试接口。<a href="https://app.getpostman.com/app/download/osx64" target="_blank" rel="noopener">点击下载</a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-a010b13e92458678.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="postman.png"></p>
+<h2 id="二、开始抓取网络接口以及模拟请求"><a href="#二、开始抓取网络接口以及模拟请求" class="headerlink" title="二、开始抓取网络接口以及模拟请求"></a>二、开始抓取网络接口以及模拟请求</h2><h5 id="第一步、打开Charles-在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口"><a href="#第一步、打开Charles-在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口" class="headerlink" title="第一步、打开Charles,在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口"></a>第一步、打开Charles,在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口</h5><h4 id="显示信息如下："><a href="#显示信息如下：" class="headerlink" title="显示信息如下："></a>显示信息如下：<img src="http://upload-images.jianshu.io/upload_images/4905848-1941e097e68ccc12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="headers.png"></h4><h4 id="cookie信息："><a href="#cookie信息：" class="headerlink" title="cookie信息："></a>cookie信息：<img src="http://upload-images.jianshu.io/upload_images/4905848-bac60fa4b21b0bfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="cookie.png"></h4><h4 id="参数信息："><a href="#参数信息：" class="headerlink" title="参数信息："></a>参数信息：</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-64cc5a34eac55cb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="参数.png"></p>
+<h5 id="第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。"><a href="#第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。" class="headerlink" title="第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。"></a>第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。<img src="http://upload-images.jianshu.io/upload_images/4905848-eebf7859754b3cf4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="postman.png"></h5><h4 id="配置信息如下："><a href="#配置信息如下：" class="headerlink" title="配置信息如下："></a>配置信息如下：<img src="http://upload-images.jianshu.io/upload_images/4905848-a8ff62cecd37f3bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="配置信息.png"></h4><h4 id="body参数："><a href="#body参数：" class="headerlink" title="body参数："></a>body参数：<img src="http://upload-images.jianshu.io/upload_images/4905848-2c4f00b32aec26e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="body.png"></h4><h5 id="第三步、发送请求，看到后台返回的信息"><a href="#第三步、发送请求，看到后台返回的信息" class="headerlink" title="第三步、发送请求，看到后台返回的信息"></a>第三步、发送请求，看到后台返回的信息<img src="http://upload-images.jianshu.io/upload_images/4905848-84ebf0154dd6c623.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="结果.png"></h5><p>到这里这个请求接口的操作就模拟成功了，既然参数和地址都有了，这个时候就是你想做什么就做什么的时候了，你懂得😆。<br><img src="http://upload-images.jianshu.io/upload_images/4905848-edfe3a61d514a92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="app.png"></p>
+<p>这是根据postman请求结果，自己随便写了个手机端来进行请求的，有兴趣的可以一起研究，欢迎骚扰。</p>
+
       
     </div>
 <div>
@@ -526,7 +536,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html" title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">http://chuzhaozhi.cn/Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决.html</a>
+    <a href="http://chuzhaozhi.cn/54645.html" title="Charles抓包+Postman模拟请求">http://chuzhaozhi.cn/54645.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -541,9 +551,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Xcode/" rel="tag"><i class="fa fa-tag"></i>  Xcode</a>
+            <a href="/tags/抓包/" rel="tag"><i class="fa fa-tag"></i>  抓包</a>
           
-            <a href="/tags/自适应/" rel="tag"><i class="fa fa-tag"></i>  自适应</a>
+            <a href="/tags/Charles/" rel="tag"><i class="fa fa-tag"></i>  Charles</a>
+          
+            <a href="/tags/Postman/" rel="tag"><i class="fa fa-tag"></i>  Postman</a>
           
         </div>
       
@@ -556,18 +568,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/WeiXinPayService.html" rel="next" title="iOS微信支付以及工具类">
-                <i class="fa fa-chevron-left"></i> iOS微信支付以及工具类
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/iOS中优雅的使用iconfont.html" rel="prev" title="iOS中优雅的使用iconfont">
-                iOS中优雅的使用iconfont <i class="fa fa-chevron-right"></i>
+              <a href="/28824.html" rel="prev" title="UITableViewCell上的输入框，输入不同内容">
+                UITableViewCell上的输入框，输入不同内容 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -786,7 +794,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。"><span class="nav-number">1.</span> <span class="nav-text">到这就解决了这个问题，当然iOS11和Xcode9还有其他新特性，一点点整理解决。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一、工具介绍"><span class="nav-number">1.</span> <span class="nav-text">一、工具介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-Charles"><span class="nav-number">1.1.</span> <span class="nav-text">1. Charles</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-Postman"><span class="nav-number">1.2.</span> <span class="nav-text">2.Postman</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、开始抓取网络接口以及模拟请求"><span class="nav-number"></span> <span class="nav-text">二、开始抓取网络接口以及模拟请求</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第一步、打开Charles-在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口"><span class="nav-number">0.1.</span> <span class="nav-text">第一步、打开Charles,在浏览器中输入需要请求的地址，我这里访问的是一个投票的接口</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示信息如下："><span class="nav-number">1.</span> <span class="nav-text">显示信息如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie信息："><span class="nav-number">2.</span> <span class="nav-text">cookie信息：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数信息："><span class="nav-number">3.</span> <span class="nav-text">参数信息：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。"><span class="nav-number">3.1.</span> <span class="nav-text">第二步、在第一步获取了请求的url、cookie、参数等请求需要的之后我们就可以打开Postman来进行模拟请求了。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置信息如下："><span class="nav-number">4.</span> <span class="nav-text">配置信息如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#body参数："><span class="nav-number">5.</span> <span class="nav-text">body参数：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第三步、发送请求，看到后台返回的信息"><span class="nav-number">5.1.</span> <span class="nav-text">第三步、发送请求，看到后台返回的信息</span></a></li></ol></li></ol></div>
             
 
           </div>

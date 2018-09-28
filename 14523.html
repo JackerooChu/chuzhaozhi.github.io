@@ -90,22 +90,25 @@
 
 
 
-<meta name="description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们可能会遇到不同的产品需求，例如说A–&amp;gt;B–C，如果是层级返回的话我们只需要pop回去就好，但是如果是back到指定VC的时候，例如：A–&amp;gt;B–C，然后从C回到A，在开发过程中还是遇到的比较多的，本文总结了常见的三种方法，以此记录一下。">
+<meta name="description" content="现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。">
 <meta name="keywords" content="iOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="多级Push页面后优雅的返回指定控制器几种方法">
-<meta property="og:url" content="http://chuzhaozhi.cn/多级Push页面后优雅的返回指定控制器几种方法.html">
+<meta property="og:title" content="xxx.app文件已损坏，打不开，解决方案">
+<meta property="og:url" content="http://chuzhaozhi.cn/14523.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们可能会遇到不同的产品需求，例如说A–&amp;gt;B–C，如果是层级返回的话我们只需要pop回去就好，但是如果是back到指定VC的时候，例如：A–&amp;gt;B–C，然后从C回到A，在开发过程中还是遇到的比较多的，本文总结了常见的三种方法，以此记录一下。">
+<meta property="og:description" content="现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-e5cd66f226e6b509.gif?imageMogr2/auto-orient/strip">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-d401cbb31eb40ce9.gif?imageMogr2/auto-orient/strip">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-d066c1afd0093a64.gif?imageMogr2/auto-orient/strip">
-<meta property="og:updated_time" content="2018-08-06T03:40:06.903Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-09-28T06:50:41.583Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多级Push页面后优雅的返回指定控制器几种方法">
-<meta name="twitter:description" content="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在开发过程中我们可能会遇到不同的产品需求，例如说A–&amp;gt;B–C，如果是层级返回的话我们只需要pop回去就好，但是如果是back到指定VC的时候，例如：A–&amp;gt;B–C，然后从C回到A，在开发过程中还是遇到的比较多的，本文总结了常见的三种方法，以此记录一下。">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4905848-e5cd66f226e6b509.gif?imageMogr2/auto-orient/strip">
+<meta name="twitter:title" content="xxx.app文件已损坏，打不开，解决方案">
+<meta name="twitter:description" content="现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -135,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/多级Push页面后优雅的返回指定控制器几种方法.html"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/14523.html"/>
 
 
 
 
 
-  <title>多级Push页面后优雅的返回指定控制器几种方法 | JackerooChu的博客</title>
+  <title>xxx.app文件已损坏，打不开，解决方案 | JackerooChu的博客</title>
   
 
 
@@ -324,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/多级Push页面后优雅的返回指定控制器几种方法.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/14523.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -341,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">多级Push页面后优雅的返回指定控制器几种方法</h1>
+          <h1 class="post-title" itemprop="name headline">xxx.app文件已损坏，打不开，解决方案</h1>
         
 
         <div class="post-meta">
@@ -353,8 +356,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-06T11:38:15+08:00">
-                2018-08-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
+                2018-03-31
               </time>
             
 
@@ -372,8 +375,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/多级Push页面后优雅的返回指定控制器几种方法.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/多级Push页面后优雅的返回指定控制器几种方法.html" itemprop="commentCount"></span>
+                <a href="/14523.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/14523.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -381,7 +384,7 @@
 
           
           
-             <span id="/多级Push页面后优雅的返回指定控制器几种方法.html" class="leancloud_visitors" data-flag-title="多级Push页面后优雅的返回指定控制器几种方法">
+             <span id="/14523.html" class="leancloud_visitors" data-flag-title="xxx.app文件已损坏，打不开，解决方案">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -406,7 +409,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  495
+                  268
                 </span>
               
 
@@ -422,7 +425,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -443,34 +446,13 @@
       
 
       
-        <p><blockquote class="blockquote-center"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在开发过程中我们可能会遇到不同的产品需求，例如说A–&gt;B–C，如果是层级返回的话我们只需要pop回去就好，但是如果是back到指定VC的时候，例如：A–&gt;B–C，然后从C回到A，在开发过程中还是遇到的比较多的，本文总结了常见的三种方法，以此记录一下。</blockquote></p>
-<p><br><a id="more"></a></p>
-<blockquote>
-<p>使用场景：  A – &gt; B – &gt; C，然后现在要求C直接pop回到A。</p>
-</blockquote>
-<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><blockquote>
-<p>C返回到B的时候写个回调，B接收到回调再自己pop到A，但是这个方法B的页面会闪现一下，用户体验不好，不推荐。</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/4905848-e5cd66f226e6b509.gif?imageMogr2/auto-orient/strip" alt="方法一.gif"></p>
-<p>实现代码：<br><code>C_ViewController.h</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line">typedef void (^backBlock)(void);     </span><br><span class="line"></span><br><span class="line">@interface C_ViewController : UIViewController</span><br><span class="line">@property (copy,nonatomic)backBlock backBlock;</span><br><span class="line"></span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
-<p><code>C_ViewController.m</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-(void)back</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    if (self.backBlock) &#123;</span><br><span class="line">        [self.navigationController popViewControllerAnimated:YES];</span><br><span class="line">        self.backBlock();</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>B_ViewController实现方法</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">C_ViewController *cViewController = [[C_ViewController alloc] init]; </span><br><span class="line"> [self.navigationController pushViewController:cViewController animated:YES];</span><br><span class="line"> cViewController.backBlock = ^&#123;</span><br><span class="line">     [self.navigationController popViewControllerAnimated:YES];</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></p>
-<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><blockquote>
-<p>在B push 到C的时候，直接把B从导航控制器的堆栈中移除。</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/4905848-d401cbb31eb40ce9.gif?imageMogr2/auto-orient/strip" alt="方法二.gif"></p>
-<p>实现方法：<br><code>B_ViewController实现方法</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//  方法二</span><br><span class="line">NSMutableArray *arrM = [[NSMutableArray alloc] initWithArray:self.navigationController.viewControllers];</span><br><span class="line">[arrM replaceObjectAtIndex:[arrM count]-1 withObject:cViewController];</span><br><span class="line">[self.navigationController setViewControllers:arrM animated:YES];</span><br></pre></td></tr></table></figure></p>
-<h2 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h2><blockquote>
-<p>写一个UIViewController的catrgory，在C的backAct方法中使用</p>
-</blockquote>
-<p><img src="https://upload-images.jianshu.io/upload_images/4905848-d066c1afd0093a64.gif?imageMogr2/auto-orient/strip" alt="方法三.gif"><br>实现方法：<br><code>UIViewController+BackToViewController.h</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#import &lt;UIKit/UIKit.h&gt;</span><br><span class="line"></span><br><span class="line">@interface UIViewController (BackToViewController)</span><br><span class="line">-(void)backToController:(NSString *)controllerName animated:(BOOL )animaed;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure></p>
-<p><code>UIViewController+BackToViewController.m</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@implementation UIViewController (BackToViewController)</span><br><span class="line">-(void)backToController:(NSString *)controllerName animated:(BOOL)animaed&#123;</span><br><span class="line">    if (self.navigationController) &#123;</span><br><span class="line">        NSArray *controllers = self.navigationController.viewControllers;</span><br><span class="line">        NSArray *result = [controllers filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id  _Nullable evaluatedObject, NSDictionary&lt;NSString *,id&gt; * _Nullable bindings) &#123;</span><br><span class="line">            return [evaluatedObject isKindOfClass:NSClassFromString(controllerName)];</span><br><span class="line">        &#125;]];</span><br><span class="line">        if (result.count &gt; 0) &#123;</span><br><span class="line">            [self.navigationController popToViewController:result[0] animated:YES];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><code>在C_ViewController中使用</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 方法三</span><br><span class="line">    if(self.navigationController.viewControllers.count &lt;= 1)</span><br><span class="line">    &#123;</span><br><span class="line">        [self dismissViewControllerAnimated:YES completion:nil];</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        [self backToController:@&quot;ViewController&quot; animated:YES];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>这是我个人用的三种方法，比较推荐第三种方法，如有更好的方法麻烦告知，大家共同进步，谢谢。</p>
-</blockquote>
-<p><a href="https://github.com/chuzhaozhi/PushAndBackDemo" target="_blank" rel="noopener">代码传送门</a></p>
+        <p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p>
+<p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p>
+<p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>
 
       
     </div>
@@ -530,7 +512,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://chuzhaozhi.cn/多级Push页面后优雅的返回指定控制器几种方法.html" title="多级Push页面后优雅的返回指定控制器几种方法">http://chuzhaozhi.cn/多级Push页面后优雅的返回指定控制器几种方法.html</a>
+    <a href="http://chuzhaozhi.cn/14523.html" title="xxx.app文件已损坏，打不开，解决方案">http://chuzhaozhi.cn/14523.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -552,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/iOS程序异常Crash友好化处理.html" rel="next" title="iOS程序异常Crash友好化处理">
-                <i class="fa fa-chevron-left"></i> iOS程序异常Crash友好化处理
+              <a href="/18602.html" rel="next" title="UITableViewCell高度自适应--Xib和Masonry布局">
+                <i class="fa fa-chevron-left"></i> UITableViewCell高度自适应--Xib和Masonry布局
               </a>
             
           </div>
@@ -562,8 +544,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/图像处理库GPUImage简单使用.html" rel="prev" title="图像处理库GPUImage简单使用">
-                图像处理库GPUImage简单使用 <i class="fa fa-chevron-right"></i>
+              <a href="/21387.html" rel="prev" title="iOS微信支付以及工具类">
+                iOS微信支付以及工具类 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -657,17 +639,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -772,22 +745,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一"><span class="nav-number">1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二"><span class="nav-number">2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法三"><span class="nav-number">3.</span> <span class="nav-text">方法三</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
