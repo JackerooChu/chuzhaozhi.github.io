@@ -156,26 +156,6 @@
   </entry>
   
   <entry>
-    <title>Reveal---iOS项目UI调试工具使用教程</title>
-    <link href="http://chuzhaozhi.cn/1581.html"/>
-    <id>http://chuzhaozhi.cn/1581.html</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-09-28T06:50:41.573Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center"><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br><a id="more"></a><p></p><h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">文章</a>解决，这里了就不多说了。</p><h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p><h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p><p>（2）、Xcode打开项目，并运行</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p><h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p><p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p><p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;一、Reveal介绍&quot;&gt;&lt;a href=&quot;#一、Reveal介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Reveal介绍&quot;&gt;&lt;/a&gt;一、Reveal介绍&lt;/h3&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.waitsun.com/tag/reveal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reveal&lt;/a&gt;是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]&lt;br&gt;reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。&lt;br&gt;Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>iOS微信支付以及工具类</title>
     <link href="http://chuzhaozhi.cn/21387.html"/>
     <id>http://chuzhaozhi.cn/21387.html</id>
@@ -194,6 +174,28 @@
   </entry>
   
   <entry>
+    <title>UITableViewCell高度自适应--Xib和Masonry布局</title>
+    <link href="http://chuzhaozhi.cn/18602.html"/>
+    <id>http://chuzhaozhi.cn/18602.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-09-28T06:50:41.576Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>xxx.app文件已损坏，打不开，解决方案</title>
     <link href="http://chuzhaozhi.cn/14523.html"/>
     <id>http://chuzhaozhi.cn/14523.html</id>
@@ -205,6 +207,26 @@
     <summary type="html">
     
       &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Reveal---iOS项目UI调试工具使用教程</title>
+    <link href="http://chuzhaozhi.cn/1581.html"/>
+    <id>http://chuzhaozhi.cn/1581.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-09-28T06:50:41.573Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center"><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br><a id="more"></a><p></p><h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">文章</a>解决，这里了就不多说了。</p><h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p><h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p><p>（2）、Xcode打开项目，并运行</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p><h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p><p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p><p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、Reveal介绍&quot;&gt;&lt;a href=&quot;#一、Reveal介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Reveal介绍&quot;&gt;&lt;/a&gt;一、Reveal介绍&lt;/h3&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.waitsun.com/tag/reveal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reveal&lt;/a&gt;是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]&lt;br&gt;reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。&lt;br&gt;Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;br&gt;
     
     </summary>
     
@@ -232,28 +254,6 @@
       <category term="Xcode" scheme="http://chuzhaozhi.cn/tags/Xcode/"/>
     
       <category term="自适应" scheme="http://chuzhaozhi.cn/tags/%E8%87%AA%E9%80%82%E5%BA%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>UITableViewCell高度自适应--Xib和Masonry布局</title>
-    <link href="http://chuzhaozhi.cn/18602.html"/>
-    <id>http://chuzhaozhi.cn/18602.html</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-09-28T06:50:41.576Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
-    
-    </summary>
-    
     
   </entry>
   
