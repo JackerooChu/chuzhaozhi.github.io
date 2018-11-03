@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://chuzhaozhi.cn/"/>
-  <updated>2018-09-28T06:50:41.583Z</updated>
+  <updated>2018-11-03T03:20:11.672Z</updated>
   <id>http://chuzhaozhi.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于苹果内购那点破事儿（3.1.1大礼包解决方案）</title>
+    <link href="http://chuzhaozhi.cn/2007592920.html"/>
+    <id>http://chuzhaozhi.cn/2007592920.html</id>
+    <published>2018-11-03T03:15:29.142Z</published>
+    <updated>2018-11-03T03:20:11.672Z</updated>
+    
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大家都知道想要在AppStore上线带有虚拟物品交易的app必须要走苹果的内购渠道，否则就会因为3.1.1条款被拒绝，如图所示：</blockquote></p><p><br><a id="more"></a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>大家都知道想要在AppStore上线带有虚拟物品交易的app必须要走苹果的内购渠道，否则就会因为3.1.1条款被拒绝，如图所示：<br><img src="https://upload-images.jianshu.io/upload_images/4905848-82dd7051a8cccced.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>翻译之后的意思是：<br><code>指南3.1.1商业支付-应用程序购买我们注意到，您的应用程序或其元数据可以通过应用程序内购买API之外的其他方式购买应用程序中的内容、服务或功能，这不适合于App Store。下一步虽然您所包括的支付系统可以在应用程序外部进行交易，但如果可购买的内容、功能或服务打算在应用程序中使用，则必须在应用程序中使用应用程序内购买来购买，除非是指南中提到的类型。3.1.3的App Store审查指南。</code></p><blockquote><p>虚拟物品包括会员、报名费、视频购买等等非实物交易</p></blockquote><p> 最近上线一个包含活动报名以及视频付费播放的app，因为有虚拟物品交易和实物交易，在项目中集成了微信支付和支付宝支付，一开始采取的是这两种方式来进行支付，测试完毕提交审核，第二天一早便收到苹果拒绝的回复：<br> <img src="https://upload-images.jianshu.io/upload_images/4905848-979ac51ed354ba12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>拒绝的原因有两个：</p><ul><li>包含有测试数据</li><li>有虚拟物品交易没有使用内购</li></ul><p>第一条被拒的原因是因为后台没有变更数据库，导致显示的数据带有测试字样，直接被苹果拒绝并截图返回<br><img src="https://upload-images.jianshu.io/upload_images/4905848-76302d3fc51867e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>在此也是提醒各位在提交审核的时候避免出现测试、Test、Beat、Demo、Trial等字样，苹果审核那边看到如此字样直接拒绝。</p><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>不需要重新打包上传，在和后台沟通后修改掉以上会被拒绝的字眼后直接回复苹果邮件：<br><img src="https://upload-images.jianshu.io/upload_images/4905848-09d24db676c964fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>然后等待苹果审核，然而还是没有避免掉3.1.1的条款，多次回复邮件说明情况还是被拒绝，后来和后台商量将所有活动报名和视频播放都改为免费，不需收费便可直接使用，回复邮件并附属上说明图片（回复的时候可以直接添加附件即可）<br><img src="https://upload-images.jianshu.io/upload_images/4905848-546ddac791534bca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>这一次的提交之后，苹果审核那边时间相对延长了一天，之前都是隔天就给了回馈，然而收到的还是3.1.1条款拒绝，截图返回如下：<br><img src="https://upload-images.jianshu.io/upload_images/4905848-406d03b0abc76e80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>看到图片的时候想到可能是因为显示了票价，此时很崩溃有没有？？？既然回复邮件说明都不奏效，那只能另寻出路了。。。</p><h4 id="终极解决方案"><a href="#终极解决方案" class="headerlink" title="终极解决方案"></a>终极解决方案</h4><ol><li>和后台商量添加审核字段<code>isCheck</code>来标识是否在审核期间（如下图）</li><li>app端对服务器返回的字段进行重新布局，在列表页面对价格进行隐藏，详情页将价格cell进行隐藏，结果如下图</li></ol><p><img src="https://upload-images.jianshu.io/upload_images/4905848-d606909c848ef722.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p><img src="https://upload-images.jianshu.io/upload_images/4905848-bd63d22165730796.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>在app端显示如下：<br><img src="https://upload-images.jianshu.io/upload_images/4905848-490ef48481c3cf2d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p><p>至此，重新打包上传，过了一晚边收到审核通过的消息，在发布应用后便可让后台改回原来的价格，app正常使用了。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>苹果审核比较严格，对测试数据把控需严谨。</li><li>此处给的方案治标不治本，业务需要的话还是需要走苹果提供的内购渠道。</li><li>以此方法上线的app在后期有几率被苹果复审下架。</li><li>版本迭代的时候需要再次跟后台沟通改变<code>isCheck</code>的值</li></ol><blockquote><p>ios小白一枚，请多多关照，不喜勿喷</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;大家都知道想要在AppStore上线带有虚拟物品交易的app必须要走苹果的内购渠道，否则就会因为3.1.1条款被拒绝，如图所示：&lt;/blockquote&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS，苹果审核" scheme="http://chuzhaozhi.cn/tags/iOS%EF%BC%8C%E8%8B%B9%E6%9E%9C%E5%AE%A1%E6%A0%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>升级macOs Mojave之后CleanMyMac X破解版，有需要自取</title>
@@ -135,6 +156,26 @@
   </entry>
   
   <entry>
+    <title>Reveal---iOS项目UI调试工具使用教程</title>
+    <link href="http://chuzhaozhi.cn/1581.html"/>
+    <id>http://chuzhaozhi.cn/1581.html</id>
+    <published>2018-03-31T07:59:40.000Z</published>
+    <updated>2018-09-28T06:50:41.573Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center"><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br><a id="more"></a><p></p><h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">文章</a>解决，这里了就不多说了。</p><h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p><h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p><p>（2）、Xcode打开项目，并运行</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p><h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p><p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p><p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、Reveal介绍&quot;&gt;&lt;a href=&quot;#一、Reveal介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Reveal介绍&quot;&gt;&lt;/a&gt;一、Reveal介绍&lt;/h3&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.waitsun.com/tag/reveal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reveal&lt;/a&gt;是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]&lt;br&gt;reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。&lt;br&gt;Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>iOS微信支付以及工具类</title>
     <link href="http://chuzhaozhi.cn/21387.html"/>
     <id>http://chuzhaozhi.cn/21387.html</id>
@@ -153,19 +194,17 @@
   </entry>
   
   <entry>
-    <title>Reveal---iOS项目UI调试工具使用教程</title>
-    <link href="http://chuzhaozhi.cn/1581.html"/>
-    <id>http://chuzhaozhi.cn/1581.html</id>
+    <title>xxx.app文件已损坏，打不开，解决方案</title>
+    <link href="http://chuzhaozhi.cn/14523.html"/>
+    <id>http://chuzhaozhi.cn/14523.html</id>
     <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-09-28T06:50:41.573Z</updated>
+    <updated>2018-09-28T06:50:41.583Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="一、Reveal介绍"><a href="#一、Reveal介绍" class="headerlink" title="一、Reveal介绍"></a>一、Reveal介绍</h3><blockquote class="blockquote-center"><p><a href="https://www.waitsun.com/tag/reveal" target="_blank" rel="noopener">Reveal</a>是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]<br>reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。<br>Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。<br></p></blockquote><br><a id="more"></a><p></p><h3 id="二、Reveal集成使用"><a href="#二、Reveal集成使用" class="headerlink" title="二、Reveal集成使用"></a>二、Reveal集成使用</h3><h4 id="1、下载安装Reveal，直接安装。"><a href="#1、下载安装Reveal，直接安装。" class="headerlink" title="1、下载安装Reveal，直接安装。"></a>1、下载安装Reveal，直接安装。</h4><p>如果提示<code>xxx.app文件损坏打不开</code>，请参考我的另一篇<a href="http://chuzhaozhi.cn/2018/03/31/xxx-app%E6%96%87%E4%BB%B6%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%89%93%E4%B8%8D%E5%BC%80%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">文章</a>解决，这里了就不多说了。</p><h4 id="2、找到你刚才安装的软件-打开"><a href="#2、找到你刚才安装的软件-打开" class="headerlink" title="2、找到你刚才安装的软件,打开"></a>2、找到你刚才安装的软件,打开</h4><p><img src="http://upload-images.jianshu.io/upload_images/4905848-9ef5178304ab70c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>主界面显示如下图</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ab31e4993b225ac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="主界面.png"></p><h4 id="3、在你的项目中集成"><a href="#3、在你的项目中集成" class="headerlink" title="3、在你的项目中集成"></a>3、在你的项目中集成</h4><p>（1）创建一个名为<code>RevealTestDemo</code>的项目,导入<code>CocoPods</code>,打开Podfile文件输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//  :configurations =&gt; [&apos;Debug&apos;] 只是在xcode debug 时才会加入；</span><br><span class="line">pod &apos;Reveal-SDK&apos;, :git =&gt; &apos;https://git.coding.net/kakukeme/Reveal-SDK.git&apos;, :configurations =&gt; [&apos;Debug&apos;]</span><br></pre></td></tr></table></figure></p><p>（2）、Xcode打开项目，并运行</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-ab5f4ccce6e06c37.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开项目.png"><br>在界面上添加一个背景颜色为红色的label,这个时候打开Reveal,你就能看到<br><img src="http://upload-images.jianshu.io/upload_images/4905848-5080ff146bb62a15.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Reveal.png"><br>点击进入就能看到</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-783e725d694cae8a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="展示UI图层.png"></p><h4 id="4、功能分析"><a href="#4、功能分析" class="headerlink" title="4、功能分析"></a>4、功能分析</h4><p>窗口介绍<br><img src="http://upload-images.jianshu.io/upload_images/4905848-0ef67c408ccfb3ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="窗口.png"><br>点击一个控件之后进入这个子控件的详细信息</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-7aa0012133378bfc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Details.png"></p><p>在属性窗口里面我们能很清晰的看见这个控件的相关信息，包括Frame等，同时你还可以直接在属性面板进行修改控件的信息</p><p>修改前<br><img src="http://upload-images.jianshu.io/upload_images/4905848-7af86d070fd1633d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改前.png"><br>修改后</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-636e084f267ce18b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改后.png"><br>是不是很方便，修改字体、颜色、大小、对齐方式等都可以在属性面板进行操作，很直观的看到修改后的效果，不幸的是，你项目中的代码还需要自己去修改（据说后期版本会有对这一方面的修改，期待ing）。<a href="https://github.com/chuzhaozhi/RevealTestDemo" target="_blank" rel="noopener">本文Demo地址</a>,Reveal<a href="https://pan.baidu.com/s/1jHYekyM" target="_blank" rel="noopener">下载地址</a></p>]]></content>
+    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p><p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p><p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>]]></content>
     
     <summary type="html">
     
-      &lt;h3 id=&quot;一、Reveal介绍&quot;&gt;&lt;a href=&quot;#一、Reveal介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Reveal介绍&quot;&gt;&lt;/a&gt;一、Reveal介绍&lt;/h3&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.waitsun.com/tag/reveal&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reveal&lt;/a&gt;是Mac os平台上的一款开发者调试IOS应用的Mac[开发软件]&lt;br&gt;reveal Mac版它能够在运行时调试和修改iOS应用程序。Reveal能连接到应用程序，并允许开发者编辑各种用户界面参数，这反过来会立即反应在程序的UI上。&lt;br&gt;Reveal 在 官网售价119美元，约合人民币1280元]，（文末会给出破解版的下载地址，当然，要支持正版哟^_^）。&lt;br&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;br&gt;
+      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
     
     </summary>
     
@@ -212,24 +251,6 @@
         &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 
       
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>xxx.app文件已损坏，打不开，解决方案</title>
-    <link href="http://chuzhaozhi.cn/14523.html"/>
-    <id>http://chuzhaozhi.cn/14523.html</id>
-    <published>2018-03-31T07:59:40.000Z</published>
-    <updated>2018-09-28T06:50:41.583Z</updated>
-    
-    <content type="html"><![CDATA[<p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br><a id="more"></a><br><img src="http://upload-images.jianshu.io/upload_images/4905848-aca7194695daddb2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文件已损坏提示.png"></p><p>在Mac OS 更新到10.12之后，苹果爸爸对软件安全更加注重，在10.12之后你将看不到<code>任何来源</code>这个选项了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0ca1daa82e234279.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="允许任何来源.png"></p><p>那么，我们在Mac OS 10.12之后要怎么才能显示这个任何来源的选项呢，其实很简单，你只需要在终端里输入<code>sudo spctl --master-disable</code></p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-0465eb1fc304cfff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入命令.png"><br>这个时候会提示你输入电脑密码，（你输入的会不显示出来）输入密码后点击回车键，这个时候就打开了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-d0509b61fb6e5a4f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="打开选项.jpg"><br>这个时候，点击左下角的<code>🔐</code>,会让你输入电脑密码<br><img src="http://upload-images.jianshu.io/upload_images/4905848-a9e47dd978b567b7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="输入密码.png"><br>之后就可以选择任何来源了</p><p><img src="http://upload-images.jianshu.io/upload_images/4905848-abf1997c19032134.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="提示.png"><br>点击<code>允许任何来源</code><br>这个时候你就可以打开之前提示文件损坏的软件了。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;blockquote class=&quot;blockquote-center&quot;&gt;&lt;br&gt;现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;
     
     </summary>
     
