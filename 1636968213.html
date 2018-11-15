@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="iOS, 开发, 技术积累, 分享" />
+  <meta name="keywords" content="Bmob," />
 
 
 
@@ -90,21 +90,30 @@
 
 
 
-<meta name="description" content="一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者，欢迎分享知识。  扫描上方二维码或直接搜索JackerooChu关注公众号了解更多文章。  微信扫描上方二维码或直接搜索速查天气，体验小程序。">
-<meta name="keywords" content="iOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://chuzhaozhi.cn/about/index.html">
+<meta name="description" content="一、属性BmobUser除了从BmobObject继承的属性外，还有几个特定的属性：  username: 用户的用户名（必需）。 password: 用户的密码（必需）。 email: 用户的电子邮件地址（可选）。 BmobUser自动处理用户账户管理所需的功能。 12345-(void)setUsername:(NSString *)username;//用户名，必需-(void)setPa">
+<meta name="keywords" content="Bmob">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS独立开发者使用Bmob第三方后台服务之用户管理">
+<meta property="og:url" content="http://chuzhaozhi.cn/1636968213.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者，欢迎分享知识。  扫描上方二维码或直接搜索JackerooChu关注公众号了解更多文章。  微信扫描上方二维码或直接搜索速查天气，体验小程序。">
+<meta property="og:description" content="一、属性BmobUser除了从BmobObject继承的属性外，还有几个特定的属性：  username: 用户的用户名（必需）。 password: 用户的密码（必需）。 email: 用户的电子邮件地址（可选）。 BmobUser自动处理用户账户管理所需的功能。 12345-(void)setUsername:(NSString *)username;//用户名，必需-(void)setPa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/swap.png">
-<meta property="og:image" content="http://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/sucha.jpg">
-<meta property="og:updated_time" content="2018-11-08T01:10:55.856Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-460fe21f4b32d1d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-48f818b2c3f4c855.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-574b07e694f3d13e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-d277517e93296a66.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-bc78c4bac6e6e210.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-646494f4b64f2961.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-8cc6856664ac769b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-8f211f3973c23449.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-9c5cae8a066b23b9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-5ff77437e684881e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4905848-4032051f9cc2352f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2018-11-15T05:09:57.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者，欢迎分享知识。  扫描上方二维码或直接搜索JackerooChu关注公众号了解更多文章。  微信扫描上方二维码或直接搜索速查天气，体验小程序。">
-<meta name="twitter:image" content="http://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/swap.png">
+<meta name="twitter:title" content="iOS独立开发者使用Bmob第三方后台服务之用户管理">
+<meta name="twitter:description" content="一、属性BmobUser除了从BmobObject继承的属性外，还有几个特定的属性：  username: 用户的用户名（必需）。 password: 用户的密码（必需）。 email: 用户的电子邮件地址（可选）。 BmobUser自动处理用户账户管理所需的功能。 12345-(void)setUsername:(NSString *)username;//用户名，必需-(void)setPa">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4905848-460fe21f4b32d1d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -134,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/about/"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/1636968213.html"/>
 
 
 
 
 
-  <title>关于我 | JackerooChu的博客</title>
+  <title>iOS独立开发者使用Bmob第三方后台服务之用户管理 | JackerooChu的博客</title>
   
 
 
@@ -311,38 +320,362 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/1636968213.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="JackerooChu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="JackerooChu的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于我</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者，欢迎分享知识。</p>
-<p><img src="http://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/swap.png" alt="swip.pngg"></p>
-<p>扫描上方二维码或直接搜索<code>JackerooChu</code>关注公众号了解更多文章。</p>
-<p><img src="http://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/sucha.jpg" alt="小程序"></p>
-<p>微信扫描上方二维码或直接搜索<code>速查天气</code>，体验小程序。</p>
-
+          <h1 class="post-title" itemprop="name headline">iOS独立开发者使用Bmob第三方后台服务之用户管理</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-15T13:09:11+08:00">
+                2018-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/1636968213.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/1636968213.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/1636968213.html" class="leancloud_visitors" data-flag-title="iOS独立开发者使用Bmob第三方后台服务之用户管理">
+               <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+  <i class="fa fa-eye"></i>
+</span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">总字数&#58;</span>
+                
+                <span title="总字数">
+                  1,791
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p><img src="https://upload-images.jianshu.io/upload_images/4905848-460fe21f4b32d1d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="一、属性"><a href="#一、属性" class="headerlink" title="一、属性"></a>一、属性</h2><p>BmobUser除了从BmobObject继承的属性外，还有几个特定的属性：</p>
+<ul>
+<li>username: 用户的用户名（必需）。</li>
+<li>password: 用户的密码（必需）。</li>
+<li><p>email: 用户的电子邮件地址（可选）。</p>
+<p>BmobUser自动处理用户账户管理所需的功能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-(void)setUsername:(NSString *)username;//用户名，必需</span><br><span class="line">-(void)setPassword:(NSString*)password;//密码，必需</span><br><span class="line">-(void)setEmail:(NSString *)email;//设置邮箱</span><br><span class="line">-(void)setObject:(id)obj forKey:(id)key;//设置某个属性的值</span><br><span class="line">-(id)objectForKey:(id)key;//得到某个属性的值</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="二、注册"><a href="#二、注册" class="headerlink" title="二、注册"></a>二、注册</h2><p>应用很常见的一个功能就是，注册用户，使用BmobUser注册用户也不复杂，如下的例子所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">BmobUser *bUser = [[BmobUser alloc] init];</span><br><span class="line">   [bUser setUsername:self.nameTextField.text];</span><br><span class="line">   [bUser setPassword:self.passwordTextField.text];</span><br><span class="line">   [bUser signUpInBackgroundWithBlock:^ (BOOL isSuccessful, NSError *error)&#123;</span><br><span class="line">       if (isSuccessful)&#123;</span><br><span class="line">           NSLog(@&quot;Sign up successfully&quot;);</span><br><span class="line">           NSString *result = [NSString stringWithFormat:@&quot;注册成功\n用户名:%@\n密码:%@\n去试试登录吧&quot;,self.nameTextField.text,self.passwordTextField.text];</span><br><span class="line">           [self showResultInfo:result];</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">           NSLog(@&quot;%@&quot;,error);</span><br><span class="line">           [self showResultInfo:@&quot;注册失败，查看控制台信息&quot;];</span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-48f818b2c3f4c855.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p><strong>注意点</strong>：</p>
+<ul>
+<li>有些时候你可能需要在用户注册时发送一封邮件，以确认用户邮箱的真实性。这时，你只需要登录自己的应用管理后台，在应用设置-&gt;邮件设置（下图）中把“邮箱验证”功能打开，Bmob云后端就会在用户注册时自动发动一封验证给用户。<br><img src="https://upload-images.jianshu.io/upload_images/4905848-574b07e694f3d13e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ul>
+</blockquote>
+<ul>
+<li><p>username字段是大小写敏感的字段，如果你希望应用的用户名不区分大小写，请在注册和登录时进行大小写的统一转换。</p>
+<h2 id="三、登录"><a href="#三、登录" class="headerlink" title="三、登录"></a>三、登录</h2><p>当用户注册成功后，需要让他们以后能够登录到他们的账户使用应用。要做到这点可以使用<br><code>方法一</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[BmobUser loginWithUsernameInBackground:self.nameTextField.text password:self.passwordTextField.text];</span><br></pre></td></tr></table></figure>
+<p><code>方法二</code></p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[BmobUser loginWithUsernameInBackground:self.nameTextField.text password:self.passwordTextField.text block:^(BmobUser *user, NSError *error) &#123;</span><br><span class="line">    if (user) &#123;</span><br><span class="line">        NSString *result = [NSString stringWithFormat:@&quot;登录成功\n用户名:%@\n密码:%@\n去试试获取当前用户吧&quot;,user.username,user.password];</span><br><span class="line">                    [self showResultInfo:result];</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        NSLog(@&quot;%@&quot;,error);</span><br><span class="line">          [self showResultInfo:@&quot;登录失败，查看可控制台消息&quot;];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以看到Bmob里面提供了很多的方法，根据需要调用</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-d277517e93296a66.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-bc78c4bac6e6e210.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="四、获取当前用户"><a href="#四、获取当前用户" class="headerlink" title="四、获取当前用户"></a>四、获取当前用户</h2><p>每次你登录成功，都会在本地磁盘中有一个缓存的用户对象作为当前用户，可以获取这个缓存的用户对象来进行登录：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">BmobUser *user = [BmobUser currentUser];</span><br><span class="line">   if (user) &#123;</span><br><span class="line">       //进行操作</span><br><span class="line">       NSString *result = [NSString stringWithFormat:@&quot;登录成功\n用户名:%@\n密码:%@\n去试试更新用户吧&quot;,user.username,user.password];</span><br><span class="line">       [self showResultInfo:result];</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">       //对象为空时，可打开用户注册界面</span><br><span class="line">       [self showResultInfo:@&quot;当前没有用户&quot;];</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>当然，你也可以用如下的方法清除缓存用户对象：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[BmobUser logout];</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-646494f4b64f2961.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="五、更新用户"><a href="#五、更新用户" class="headerlink" title="五、更新用户"></a>五、更新用户</h2><p>当用户登录成功后，在本地有个缓存的用户对象，如果开发者希望更改当前用户的某个属性可按如下代码操作:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">BmobUser *bUser = [BmobUser currentUser];</span><br><span class="line">   </span><br><span class="line">   if (bUser) &#123;</span><br><span class="line">       [bUser setObject:self.nameTextField.text forKey:@&quot;username&quot;];</span><br><span class="line">       [bUser updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) &#123;</span><br><span class="line">           if (isSuccessful) &#123;</span><br><span class="line">               [self showResultInfo:@&quot;更新用户成功，去查看当前用户信息吧&quot;];</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">               NSLog(@&quot;error %@&quot;,[error description]);</span><br><span class="line">               [self showResultInfo:@&quot;更新用户失败，控制台查看信息&quot;];</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;];</span><br><span class="line">   &#125;else&#123;</span><br><span class="line">        [self showResultInfo:@&quot;当前未登录&quot;];</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>一般来说，使用当前用户对象来进行资料更新可能会遇到一个问题。如果当前用户上次登录的时间距离当前时间过长，存放在本地的Token就有可能会过期，导致用户更新资料失败，这是需要重新登录，登录成功后才能更新资料。</p>
+<blockquote>
+<p> 在更新用户信息时，如果用户邮箱有变更并且在管理后台打开了邮箱验证选项的话，Bmob云后端同样会自动发动一封邮件验证信息给用户。</p>
+</blockquote>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-8cc6856664ac769b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="六、查询用户"><a href="#六、查询用户" class="headerlink" title="六、查询用户"></a>六、查询用户</h2><p>查询用户和查询普通对象一样，只需指定BmobUser类即可，如下：<br><figure class="highlight plain"><figcaption><span>- C</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">BmobQuery *query = [BmobUser query];</span><br><span class="line">   [query whereKey:@&quot;username&quot; equalTo:self.nameTextField.text];</span><br><span class="line">   [query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) &#123;</span><br><span class="line">       if (error) &#123;</span><br><span class="line">           NSLog(@&quot;%@&quot;,error);</span><br><span class="line">           [self showResultInfo:@&quot;查询出错，查看控制台信息&quot;];</span><br><span class="line"></span><br><span class="line">           </span><br><span class="line">       &#125;else&#123;</span><br><span class="line">           if (array.count&gt;0) &#123;</span><br><span class="line">               for (BmobUser *user in array) &#123; //  demo中只有一个用户，所以把显示结果的放在循环内了</span><br><span class="line">                   NSLog(@&quot;objectid %@&quot;,user.objectId);</span><br><span class="line">                   NSString *result = [NSString stringWithFormat:@&quot;查询成功\n用户名:%@\n用户id:%@&quot;,user.username,user.objectId];</span><br><span class="line">                   [self showResultInfo:result];</span><br><span class="line">                   </span><br><span class="line">               &#125;</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">                [self showResultInfo:@&quot;没有查询到结果，请修改信息后查询&quot;];</span><br><span class="line">           &#125;</span><br><span class="line">           </span><br><span class="line">       &#125;</span><br><span class="line">      </span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure></p>
+<p>在Bmob后台查看用户表<br><img src="https://upload-images.jianshu.io/upload_images/4905848-8f211f3973c23449.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="七、修改密码"><a href="#七、修改密码" class="headerlink" title="七、修改密码"></a>七、修改密码</h2><p>使用旧密码来重置新密码的接口，示例如下：<br><code>修改</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">BmobUser *user = [BmobUser currentUser];</span><br><span class="line">   [user updateCurrentUserPasswordWithOldPassword:self.nameTextField.text newPassword:self.passwordTextField.text block:^(BOOL isSuccessful, NSError *error) &#123;</span><br><span class="line">       if (isSuccessful) &#123;</span><br><span class="line">              [self showResultWithLoginInfo:user.username];</span><br><span class="line">         </span><br><span class="line">       &#125; else &#123;</span><br><span class="line">           NSLog(@&quot;change password error:%@&quot;,error);</span><br><span class="line">            [self showResultInfo:@&quot;修改失败，查看可控制台消息&quot;];</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;];</span><br></pre></td></tr></table></figure></p>
+<p><code>修改成功之后登录</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//用新密码登录</span><br><span class="line">      [BmobUser loginInbackgroundWithAccount:result andPassword:self.passwordTextField.text block:^(BmobUser *user, NSError *error) &#123;</span><br><span class="line">          if (error) &#123;</span><br><span class="line">              NSLog(@&quot;login error:%@&quot;,error);</span><br><span class="line">              [self showResultInfo:@&quot;登录失败，查看可控制台消息&quot;];</span><br><span class="line">              </span><br><span class="line">          &#125; else &#123;</span><br><span class="line">              </span><br><span class="line">              </span><br><span class="line">              NSLog(@&quot;user:%@&quot;,user);</span><br><span class="line">              NSString *result = [NSString stringWithFormat:@&quot;登录成功\n用户名:%@\n用户ID:%@\n&quot;,user.username,user.objectId];</span><br><span class="line">              [self showResultInfo:result];</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;];</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4905848-9c5cae8a066b23b9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h2 id="八、邮箱找回-修改-密码"><a href="#八、邮箱找回-修改-密码" class="headerlink" title="八、邮箱找回(修改)密码"></a>八、邮箱找回(修改)密码</h2><blockquote>
+<p><strong>前提是在注册操作的时候有添加过邮箱</strong></p>
+</blockquote>
+<p>一旦你引入了一个密码系统，那么肯定会有用户忘记密码的情况。对于这种情况，我们提供了一种方法，让用户安全地重置起密码。</p>
+<p>重置密码的流程很简单，开发者只需要求用户输入注册的电子邮件地址即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[BmobUser requestPasswordResetInBackgroundWithEmail:self.nameTextField.text block:^(BOOL isSuccessful, NSError *error) &#123;</span><br><span class="line">      if (isSuccessful) &#123;</span><br><span class="line">          [self showResultInfo:@&quot;发送成功，请去邮箱内查看邮件&quot;];</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">          NSLog(@&quot;%@&quot;,error);</span><br><span class="line">          [self showResultInfo:@&quot;发送失败，请查看控制台信息&quot;];</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">  &#125;];</span><br></pre></td></tr></table></figure></p>
+<p><code>以下为未开启邮箱验证和注册时未绑定邮箱的</code><br><img src="https://upload-images.jianshu.io/upload_images/4905848-5ff77437e684881e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>密码重置流程如下：</p>
+<ol>
+<li>用户输入他们的电子邮件，请求重置自己的密码。</li>
+<li>Bmob向他们的邮箱发送一封包含特殊的密码重置连接的电子邮件。</li>
+<li>用户根据向导点击重置密码连接，打开一个特殊的Bmob页面，根据提示，他们可以输入一个新的密码。</li>
+<li>用户的密码已被重置为新输入的密码。</li>
+</ol>
+<h2 id="九、总结"><a href="#九、总结" class="headerlink" title="九、总结"></a>九、总结</h2><h3 id="注意点："><a href="#注意点：" class="headerlink" title="注意点："></a>注意点：</h3><blockquote>
+<ol>
+<li>需要在Bmob后台开启邮箱认证</li>
+<li>Bmob后台User表里可添加字段来完善用户信息</li>
+<li>通过邮箱操作密码等信息的需要在注册是要求用户验证邮箱，否则操作失败</li>
+</ol>
+</blockquote>
+<p>Bmob接入具体操作可查看上一篇文章<br><a href="https://www.jianshu.com/p/a9589877b5ad" target="_blank" rel="noopener">iOS独立开发者使用Bmob第三方后台服务初探</a><br>本文同步至<a href="http://chuzhaozhi.cn">个人博客</a><br><a href="https://github.com/chuzhaozhi/BmobUserManage" target="_blank" rel="noopener">代码传送门</a>，欢迎star,感兴趣的可以留言一起探讨。<br>搜索公众号<code>JacerooChu</code>或扫描下方二维码一起讨论和获取更多信息。<br><img src="https://upload-images.jianshu.io/upload_images/4905848-4032051f9cc2352f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="swap.png"><br>iOS独立开发者使用Bmob第三方后台服务之用户管理</p>
+
       
     </div>
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
+</div>
     
     
     
+    
+<div>
+      
+        
+
+      
+</div>
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/swap.png" alt="JackerooChu wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+      <div align="center">
+  
+    <div class="copyright">
+    <p><span>
+    <b>本文地址：</b><a href="/1636968213.html" title="iOS独立开发者使用Bmob第三方后台服务之用户管理">http://chuzhaozhi.cn/1636968213.html</a><br /><b>转载请注明出处，谢谢！</b>
+    </span></p>
+    </div>
+  
+</div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持技术积累和分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://chuzhaozhi.oss-cn-shanghai.aliyuncs.com/code.png?x-oss-process=style/copyright" alt="JackerooChu 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    JackerooChu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://chuzhaozhi.cn/1636968213.html" title="iOS独立开发者使用Bmob第三方后台服务之用户管理">http://chuzhaozhi.cn/1636968213.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，版权归JackerooChu所有，转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Bmob/" rel="tag"><i class="fa fa-tag"></i>  Bmob</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/1318804238.html" rel="next" title="iOS独立开发者使用Bmob第三方后台服务初探">
+                <i class="fa fa-chevron-left"></i> iOS独立开发者使用Bmob第三方后台服务初探
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享到：</div>
+<div class="-hoofoo-share-buttons">
+    <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
+    <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+    <div class="-mob-share-qq -hoofoo-share-qq -hoofoo-share-ui-button"><i class="fa fa-qq" 
+    aria-hidden="true"></i></div>
+    
+</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=280f1362d50b0"></script>
+<!--MOB SHARE END-->
+
+      
+    </div>
   </div>
 
 
@@ -378,8 +711,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -484,6 +826,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、属性"><span class="nav-number">1.</span> <span class="nav-text">一、属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、注册"><span class="nav-number">2.</span> <span class="nav-text">二、注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、登录"><span class="nav-number">3.</span> <span class="nav-text">三、登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、获取当前用户"><span class="nav-number">4.</span> <span class="nav-text">四、获取当前用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、更新用户"><span class="nav-number">5.</span> <span class="nav-text">五、更新用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、查询用户"><span class="nav-number">6.</span> <span class="nav-text">六、查询用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、修改密码"><span class="nav-number">7.</span> <span class="nav-text">七、修改密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、邮箱找回-修改-密码"><span class="nav-number">8.</span> <span class="nav-text">八、邮箱找回(修改)密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、总结"><span class="nav-number">9.</span> <span class="nav-text">九、总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意点："><span class="nav-number">9.1.</span> <span class="nav-text">注意点：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
