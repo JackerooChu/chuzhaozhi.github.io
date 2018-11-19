@@ -77,7 +77,7 @@
 
 
 
-  <meta name="keywords" content="iOS, 开发, 技术积累, 分享" />
+  <meta name="keywords" content="工具," />
 
 
 
@@ -90,17 +90,43 @@
 
 
 
-<meta name="description" content="一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者。">
-<meta name="keywords" content="iOS">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JackerooChu的博客">
-<meta property="og:url" content="http://chuzhaozhi.cn/page/3/index.html">
+<meta name="description" content="一、抓取PC端https请求包  电脑安装Charles证书   2. 点击下载证书后双击进行安装，并打开电脑钥匙串软件，可以看到此时的证书是不被信任的  3. 双击Charles证书，点击按钮展开信任页面  4. 修改使用此证书是始终信任  5. 修改之后会要求输入电脑密码已验证身份  6. 修改之后查看到证书是如下所示效果  7. 打开Charles进行抓取操作，打开网易云音乐软件播放歌曲">
+<meta name="keywords" content="工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Charles抓取https接口数据方法">
+<meta property="og:url" content="http://chuzhaozhi.cn/1811391061.html">
 <meta property="og:site_name" content="JackerooChu的博客">
-<meta property="og:description" content="一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者。">
+<meta property="og:description" content="一、抓取PC端https请求包  电脑安装Charles证书   2. 点击下载证书后双击进行安装，并打开电脑钥匙串软件，可以看到此时的证书是不被信任的  3. 双击Charles证书，点击按钮展开信任页面  4. 修改使用此证书是始终信任  5. 修改之后会要求输入电脑密码已验证身份  6. 修改之后查看到证书是如下所示效果  7. 打开Charles进行抓取操作，打开网易云音乐软件播放歌曲">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-65009e0877eb7cb6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-5c8bdd94416649d3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-bd7f5390a0403806?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-99f407395298188b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-416b4895e7b63ddb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-5d49aa74a4cca73b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-9a356d657ce39609?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-3b44795b0f967d8a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a7840a20c810a99f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-20d6010752d6a06d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-2930021789ddeac1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-a04cb87558439a6d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-26ab07bcdb2dc06f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-0d8342269455d033?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-de29f1eb02b8f50a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-de5c0068d6a02c8a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-38b89fca8d50e0ab?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-5ad10497e0713323?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-d7693c8b178bb7cf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-ae1fe1b2d4b862bb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-19e7fc9a2319db9a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-989aa41e341dce76?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-35d3d0bc362515d5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/4905848-8909d8ef33262a5f?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2018-11-19T07:13:22.659Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JackerooChu的博客">
-<meta name="twitter:description" content="一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者。">
+<meta name="twitter:title" content="Charles抓取https接口数据方法">
+<meta name="twitter:description" content="一、抓取PC端https请求包  电脑安装Charles证书   2. 点击下载证书后双击进行安装，并打开电脑钥匙串软件，可以看到此时的证书是不被信任的  3. 双击Charles证书，点击按钮展开信任页面  4. 修改使用此证书是始终信任  5. 修改之后会要求输入电脑密码已验证身份  6. 修改之后查看到证书是如下所示效果  7. 打开Charles进行抓取操作，打开网易云音乐软件播放歌曲">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/4905848-65009e0877eb7cb6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -130,13 +156,13 @@
 
 
 
-  <link rel="canonical" href="http://chuzhaozhi.cn/page/3/"/>
+  <link rel="canonical" href="http://chuzhaozhi.cn/1811391061.html"/>
 
 
 
 
 
-  <title> iOS, 开发, 技术积累, 分享 - JackerooChu的博客一个对编程充满热爱的iOS开发工程师，一个对新技术充满好奇的求知者。  </title>
+  <title>Charles抓取https接口数据方法 | JackerooChu的博客</title>
   
 
 
@@ -165,8 +191,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <!-- <a href="https://github.com/chuzhaozhi"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
  -->
@@ -305,9 +330,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -315,12 +340,12 @@
   
   
 
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/20558.html">
+    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/1811391061.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="JackerooChu">
@@ -337,9 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/20558.html" itemprop="url">iOS中优雅的使用iconfont</a></h1>
+          <h1 class="post-title" itemprop="name headline">Charles抓取https接口数据方法</h1>
         
 
         <div class="post-meta">
@@ -351,8 +374,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-04T16:32:40+08:00">
-                2018-04-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T15:12:36+08:00">
+                2018-11-19
               </time>
             
 
@@ -370,8 +393,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/20558.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/20558.html" itemprop="commentCount"></span>
+                <a href="/1811391061.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/1811391061.html" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -379,7 +402,7 @@
 
           
           
-             <span id="/20558.html" class="leancloud_visitors" data-flag-title="iOS中优雅的使用iconfont">
+             <span id="/1811391061.html" class="leancloud_visitors" data-flag-title="Charles抓取https接口数据方法">
                <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
   <i class="fa fa-eye"></i>
@@ -392,214 +415,13 @@
           
 
           
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">总字数&#58;</span>
-                
-                <span title="总字数">
-                  1,485
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          1.什么是iconfont&ensp;&ensp;&ensp;&ensp;iconFont拆开来看，就是 Icon + Font，这样估计大家应该都能理解是什么，那两者结合是什么呢？没错！就是 IconFont ！让开发者像使用字体一样使用图标。如果自己不会做的话，可以直接去阿里的iconfont图
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/20558.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-<div>
-  
-</div>
-    
-    
-    
-    
-<div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/45450.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JackerooChu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackerooChu的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/45450.html" itemprop="url">Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Xcode/" itemprop="url" rel="index">
-                    <span itemprop="name">Xcode</span>
-                  </a>
-                </span>
-
-                
-                
-              
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
             </span>
           
 
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/45450.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/45450.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/45450.html" class="leancloud_visitors" data-flag-title="Xcode9-Safe-Area-Layout-Guide-Before-iOS9-0报错解决">
-               <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-  <i class="fa fa-eye"></i>
-</span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
             <div class="post-wordcount">
               
                 
@@ -610,7 +432,7 @@
                   <span class="post-meta-item-text">总字数&#58;</span>
                 
                 <span title="总字数">
-                  238
+                  520
                 </span>
               
 
@@ -626,7 +448,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -647,20 +469,98 @@
       
 
       
-        
-          <p><blockquote class="blockquote-center"><br> 9月20日苹果爸爸推送了iOS11.0以及Xcode9,作为开发小白一枚，第一时间更新了Xcode9,去体验一下所谓的跨时代的iPhone X,像往常新建个新项目，结果一运行直接报错<br></blockquote><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/45450.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p><strong>一、抓取PC端https请求包</strong></p>
+<ol>
+<li>电脑安装Charles证书</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-65009e0877eb7cb6?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>2. 点击下载证书后双击进行安装，并打开电脑钥匙串软件，可以看到此时的证书是不被信任的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-5c8bdd94416649d3?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>3. 双击Charles证书，点击按钮展开信任页面</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-bd7f5390a0403806?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>4. 修改使用此证书是始终信任</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-99f407395298188b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>5. 修改之后会要求输入电脑密码已验证身份</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-416b4895e7b63ddb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>6. 修改之后查看到证书是如下所示效果</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-5d49aa74a4cca73b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>7. 打开Charles进行抓取操作，打开网易云音乐软件播放歌曲</p>
+<ul>
+<li>找到网易云的请求包地址，设置Enable SSL Proxying</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-9a356d657ce39609?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>在网易云音乐内任意点击一首歌曲进行播放，请求包数据就一览无余了</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-3b44795b0f967d8a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><strong>二、抓取移动端端https请求包</strong></p>
+<ol>
+<li>安装手机端Charles证书，在Help菜单里找到SSL Proxying，如图</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-a7840a20c810a99f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<pre><code>2\. 按照如图的提示进行操作
+</code></pre><p><img src="http://upload-images.jianshu.io/upload_images/4905848-20d6010752d6a06d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>手机连接上无线网，要求和电脑的网络是在同一局域网内</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-2930021789ddeac1?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>点进无线网详情页面，选择配置代理</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-a04cb87558439a6d?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>设置为手动，然后输入图上的地址，也就是你自己电脑的ip地址，端口号为8888，之后点击存储即可。</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-26ab07bcdb2dc06f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p> 3. 在Safari浏览器内输入chls.pro/ssl，点击前往</p>
+<ul>
+<li>会提示打开设置页面</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-0d8342269455d033?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>选择安装</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-de29f1eb02b8f50a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>输入密码进行安装</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-de5c0068d6a02c8a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<ul>
+<li>安装完成</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-38b89fca8d50e0ab?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p> 4. 进行抓取，需要先在设置–》通用–》关于本机–》证书信任设置–》设置Charles证书完全信任</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-5ad10497e0713323?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>5. 打开腾讯体育app，在Charles内找到请求数据包，具体操作和PC端是一样的</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-d7693c8b178bb7cf?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p><strong>三、Charles相关设置</strong></p>
+<p>SSL Proxying Serrings</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-ae1fe1b2d4b862bb?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<p>添加一个抓取包的设置</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-19e7fc9a2319db9a?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<blockquote>
+<p>图中<em>baidu.com，</em>表示通配符，也就是说只要请求地址是以baidu.com结尾的都进行抓取</p>
+<p>端口443表示对所有哦端口号为443的请求都允许</p>
+</blockquote>
+<p><strong>四、总结</strong></p>
+<p>整个操作的过程步骤如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-989aa41e341dce76?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image"></p>
+<blockquote>
+<p>获取文件请关注公众号<code>JackerooChu</code>或者扫描二维码，回复关键字【Charles】获取</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-35d3d0bc362515d5?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" title="undefined"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/4905848-8909d8ef33262a5f?imageMogr2/auto-orient/strip" alt="image"></p>
+
       
     </div>
 <div>
   
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+  
 </div>
     
     
@@ -668,390 +568,107 @@
     
 <div>
       
+        
+
+      
+</div>
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://jackeroochu-blog.oss-cn-shanghai.aliyuncs.com/swap.png" alt="JackerooChu wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客！</div>
+</div>
+
+      </div>
+      <div align="center">
+  
+    <div class="copyright">
+    <p><span>
+    <b>本文地址：</b><a href="/1811391061.html" title="Charles抓取https接口数据方法">http://chuzhaozhi.cn/1811391061.html</a><br /><b>转载请注明出处，谢谢！</b>
+    </span></p>
+    </div>
+  
 </div>
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持技术积累和分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://chuzhaozhi.oss-cn-shanghai.aliyuncs.com/code.png?x-oss-process=style/copyright" alt="JackerooChu 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    JackerooChu
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://chuzhaozhi.cn/1811391061.html" title="Charles抓取https接口数据方法">http://chuzhaozhi.cn/1811391061.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，版权归JackerooChu所有，转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/28824.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JackerooChu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackerooChu的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/28824.html" itemprop="url">UITableViewCell上的输入框，输入不同内容</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/工具/" rel="tag"><i class="fa fa-tag"></i>  工具</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/28824.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/28824.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/28824.html" class="leancloud_visitors" data-flag-title="UITableViewCell上的输入框，输入不同内容">
-               <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-  <i class="fa fa-eye"></i>
-</span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">总字数&#58;</span>
-                
-                <span title="总字数">
-                  1,304
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h2 id="一、实现效果"><a href="#一、实现效果" class="headerlink" title="一、实现效果"></a>一、实现效果</h2><p><blockquote class="blockquote-center"><br>本文介绍怎么在UITableViewCell中添加输入框，对于不同的row的输入框输入的文本进行获取以至于打到一个表单填写的效果。<br></blockquote><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/28824.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/1.html" rel="next" title="Adobe Zii 4.0.4 Adobe系列软件激活工具 mac版">
+                <i class="fa fa-chevron-left"></i> Adobe Zii 4.0.4 Adobe系列软件激活工具 mac版
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-<div>
-  
-</div>
-    
-    
-    
-    
-<div>
-      
-</div>
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/18602.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JackerooChu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackerooChu的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/18602.html" itemprop="url">UITableViewCell高度自适应--Xib和Masonry布局</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/18602.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/18602.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/18602.html" class="leancloud_visitors" data-flag-title="UITableViewCell高度自适应--Xib和Masonry布局">
-               <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-  <i class="fa fa-eye"></i>
-</span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">总字数&#58;</span>
-                
-                <span title="总字数">
-                  0
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/18602.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-<div>
-  
-</div>
-    
-    
-    
-    
-<div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1061,196 +678,33 @@
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://chuzhaozhi.cn/14523.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="JackerooChu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JackerooChu的博客">
-    </span>
-
+        <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享到：</div>
+<div class="-hoofoo-share-buttons">
+    <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
+    <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
+    <div class="-mob-share-qq -hoofoo-share-qq -hoofoo-share-ui-button"><i class="fa fa-qq" 
+    aria-hidden="true"></i></div>
     
-      <header class="post-header">
+</div>
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+    </ul>
+    <div class="-mob-share-close">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=280f1362d50b0"></script>
+<!--MOB SHARE END-->
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/14523.html" itemprop="url">xxx.app文件已损坏，打不开，解决方案</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T15:59:40+08:00">
-                2018-03-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/14523.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/14523.html" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/14523.html" class="leancloud_visitors" data-flag-title="xxx.app文件已损坏，打不开，解决方案">
-               <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-  <i class="fa fa-eye"></i>
-</span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">总字数&#58;</span>
-                
-                <span title="总字数">
-                  268
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><blockquote class="blockquote-center"><br>现在很多软件是收费的，对于像我等穷屌丝来说，自然是想去找个破解的软件来替代，这个时候遇到xxx.app文件已损坏，打不开的情况，要怎么办呢，别急，以下操作就可以完美解决你的问题。<br></blockquote><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/14523.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
       
     </div>
-<div>
-  
-</div>
-    
-    
-    
-    
-<div>
-      
-</div>
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1258,6 +712,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -1633,6 +1094,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
